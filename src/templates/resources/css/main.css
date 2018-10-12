@@ -13,7 +13,8 @@ primary-color-dark: #005BB6 */
 
 html {
   font-size: 62.5%; }
-  /* 10 / 16  1rem = 10px */
+  /* 10 / 16 * 100 */
+  /* 1rem = 10px */
 
 body {
   box-sizing: border-box; }
@@ -91,46 +92,6 @@ body {
         transform: scale(1.01) }
       100% {
         opacity: 1; } }
-
-@keyframes moveInLeft {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateX(-100px);
-    transform: translateX(-100px) }
-  100% {
-    opacity: 1;
-    -webkit-transform: translateX(0);
-    transform: translateX(0) } }
-
-@keyframes moveInRight {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateX(100px);
-    transform: translateX(100px) }
-  100% {
-    opacity: 1;
-    -webkit-transform: translateX(0);
-    transform: translateX(0) } }
-
-@keyframes moveInTop {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(100px);
-    transform: translateY(100px) }
-  100% {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-    transform: translateY(0) } }
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0; }
-  60% {
-    border: 1px solid #72BCFF;
-    -webkit-transform: scale(1.01);
-    transform: scale(1.01) }
-  100% {
-    opacity: 1; } }
 
 /* ============================================================================================== */    
 /* Utilities */
