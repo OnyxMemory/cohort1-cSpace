@@ -4,7 +4,7 @@ from flask import Flask, render_template
 from CSpace import CSpace
 
 # load workbook into cspace object
-wb = openpyxl.load_workbook('cSpace_booking.xlsx')
+wb = openpyxl.load_workbook('./data/cSpace_booking.xlsx')
 cspace = CSpace(wb)
 
 # setup flask project
