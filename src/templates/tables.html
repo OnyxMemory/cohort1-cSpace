@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Current Credits Booked by Client</title>
+    <link rel="shortcut icon" href="#" />
+    <style>
+        ul {
+            list-style-type: none;
+        }
+
+        li {
+            margin: 0 auto;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 30%;
+        }
+
+        .container {
+            width: 100%;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>{{ date }}</h1>
+        <ul>
+            {% for client in clients %}
+            <li><b>{{ client[0] }} {{ client[1] }}</b><span>{{ client[2] }}</span></li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>
