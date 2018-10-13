@@ -19,6 +19,22 @@ html {
 body {
   box-sizing: border-box; }
 
+/* ------------------------------------- */
+/*  REUSABLE COMPONENTS */
+/* ------------------------------------- */
+
+.row {
+    max-width: 1140px;
+    margin: 0 auto; 
+}
+
+section {
+    padding: 80px 0; 
+}
+
+.box {
+    padding: 1%;
+}
 
 /* ============================================================================================== */  
 /* Typography/ Headings */
@@ -49,6 +65,56 @@ body {
     font-weight: 300;
     color: #f2f2f2;
     letter-spacing: .1rem; }
+
+.heading-secondary {
+    font-size: 300%;
+    word-spacing 2px;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 30px;
+    letter-spacing: 1px;
+    font-weight: 400;
+    color: #333;
+}
+.heading-secondary:after {
+    display: block;
+    height 3px;
+    content: " ";
+    width: 200px;
+    margin: 0 auto;
+    margin-top: 10px;
+    border-bottom: 4px solid #005BB6;
+}
+
+
+
+/*--------------------Paragraphs--------*/
+
+.main{
+    line-height: 145%;
+    width: 70%;
+    margin-left: 15%;
+    margin-bottom: 20px;
+    margin-top:30px;
+    color: #333;
+    font-size: 200%;
+    text-align: center;
+    font-weight: 300;
+}
+
+.sub{
+    line-height: 145%;
+    width: 85%;
+    margin-left: 7.5%;
+    margin-bottom: 10px;
+    margin-top:10px;
+    color: #333;
+    font-size: 170%;
+    text-align: center;
+    font-weight: 300;
+}
+
+
 
 /* ============================================================================================== */  
 /* Keyframes/Animations */
@@ -144,6 +210,22 @@ body {
   animation: fadeIn 2s .5s backwards;
   transform: scale(1.01); }
 
+.btn-colour, .btn-colour:link, .btn-colour:visited {
+    background-color: #72BCFF;
+    border: 1px solid #005BB6;
+    color: #fff;
+    text-align: center;
+    margin-left: 10%;
+}
+
+.btn-colour:hover {
+    background-color: #005BB6;
+    border: 1px solid #005BB6;
+    color: #fff;
+    margin-left: 10%;
+
+} 
+
 
 /* ============================================================================================== */   
 /* Navigation   */
@@ -180,31 +262,111 @@ body {
 /* ============================================================================================== */
 /* grid */
 
+
+/*  SECTIONS  ============================================================================= */
+
+.section {
+	clear: both;
+	padding: 0px;
+	margin: 0px;
+}
+
+/*  GROUPING  ============================================================================= */
+
 .row {
-  max-width: 114rem;
-  margin: 0 auto; }
-  .row:not(:last-child) {
-    margin-bottom: 8rem; }
-  .row:after {
-    content: "";
-    display: table;
-    clear: both; }
-  .row [class^="col-"] {
-    float: left; }
-    .row [class^="col-"]:not(:last-child) {
-      margin-right: 6rem; }
-  .row .col-1-of-2 {
-    width: calc((100% - 6rem) / 2); }
-  .row .col-1-of-3 {
-    width: calc((100% - 6rem * 2) / 3); }
-  .row .col-2-of-3 {
-    width: calc(2 * ((100% - 6rem * 2) / 3) + 6rem); }
-  .row .col-1-of-4 {
-    width: calc((100% - 6rem * 3) / 4); }
-  .row .col-2-of-4 {
-    width: calc(2 * ((100% - 6rem * 3) / 4) + 6rem); }
-  .row .col-3-of-4 {
-    width: calc(3 * ((100% - 6rem * 3) / 4) + 2 * 6rem); }
+    zoom: 1; /* For IE 6/7 (trigger hasLayout) */
+}
+
+.row:before,
+.row:after {
+    content:"";
+    display:table;
+}
+.row:after {
+    clear:both;
+}
+
+/*  GRID COLUMN SETUP   ==================================================================== */
+
+.col {
+	display: block;
+	float:left;
+	margin: 1% 0 1% 1.6%;
+}
+
+.col:first-child { margin-left: 0; } /* all browsers except IE6 and lower */
+
+/*  GRID OF TWO   ============================================================================= */
+
+
+.span-2-of-2 {
+	width: 100%;
+}
+
+.span-1-of-2 {
+	width: 49.2%;
+}
+
+/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+
+@media only screen and (max-width: 480px) {
+	.span-2-of-2 {
+		width: 100%; 
+	}
+	.span-1-of-2 {
+		width: 100%; 
+	}
+}
+
+
+/*  GRID OF THREE   ============================================================================= */
+
+	
+.span-3-of-3 {
+	width: 100%; 
+}
+
+.span-2-of-3 {
+	width: 66.13%; 
+}
+
+.span-1-of-3 {
+	width: 32.26%; 
+}
+
+
+/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+
+@media only screen and (max-width: 480px) {
+	.span-3-of-3 {
+		width: 100%; 
+	}
+	.span-2-of-3 {
+		width: 100%; 
+	}
+	.span-1-of-3 {
+		width: 100%;
+	}
+}
+
+/*  GRID OF FOUR   ============================================================================= */
+
+
+.span-4-of-4 {
+	width: 100%; 
+}
+
+.span-3-of-4 {
+	width: 74.6%; 
+}
+
+.span-2-of-4 {
+	width: 49.2%; 
+}
+
+.span-1-of-4 {
+	width: 23.8%; 
+}
 
 /* ============================================================================================== */
 /* header */
@@ -257,4 +419,70 @@ body {
     -webkit-background-clip: text;
     color: transparent;
     text-align: center; }
- 
+
+/* ============================================================================================== */
+/* Spaces Section */
+
+.section-spaces{
+    padding: 0;
+    height: 100vh;
+
+}
+
+.box img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px; 
+}
+
+.heading-spaces {
+    font-size: 200%;
+    word-spacing 2px;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 15px;
+    letter-spacing: 1px;
+    font-weight: 700;
+    color: #333;
+}
+
+/* ============================================================================================== */
+/* Clients Section */
+
+.section-clients{
+    padding: 0;
+    height: 100vh;
+    background-color: rgba(114, 188, 255, 0.19);
+}
+
+
+blockquote {
+    padding: 2%;
+    font-style: italic;
+    line-height: 145%;
+    position: relative;
+    margin-top: 100px;
+    font-size: 220%;
+}
+
+blockquote:before {
+    content: "\201C";
+    font-size: 500%;
+    display: block;
+    position: absolute;
+    top: -5px;
+    left: -5px;
+}
+
+cite {
+    font-size: 150%;
+    margin-top: 80px;
+    display: block;
+}
+
+cite img {
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 10px;
+    vertical-align: middle;
+}
