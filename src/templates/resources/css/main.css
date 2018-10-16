@@ -506,8 +506,8 @@ input[type=submit]:hover, {
   background: #fff;
   padding: 9rem 0;
   background: #ffffff;
-  border-top: 1px solid #72BCFF;
-  border-bottom: 1px solid #72BCFF; 
+  /* border-top: 1px solid #72BCFF;
+  border-bottom: 1px solid #72BCFF; */
 }
 
 .section-spaces__heading p {
@@ -522,29 +522,30 @@ input[type=submit]:hover, {
 .spaces__theatre,
 .spaces__desk,
 .spaces__gallery {
-  padding: 15rem 0 19rem 0; 
+  padding: 15rem 0 19rem 0;
+  box-shadow: 0 1rem 2rem rgba(0,0,0,.7);
 }
 
 
 /*----- spaces background  -----*/
 .spaces__meeting {
   background-image: linear-gradient(-90deg, #ffffff 0%, #ffffff 35%, #6ead45 100%);
-  border-bottom: 1px solid #72BCFF; 
+  /* border-bottom: 1px solid #72BCFF;  */
 }
 
 .spaces__theatre {
   background-image: linear-gradient(-90deg, #c0612b 0%, #ffffff 65%, #ffffff 100%);
-  border-bottom: 1px solid #72BCFF; 
+  /* border-bottom: 1px solid #72BCFF;  */
 }
 
 .spaces__desk {
   background-image: linear-gradient(-90deg, #ffffff 0%, #ffffff 35%, #8f4b7c 100%);
-  border-bottom: 1px solid #72BCFF; 
+  /* border-bottom: 1px solid #72BCFF;  */
 }
 
 .spaces__gallery {
   background-image: linear-gradient(-90deg, rgba(0, 91, 182, 0.8) 0%, #ffffff 65%, #ffffff 100%);
-  border-bottom: 1px solid #72BCFF; 
+  /* border-bottom: 1px solid #72BCFF;  */
 }
 
 
