@@ -135,8 +135,10 @@ class TestOopMajorCSpace(unittest.TestCase):
         self.assertEqual(12, self.cspace.clients['James'].credits)
 
     def test_run(self):
-        output = '{:^20}{:^5}\n'.format('Carrie Cordon', 13) + \
-                 '{:^20}{:^5}\n'.format('James Jordan', 12) + \
-                 '{:^20}{:^5}\n'.format('Don Dunkirk', 13)
+        output = [
+            ('Carrie', 'Cordon', 13),
+            ('James', 'Jordan', 12),
+            ('Don', 'Dunkirk', 13)
+        ]
 
         self.assertEqual(output, self.cspace.run('2018-08'))
