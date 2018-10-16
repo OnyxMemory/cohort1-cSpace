@@ -1,6 +1,3 @@
-#pipenv files
-Pipfile
-Pipfile.lock
 .DS_Store
 
 # Byte-compiled / optimized / DLL files
@@ -107,3 +104,5 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+.vscode/settings.json
+.vscode/settings.json
