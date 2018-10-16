@@ -49,7 +49,6 @@ class CSpace:
         output_array = []
         for client in self.clients:
             output_array.append((self.clients[client].first_name, self.clients[client].last_name, self.clients[client].credits))
-        print(output_array)
         return output_array
 
     @staticmethod
