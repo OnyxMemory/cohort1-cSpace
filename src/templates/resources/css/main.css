@@ -420,7 +420,7 @@ input[type=submit]:hover, {
 
 .header {
   height: 90vh;
-  background-image: linear-gradient(to right bottom, rgba(22, 22, 22, 0.8), rgba(28, 56, 83, 0.2)), url(../img/background.jpeg);
+  background-image: linear-gradient(to right bottom, rgba(22, 22, 22, 0.8), rgba(28, 56, 83, 0.2)), url(../img/header-background.jpg);
   background-size: cover;
   background-attachment: fixed;
   background-position: center; 
@@ -784,5 +784,57 @@ textarea {
     width: calc(3 * ((100% - 6rem * 3) / 4) + 2 * 6rem);
    }
 
+/* Navbar specific css*/
 
+nav {
+   background-color:rgba(0, 0, 0, 0.5); 
+    padding-right: 30px!important;
+}
+
+nav img {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+nav ul li {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+nav ul {
+    width: 100%;
+}
+
+.navbar-nav li {
+    font-size: 3em;
+}
+
+nav .nav-link {
+
+}
+
+nav .green {
+    color: #6ead45;
+}
+nav .green:hover {
+    color: #507f32;
+}
+nav .orange {
+    color: #c0612b;
+}
+nav .orange:hover {
+    color: #944a21;
+}
+nav .blue {
+    color: #019db3;
+}
+nav .blue:hover {
+    color: #006674;
+}
+nav .purple {
+    color: #8f4b7c;
+}
+nav .purple:hover {
+    color: #7b3b69;
+}
 

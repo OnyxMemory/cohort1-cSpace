@@ -5,25 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="resources/css/main.css">
-
     <title>cSpace</title>
 </head>
 <body>
     <header class="header">
-        <div class="logo-box">
-            <img src="resources/img/cspace-logo.png" alt="logo" class="logo">
+     <nav class="navbar fixed-top navbar-expand-sm">
+        <a class="navbar-brand" href="#">
+          <img src="resources/img/cspace-logo.png" width="400"/>
+        </a>
+          <ul class="navbar-nav justify-content-end">
+            <li class="nav-item">
+              <a class="nav-link green" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link orange" href="#testimonials">Testimonials</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link blue" href="#contact">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link purple" href="#">Login</a>
+            </li>
+          </ul>
         </div>
-        <nav class="nav">
-            <ul class="nav__list">
-                <li class="nav__item">
-                    <a href="#" class="nav__link">Who we are</a>
-                    <a href="#" class="nav__link">What we do</a>
-                    <a href="#" class="nav__link">Projects</a>
-                    <a href="#" class="nav__link">Contact</a>
-                </li>
-            </ul>
-        </nav>
+      </nav> 
+    </header>
         <div class="heading-text-box">
             <h1 class="heading-primary">
                 <span class="heading-primary--main">Never stop creating.</span>
@@ -34,7 +42,6 @@
                 <a href="#" class="btn btn__animated">Book Now</a>
             </div>
         </div>
-    </header>
 
     
     <div class="bottom-nav">
@@ -291,6 +298,8 @@
                 </div>
             </section>
     </main>
-
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 </body>
 </html>
