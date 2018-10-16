@@ -74,17 +74,40 @@ body {
     letter-spacing: .1rem; }
 
 .heading-secondary {
-  font-size: 4rem;
+  font-size: 5rem;
   text-transform: uppercase;
   font-weight: 400;
   letter-spacing: 2px;
   color: transparent;
   background-image: linear-gradient(to right, #005BB6, #72BCFF);
-    -webkit-background-clip: text;
-    background-clip: text;
-
+  -webkit-background-clip: text;
+  background-clip: text;
 }
-    
+
+.heading-secondary--sub {
+  font-size: 1.8rem;
+  text-align: center;
+  font-weight: 400;
+  background-image: linear-gradient(to right, rgb(0, 0, 0), rgb(94, 94, 94));
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+
+.heading-secondary--white {
+  color: #fff;
+  font-weight: 300;
+  opacity: .9;
+}
+
+.heading-secondary--black {
+  font-weight: 400;
+  color: transparent;
+  background-image: linear-gradient(to right, rgb(0, 0, 0), rgb(94, 94, 94));
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
 .heading-tertiary {
   font-size: 2.5rem;
   color: #fff;
@@ -312,11 +335,7 @@ input[type=submit]:hover, {
 
 /*  SECTIONS  ============================================================================= */
 
-.section {
-	clear: both;
-	padding: 0px;
-	margin: 0px;
-}
+
 
 /*  GROUPING  ============================================================================= */
 
@@ -474,9 +493,13 @@ input[type=submit]:hover, {
     text-align: center; 
   }
 
-/* ============================================================================================== */
-/* Spaces Section */
 
+/* ============================================================================================== */
+/* SECTIONS */
+/* ============================================================================================== */
+
+
+/*------------- Spaces Section -----------------*/
 
 /*----- spaces section heading  -----*/
 .section-spaces__heading {
@@ -505,17 +528,17 @@ input[type=submit]:hover, {
 
 /*----- spaces background  -----*/
 .spaces__meeting {
-  background-image: linear-gradient(-90deg, #ffffff 0%, #ffffff 35%, rgba(0, 91, 182, 0.8) 100%);
+  background-image: linear-gradient(-90deg, #ffffff 0%, #ffffff 35%, #6ead45 100%);
   border-bottom: 1px solid #72BCFF; 
 }
 
 .spaces__theatre {
-  background-image: linear-gradient(-90deg, rgba(0, 91, 182, 0.8) 0%, #ffffff 65%, #ffffff 100%);
+  background-image: linear-gradient(-90deg, #c0612b 0%, #ffffff 65%, #ffffff 100%);
   border-bottom: 1px solid #72BCFF; 
 }
 
 .spaces__desk {
-  background-image: linear-gradient(-90deg, #ffffff 0%, #ffffff 35%, rgba(0, 91, 182, 0.8) 100%);
+  background-image: linear-gradient(-90deg, #ffffff 0%, #ffffff 35%, #8f4b7c 100%);
   border-bottom: 1px solid #72BCFF; 
 }
 
@@ -619,55 +642,113 @@ input[type=submit]:hover, {
   top: 5rem; 
 }
 
-
 /* ============================================================================================== */  
-/* Clients Section */
 
-.section-clients{
-    padding: 0;
-    height: 100vh;
-    background-color: #fff;
+/*------- Testimonials Section ----- */
+
+.section-testimonials {
+  background: rgb(50, 102, 180);
+  padding: 9rem;
+  z-index: 100;
+  position: relative;
+}
+
+.section-testimonials:after {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: url(../img/cement.JPG);
+  filter: blur(1px);
+  opacity: .25;
+  top: 0;
+  left: 0;
+  background-size: cover;
 }
 
 
-blockquote {
-    padding: 2%;
-    font-style: italic;
-    line-height: 145%;
-    position: relative;
-    margin-top: 100px;
-    font-size: 220%;
+.testimonials__box {
+  background: rgb(58, 58, 58);
+  color: #fff;
+  border: 1px solid #fff;
+  position: relative;
+  padding: 2rem;
+  border-radius: 3px;
+  font-size: 1.6rem;
+  padding: 3.8rem 2rem 2rem 2rem;
 }
 
-blockquote:before {
-    content: "\201C";
-    font-size: 500%;
-    display: block;
-    position: absolute;
-    top: -5px;
-    left: -5px;
+.testimonials__box--middle {
+  top: 3rem;
 }
 
-cite {
-    font-size: 150%;
-    margin-top: 80px;
-    display: block;
+.testimonials__box:after {
+  content: '';
+  border-top: 1px solid #fff;
+  border-left: 1px solid #fff;
+  background: rgb(58, 58, 58);
+  transform: rotate(225deg) translateX(-50%);
+  height: 2rem;
+  width: 2rem;
+  position: absolute;
+  left: 45%;
+  bottom: -.4rem;
 }
 
-cite img {
-    height: 100px;
-    border-radius: 50%;
-    margin-right: 10px;
-    vertical-align: middle;
+.testimonials__img {
+  position: absolute;
+  height: 7rem;
+  border-radius: 3px;
+  border: 1px solid #fff;
+  left: 2rem;
+  top: -4rem;
+}
+
+.testimonials__text {
+  font-style: italic;
+}
+
+.testimonials__text:before {
+  content: '\201C';
+  font-size: 2rem;
+}
+
+.testimonials__client {
+  text-align: center;
+  margin-top: 2rem;
+  color: #fff;
+  position: relative;
+}
+
+.testimonials__client--middle {
+  top: 3rem;
+}
+
+
+.testimonials__client-name {
+  font-size: 1.6rem;
+}
+
+.testimonials__client-company {
+
+}
+
+.down-arrow {
+  border-top: 1px solid #fff;
+  border-left: 1px solid #fff;
+  transform: rotate(225deg);
+  height: 2rem;
+  width: 2rem;
 }
 
 /* ============================================================================================== */
 /* Upcoming Events */
+/* ============================================================================================== */
 
 .section-events{
-    padding: 0;
-    height: 100vh;
-    background-color: rgba(114, 188, 255, 0.19);
+  padding: 10rem;
+  height: 100vh;
+  background-color: rgba(114, 188, 255, 0.19);
 }
 
 .section-events .main-date {
