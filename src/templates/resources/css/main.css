@@ -792,8 +792,8 @@ nav {
 }
 
 nav img {
-    margin-top: 40px;
-    margin-bottom: 40px;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 nav ul li {
@@ -836,5 +836,19 @@ nav .purple {
 }
 nav .purple:hover {
     color: #7b3b69;
+}
+
+.brighten {
+  background-color: white;
+  opacity: 0.9;
+  border-bottom: 1px solid #019db3;
+}
+
+.hidden {
+  display: none;
+}
+
+.show {
+  display: block;
 }
 
