@@ -660,7 +660,6 @@ input[type=submit]:hover, {
   height: 100%;
   width: 100%;
   background-image: url(../img/cement.JPG);
-  filter: blur(1px);
   opacity: .25;
   top: 0;
   left: 0;
