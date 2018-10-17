@@ -529,17 +529,17 @@ input[type=submit]:hover, {
 
 /*----- spaces background  -----*/
 .spaces__meeting {
-  background-image: linear-gradient(-90deg, #ffffff 0%, #ffffff 35%, #6ead45 100%);
+  background-image: linear-gradient(-90deg, #ffffff 0%, #ffffff 35%, rgba(0, 91, 182, 0.8) 100%);
   /* border-bottom: 1px solid #72BCFF;  */
 }
 
 .spaces__theatre {
-  background-image: linear-gradient(-90deg, #c0612b 0%, #ffffff 65%, #ffffff 100%);
+  background-image: linear-gradient(-90deg, rgba(0, 91, 182, 0.8) 0%, #ffffff 65%, #ffffff 100%);
   /* border-bottom: 1px solid #72BCFF;  */
 }
 
 .spaces__desk {
-  background-image: linear-gradient(-90deg, #ffffff 0%, #ffffff 35%, #8f4b7c 100%);
+  background-image: linear-gradient(-90deg, #ffffff 0%, #ffffff 35%, rgba(0, 91, 182, 0.8) 100%);
   /* border-bottom: 1px solid #72BCFF;  */
 }
 
@@ -836,33 +836,40 @@ textarea {
   }
 
   .row [class^="col-"] {
-    float: left; }
+    float: left;
+  }
     .row [class^="col-"]:not(:last-child) {
       margin-right: 6rem; 
     }
 
   .row .col-1-of-2 {
-    width: calc((100% - 6rem) / 2); 
+    width: calc((100% - 6rem) / 2);
+    /* background: orangered; */
   }
 
   .row .col-1-of-3 {
-    width: calc((100% - 6rem * 2) / 3); 
+    width: calc((100% - 6rem * 2) / 3);
+    /* background: orangered; */
   }
 
   .row .col-2-of-3 {
     width: calc(2 * ((100% - 6rem * 2) / 3) + 6rem);
+    /* background: orangered; */
    }
 
   .row .col-1-of-4 {
     width: calc((100% - 6rem * 3) / 4); 
+    /* background: orangered; */
   }
 
   .row .col-2-of-4 {
     width: calc(2 * ((100% - 6rem * 3) / 4) + 6rem); 
+    /* background: orangered; */
   }
 
   .row .col-3-of-4 {
     width: calc(3 * ((100% - 6rem * 3) / 4) + 2 * 6rem);
+    /* background: orangered; */
    }
 
 /* Navbar specific css*/
@@ -873,8 +880,8 @@ nav {
 }
 
 nav img {
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 nav ul li {
@@ -895,38 +902,40 @@ nav .nav-link {
 }
 
 nav .green {
-    color: #6ead45;
+    color: #fff;
 }
 nav .green:hover {
-    color: #507f32;
+    color: #fff;
 }
 nav .orange {
-    color: #c0612b;
+    color: #fff;
 }
 nav .orange:hover {
-    color: #944a21;
+    color: #fff;
 }
 nav .blue {
-    color: #019db3;
+    color: #fff;
 }
 nav .blue:hover {
-    color: #006674;
+    color: #fff;
 }
 nav .purple {
-    color: #8f4b7c;
+    color: #fff;
 }
 nav .purple:hover {
-    color: #7b3b69;
+    color: #fff;
 }
 
 .brighten {
   background-color: white;
   opacity: 0.9;
   border-bottom: 1px solid #019db3;
+  color: #333;
 }
 
 .hidden {
   display: none;
+  color: #333;
 }
 
 .show {

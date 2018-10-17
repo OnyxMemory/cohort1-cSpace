@@ -10,8 +10,9 @@ body {
     width: 100%;
     height: 100%;
     display: grid;
-    grid-template-columns: 15% 50% 35%;
-    grid-template-rows: 50% 10% 40%;
+    /* grid-template-columns: 15% 50% 35%; */
+    grid-template-columns: 15% 1fr 1fr 1fr;
+    grid-template-rows: 50% 50%;
 }
 
 .left-menu {
@@ -25,7 +26,7 @@ body {
 
 .calender {
     grid-column-start: 2;
-    grid-column-end: 3;
+    grid-column-end: 4;
     grid-row-start: 1;
     grid-row-end: 2;
     background-color: blue;
@@ -33,7 +34,7 @@ body {
 }
 
 .chat {
-    grid-column-start: 2;
+    grid-column-start: 1;
     grid-column-end: 3;
     grid-row-start: 2;
     grid-row-end: 4;
@@ -52,7 +53,7 @@ body {
 .invoices {
     grid-column-start: 3;
     grid-column-end: 3;
-    grid-row-start: 3;
+    grid-row-start: 2;
     grid-row-end: 4;
     background-color: yellow;
 }
