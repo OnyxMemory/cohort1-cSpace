@@ -57,3 +57,12 @@ body {
     background-color: yellow;
 }
 
+.event-heading  {
+    text-align: center; 
+}
+.event-box {
+    float: left;
+    margin: 40px;
+    margin-top: -20px;
+}
+
