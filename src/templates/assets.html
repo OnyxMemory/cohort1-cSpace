@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Assets Management</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="resources/css/assets.css">
+    <script src="https://unpkg.com/ionicons@4.4.4/dist/ionicons.js"></script>
+    <script type="text/javascript">
+    function showTooltip(client, room) {
+          console.log('Yes');
+          var ev = window.event;
+          var posX = ev.clientX;
+          var posY = ev.clientY;
+          var element = document.elementFromPoint(posX, posY);
+          var elem = document.getElementById("tooltip");
+          elem.style.top=element.offsetTop+5+'px';
+          elem.style.left=posX+10+'px';
+          elem.style.visibility = "visible";
+          // elem.style.hover='pointer';
+          elem.innerHTML="<span class='tooltip-client'>"+client+"<BR>Room: "+room+"</span>";
+    }
+    function closeToolTip() {
+          var elem = document.getElementById("tooltip");
+          elem.style.visibility = "hidden";
+    }
+    </script>
+</head>
+<body>
+ <div id="assets">
+    <div class="asset-title">
+        <h5>Asset Management</h5>
+    </div>
+     <div class="asset-location">
+         <h5>King Edward</h5>
+     </div>
+     <div id="tooltip"></div>
+    <div class="asset-calendar">
+        <div class="room-calendar">
+            <div class="room-calendar-icon"><ion-icon name="arrow-dropleft"></ion-icon></div>
+            <div class="room-calendar-month">OCT-2018</div>
+            <div class="room-calendar-icon"><ion-icon name="arrow-dropright"></ion-icon></div>
+            <div class="room-calendar-weekday"><p class="calendar-weekday">Sunday</p></div>
+            <div class="room-calendar-weekday"><p class="calendar-weekday">Monday</p></div>
+            <div class="room-calendar-weekday"><p class="calendar-weekday">Tuesday</p></div>
+            <div class="room-calendar-weekday"><p class="calendar-weekday">Wednesday</p></div>
+            <div class="room-calendar-weekday"><p class="calendar-weekday">Thursday</p></div>
+            <div class="room-calendar-weekday"><p class="calendar-weekday">Friday</p></div>
+            <div class="room-calendar-weekday"><p class="calendar-weekday">Saturday</p></div>
+
+            <div class="room-calendar-item">.</div>
+            <div class="room-calendar-item">1</div>
+            <div class="room-calendar-item">2</div>
+            <div class="room-calendar-item">3</div>
+            <div class="room-calendar-item">4</div>
+            <div class="room-calendar-item">5</div>
+            <div class="room-calendar-item">6</div>
+            <div class="room-calendar-item">7</div>
+            <div class="room-calendar-item">8
+                <div class="rooms-by-day">
+                    <div class="rate1" onmousemove="showTooltip('Eric Day', 'Desk4');"
+                    onmouseleave="closeToolTip();">&nbsp;</div>
+                    <div class="rate2" onmousemove="showTooltip('Tish Day', 'Treehouse1');"
+                    onmouseleave="closeToolTip();">&nbsp;</div>
+                    <div class="rate2" onmousemove="showTooltip('Michelle Day', 'Treehouse2');"
+                    onmouseleave="closeToolTip();">&nbsp;</div>
+                </div>
+            </div>
+            <div class="room-calendar-item">9
+                <div class="rooms-by-day">
+                    <div class="rate3" onmousemove="showTooltip('Patrick Day', 'Gallery');"
+                    onmouseleave="closeToolTip();">&nbsp;</div>
+                </div>
+            </div>
+            <div class="room-calendar-item">10</div>
+            <div class="room-calendar-item">11</div>
+            <div class="room-calendar-item">12</div>
+            <div class="room-calendar-item">13</div>
+            <div class="room-calendar-item">14
+            </div>
+            <div class="room-calendar-item">15</div>
+            <div class="room-calendar-item">16</div>
+            <div class="room-calendar-item">17</div>
+            <div class="room-calendar-item">18
+                <div class="rooms-by-day">
+                    <div class="rate1" onmousemove="showTooltip('Eric Day', 'Desk4');"
+                    onmouseleave="closeToolTip();">&nbsp;</div>
+                    <div class="rate1" onmousemove="showTooltip('Eric Day', 'Desk5');"
+                    onmouseleave="closeToolTip();">&nbsp;</div>
+                    <div class="rate1" onmousemove="showTooltip('Eric Day', 'Desk6');"
+                    onmouseleave="closeToolTip();">&nbsp;</div>
+                    <div class="rate2" onmousemove="showTooltip('Michelle Day', 'Treehouse');"
+                    onmouseleave="closeToolTip();">&nbsp;</div>
+                    <div class="rate2" onmousemove="showTooltip('Michelle Day', 'Treehouse2');"
+                    onmouseleave="closeToolTip();">&nbsp;</div>
+                    <div class="rate2" onmousemove="showTooltip('Michelle Day', 'Treehouse3');"
+                    onmouseleave="closeToolTip();">&nbsp;</div>
+                    <div class="rate3" onmousemove="showTooltip('Patrick Day', 'Gallery');"
+                    onmouseleave="closeToolTip();">&nbsp;</div>
+                    <div class="rate3" onmousemove="showTooltip('Patrick Day', 'Gallery2');"
+                    onmouseleave="closeToolTip();">&nbsp;</div>
+                    <div class="rate3" onmousemove="showTooltip('Patrick Day', 'Gallery3');"
+                    onmouseleave="closeToolTip();">&nbsp;</div>
+                </div>
+            </div>
+            <div class="room-calendar-item">19</div>
+            <div class="room-calendar-item">20</div>
+            <div class="room-calendar-item">21</div>
+            <div class="room-calendar-item">22</div>
+            <div class="room-calendar-item">23</div>
+            <div class="room-calendar-item">24</div>
+            <div class="room-calendar-item">25</div>
+            <div class="room-calendar-item">26</div>
+            <div class="room-calendar-item">27</div>
+            <div class="room-calendar-item">28</div>
+            <div class="room-calendar-item">29</div>
+            <div class="room-calendar-item">30</div>
+            <div class="room-calendar-item">31</div>
+        </div>
+    </div>
+    <div class="asset-rooms">
+        <h5>rooms</h5>
+    </div>
+    <div class="asset-rooms">rooms</div>
+    <div class="asset-rooms">rooms</div>
+ </div>
+
+</body>
+</html>
