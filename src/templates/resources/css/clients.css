@@ -1,8 +1,8 @@
-.client-table th, .client-table td {
+/* .client-table th, .client-table td {
     text-align: left;}
 .client-table {
-    border-collapse: collapse; /* Collapse borders */
-    border: 1px solid #ddd; /* Add a grey border */
+    border-collapse: collapse; 
+    border: 1px solid #ddd; 
 }
 
 .client-table tr {
@@ -12,3 +12,4 @@
 .client-table tr.header, .client-table tr:hover {
     background-color: #f1f1f1;
   }
+*/
