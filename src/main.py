@@ -48,10 +48,6 @@ cspace.add_clients_from_array(cspace.clients_array)
 def client_page(name=None):
     return render_template('client_info.html', clients=cspace.clients, name=name)
 
-def last_day_of_month(any_day):
-    next_month = any_day.replace(day=28) + datetime.timedelta(days=4)  # this will never fail
-    return next_month - datetime.timedelta(days=next_month.day)
-
 @app.route('/calendar')
 def get_bookings():
     monthly_booking = cspace.extract_bookings(cspace.workbook['2018-09'])
@@ -69,7 +65,7 @@ def get_bookings():
     # monthly_booking = cspace.extract_bookings(date)
     # print(monthly_booking)
 
-    tempData = {'date': '2018-09',
+    tempData = {'date': '2018-10',
                 'dayheader': dayheader,
                 'bookings': monthly_booking,
                 'maxrows': len(monthly_booking),
