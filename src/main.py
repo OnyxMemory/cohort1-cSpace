@@ -21,6 +21,15 @@ def show_people_by_date(date):
     clients_credits = cspace.run(date)
     return render_template('tables.html', clients=clients_credits, date=date)
 
+@app.route('/clients')
+def show_clientlist():
+    cspace.add_clients_from_array(cspace.clients_array)
+    return render_template('clients.html', clients=cspace.clients)
+
+cspace.add_clients_from_array(cspace.clients_array)
+@app.route('/clients/<name>')
+def client_page(name=None):
+    return render_template('client_info.html', clients=cspace.clients, name=name)
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True)
