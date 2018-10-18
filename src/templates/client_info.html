@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="resources/css/client_info_style.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <title>Client page</title>
+</head>
+
+<body>
+
+    <section class="client-text">
+        <h1> {{ clients[name].first_name }} {{ clients[name].last_name }} </h1>
+
+        <ul class="client-contact-info">
+            <li>Phone: {{clients[name].phone}}</li>
+            <li>Email: {{clients[name].email}}</li>
+        </ul>
+
+        <ul class="client-info">
+            <li>Payment Method: {{clients[name].payment_method}}</li>
+            <li>Payment Status: {{clients[name].payment_status}}</li>
+            <li>Issues: {{clients[name].issues}}</li>
+            <li>Notes: {{clients[name].notes}}</li>
+        </ul>
+    </section>
+
+    <section class="client-left-col">
+        <img src="" alt="Client Photo" class="client-photo">
+        <ul class="client-nav">
+            <li><a href="#">Update</a></li>
+            <li><a href="#">Delete</a></li>
+            <li><a href="#">Back to previous page</a></li>
+            <li><a href="#">Back to client list</a></li>
+        </ul>
+
+    </section>
+
+</body>
+
+</html>
