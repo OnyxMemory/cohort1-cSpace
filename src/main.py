@@ -16,6 +16,9 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 
+@app.route('/admin')
+def admin():
+    return render_template('admin_nav.html')
 
 @app.route('/<string:date>')
 def show_people_by_date(date):
