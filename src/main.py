@@ -16,16 +16,15 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 
+@app.route('/admin')
+def admin():
+    return render_template('admin_nav.html')
 
 @app.route('/<string:date>')
 def show_people_by_date(date):
     clients_credits = cspace.run(date)
     return render_template('tables.html', clients=clients_credits, date=date)
 
-@app.route('/clients')
-def show_clientlist():
-    cspace.add_clients_from_array(cspace.clients_array)
-    return render_template('clients.html', clients=cspace.clients)
 
 @app.route('/clients')
 def show_clientlist():
