@@ -2,6 +2,7 @@ import openpyxl
 
 from flask import Flask, render_template
 from CSpace import CSpace
+from Client import Client
 
 # load workbook into cspace object
 wb = openpyxl.load_workbook('./data/cSpace_booking.xlsx')
@@ -30,6 +31,12 @@ cspace.add_clients_from_array(cspace.clients_array)
 @app.route('/clients/<name>')
 def client_page(name=None):
     return render_template('client_info.html', clients=cspace.clients, name=name)
+
+cspace.add_clients_from_array(cspace.clients_array)
+@app.route('/client/<name>')
+def client_page(name=None):
+    return render_template('client_info.html', clients=cspace.clients, name=name)
+
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True)
