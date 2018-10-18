@@ -23,8 +23,8 @@
 
     .booking-calendar {
         display: grid;
-        grid-template-columns: 4fr repeat({{ cols }} , 1fr);
-        grid-template-rows: 1.5em repeat({{monthly_booking|length}}, 1.5em);
+        grid-template-columns: 4fr repeat({{ tempData.maxcols }} , 1fr);
+        grid-template-rows: 1.5em repeat({{ tempData.maxrows }}, 1.5em);
         grid-column-gap: 3px;
         grid-row-gap: 3px;
         background-color: #fff;
@@ -116,24 +116,27 @@
     <div id="tooltip"></div>
     <div class="booking-calendar">
 
+
+
+
         {% set week_word = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'] %}
-        {% for i in range(cols+1) %}
+        {% for i in range(tempData.maxcols+1) %}
             {% if i > 0 %}
                 <div class="calendar-day">
-                {{ i }}
+                {{ i }} {{tempData.dayheader[i-1]}}
                 </div>
             {% else %}
                 &nbsp;
             {% endif %}
         {% endfor %}
-        {% for room, bookings in monthly_booking.items() %}
+        {% for room, bookings in tempData.bookings.items() %}
             <div class="calendar-room">
                 {{ room }}
             </div>
             {% for book in bookings %}
                 {% if book %}
                     <div class="calendar-booking-booked" style='background-color: {{ rates[facilities[room].type].Color }}'
-                         onmousemove="showTooltip('Eric Day');"
+                         onmousemove="showTooltip('{{ clients[book].name }}');"
                          onmouseleave="closeToolTip();">
                 {% else %}
                     <div class="calendar-booking-empty">

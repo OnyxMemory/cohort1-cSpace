@@ -1,4 +1,5 @@
 import openpyxl
+import datetime
 
 from flask import Flask, render_template, send_from_directory
 from CSpace import CSpace
@@ -47,13 +48,28 @@ cspace.add_clients_from_array(cspace.clients_array)
 def client_page(name=None):
     return render_template('client_info.html', clients=cspace.clients, name=name)
 
-@app.route('/ws/<string:date>')
-def get_bookings_by_month(date):
-    monthly_booking = cspace.extract_bookings(cspace.workbook[date])
+@app.route('/calendar')
+def get_bookings():
+    monthly_booking = cspace.extract_bookings(cspace.workbook['2018-09'])
+
+    mydate = '2018-09'.split('-')
+
+    mdate = datetime.date(int(mydate[0]), int(mydate[1]), 1)
+    maxDays = last_day_of_month(mdate).day
+    dayheader = [];
+    for myday in range(maxDays):
+        mdate = datetime.date(int(mydate[0]), int(mydate[1]), myday+1)
+        dayheader.append(mdate.strftime('%a'))
+    # print(maxDays, dayheader)
     cspace.add_rooms_from_array(cspace.room_array, cspace.workbook['Rates'])
     # monthly_booking = cspace.extract_bookings(date)
     # print(monthly_booking)
 
+    tempData = {'date': '2018-10',
+                'dayheader': dayheader,
+                'bookings': monthly_booking,
+                'maxrows': len(monthly_booking),
+                'maxcols': maxDays }
     colors = ['#C39BD3', '#7FB3D5', '#7DCEA0', '#F0B27A', '#808B96']
     i = 0
     dataRates = {}
@@ -61,16 +77,14 @@ def get_bookings_by_month(date):
         dataRates[type] = {'Credits': credit, 'Color': colors[i]}
         i = i + 1
 
-    cols = len(next(iter(monthly_booking.values() )))
-    rows = len(monthly_booking)
+
+    # cols = len(next(iter(monthly_booking.values() )))
+    # rows = len(monthly_booking)
     return render_template('base-calendar.html',
-                           monthly_booking=monthly_booking,
-                           rows=rows,
-                           cols=cols,
+                           tempData=tempData,
                            rates=dataRates,
                            facilities=cspace.rooms,
-                           clients=cspace.clients,
-                           date=date)
+                           clients=cspace.clients)
 
 
 if __name__ == '__main__':

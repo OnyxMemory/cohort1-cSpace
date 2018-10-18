@@ -1,6 +1,6 @@
 from Client import Client
 from Room import Room
-
+import datetime
 
 class CSpace:
     def __init__(self, workbook):
@@ -52,6 +52,11 @@ class CSpace:
         return output_array
 
     @staticmethod
+    def last_day_of_month(any_date):
+        next_month = any_date.replace(day=28) + datetime.timedelta(days=4)  # this will never fail
+        return (next_month - datetime.timedelta(days=next_month.day)).day
+
+    @staticmethod
     def extract_data(data_sheet):
         data = []
         for row in data_sheet.iter_rows(min_row=2, max_row=data_sheet.max_row, max_col=data_sheet.max_column):
@@ -78,7 +83,10 @@ class CSpace:
         bookings = {}
         heading = ''
 
-        for cols in month_sheet.iter_cols(min_row=1, max_row=month_sheet.max_row, min_col=3):
+        year, month = month_sheet.title.split('-')
+        last_day = CSpace.last_day_of_month(datetime.date(int(year), int(month), 1))
+
+        for cols in month_sheet.iter_cols(min_row=1, max_row=last_day, min_col=3):
             for x, cell in enumerate(cols):
                 if x is 0:
                     heading = cell.value
