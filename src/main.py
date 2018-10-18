@@ -66,6 +66,7 @@ def get_bookings_by_month(date):
                            cols=cols,
                            rates=dataRates,
                            facilities=cspace.rooms,
+                           clients=cspace.clients,
                            date=date)
 
 
