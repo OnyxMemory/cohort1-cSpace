@@ -245,9 +245,6 @@ input[type=submit] {
   transition: .3s; 
 }
 
-input[type=submit] {
-    color: #005BB6;
-}
 
 .btn:hover, 
 input[type=submit]:hover {
@@ -260,29 +257,17 @@ input[type=submit]:hover {
   transform: scale(1.01); 
 }
 
-.btn-colour, 
-.btn-colour:link, 
-.btn-colour:visited, 
-input[type=submit], {
-    background-color: #72BCFF;
-    border: 1px solid #005BB6;
-    color: #fff;
-    text-align: center;
-    margin-left: 10%;
-}
-
-.btn-colour:hover, 
-input[type=submit]:hover, {
-    background-color: #005BB6;
-    border: 1px solid #005BB6;
-    color: #fff;
-    margin-left: 10%;
-} 
 
 .btn--light-blue {
   color: #72BCFF;
   border: 1px solid #72BCFF;
   border-radius: 1rem; 
+}
+
+.btn--white {
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 2px;
 }
 
 .btn--light-blue:hover {
@@ -337,11 +322,11 @@ input[type=submit]:hover, {
 
 
 
-/*  GROUPING  ============================================================================= */
+ /* GROUPING  =============================================================================
 
 .row {
   zoom: 1; /* For IE 6/7 (trigger hasLayout) */
-}
+/* }
 
 .row:before,
 .row:after {
@@ -350,22 +335,22 @@ input[type=submit]:hover, {
 }
 .row:after {
   clear:both;
-}
+} */
 
 /*  GRID COLUMN SETUP   ==================================================================== */
 
-.col {
+/* .col {
 	display: block;
 	float:left;
 	margin: 1% 0 1% 1.6%;
 }
 
-.col:first-child { margin-left: 0; } /* all browsers except IE6 and lower */
+.col:first-child { margin-left: 0; } all browsers except IE6 and lower */
 
 /*  GRID OF TWO   ============================================================================= */
 
 
-.span-2-of-2 {
+/* .span-2-of-2 {
 	width: 100%;
 }
 
@@ -374,7 +359,7 @@ input[type=submit]:hover, {
 }
 
 /*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
-
+/* 
 @media only screen and (max-width: 480px) {
 	.span-2-of-2 {
 		width: 100%; 
@@ -382,13 +367,13 @@ input[type=submit]:hover, {
 	.span-1-of-2 {
 		width: 100%; 
 	}
-}
+} */
 
 
 /*  GRID OF THREE   ============================================================================= */
 
 	
-.span-3-of-3 {
+/* .span-3-of-3 {
 	width: 100%; 
 }
 
@@ -398,12 +383,12 @@ input[type=submit]:hover, {
 
 .span-1-of-3 {
 	width: 32.26%; 
-}
+} */
 
 
 /*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
 
-@media only screen and (max-width: 480px) {
+/* @media only screen and (max-width: 480px) {
 	.span-3-of-3 {
 		width: 100%; 
 	}
@@ -413,12 +398,12 @@ input[type=submit]:hover, {
 	.span-1-of-3 {
 		width: 100%;
 	}
-}
+} */
 
 /*  GRID OF FOUR   ============================================================================= */
 
 
-.span-4-of-4 {
+/* .span-4-of-4 {
 	width: 100%; 
 }
 
@@ -432,7 +417,7 @@ input[type=submit]:hover, {
 
 .span-1-of-4 {
 	width: 23.8%; 
-}
+}  */
 
 /* ============================================================================================== */
 /* header */
@@ -506,8 +491,6 @@ input[type=submit]:hover, {
   background: #fff;
   padding: 9rem 0;
   background: #ffffff;
-  /* border-top: 1px solid #72BCFF;
-  border-bottom: 1px solid #72BCFF; */
 }
 
 .section-spaces__heading p {
@@ -784,10 +767,153 @@ input[type=submit]:hover, {
 .event-img {
   width: 100%;
 }
-/* ============================================================================================== */
-/* Contact Form*/
 
-.section-form{
+/* ============================================================================================== */
+/* Section Form */
+
+.section-contact {
+  background: #20253c;
+  border-top: 1px solid #343b60;
+  border-bottom: 1px solid #343b60; 
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form__group, 
+.form__group--textarea {
+  margin-bottom: 3rem;
+  margin-top: 3rem;
+}
+
+.form__label {
+  color: #fff;
+}
+
+.form__group--textarea {
+
+}
+
+.form__group-box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form__group {
+  width: 48%;
+  position: relative;
+  margin-top: 7rem;
+}
+
+.form__input {
+  padding: 3rem 0 1rem 1rem;
+  font-size: 1.7rem;
+  background: #2a3150;
+  border: none;
+  outline: none;
+  width: 100%;
+  color: white;
+  border-bottom: 2px solid transparent;
+  transition: all .3s; 
+}
+
+.form__input::-webkit-input-placeholder {
+  color: #fff;
+  letter-spacing: 3px; 
+}
+
+.form__label {
+  color: #fff !important;
+  letter-spacing: 3px;
+  font-size: 1.8rem;
+  position: absolute;
+  left: 1.5rem;
+  top: 1.5rem;
+  transition: all .3s; 
+}
+
+.form__input:focus, 
+.form__input:valid {
+  border-bottom: 2px solid #fff; 
+}
+
+.form__input:focus + .form__label,
+.form__input:valid + .form__label {
+  left: .4rem;
+  top: 0;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  color: #fff; 
+}
+
+.form__group--textarea {
+  position: relative;
+  margin-bottom: 3rem; 
+}
+
+.form__textarea {
+  background: #2a3150;
+  outline: none;
+  border: none;
+  width: 100%;
+  padding: 3rem 1rem 1rem 1rem;
+  color: #fff;
+  font-size: 1.5rem; 
+}
+
+.form__label--textarea {
+  color: #fff;
+  letter-spacing: 3px;
+  font-size: 1.8rem;
+  position: absolute;
+  left: 1.5rem;
+  top: 1.5rem;
+  transition: all .3s; 
+}
+
+.form__textarea:focus ~ .form__label--textarea {
+  left: .4rem;
+  top: 0;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  color: #fff; 
+}
+
+.form__btn {
+  background: transparent;
+  align-self: flex-start;
+  width: 20rem;
+}
+
+.contact {
+  border-left: 1px solid #343b60;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: space-between;
+}
+
+.contact p, 
+.contact address {
+  color: #fff;
+  font-size: 1.6rem; 
+}
+
+.contact__email, 
+.contact__phone, 
+.contact__address {
+  border-bottom: 1px solid #343b60;
+  width: 100%;
+  height: 100%;
+  padding: 5rem;
+}
+
+.contact__address {
+  border-bottom: none;
+}
+/* .section-form{
     padding: 0;
     height: 100vh;
     background-color: #fff;
@@ -795,9 +921,9 @@ input[type=submit]:hover, {
 .contact-form {
     width: 60%;
     margin: 20px auto;
-}
+} */
 
-input[type=text],
+/* input[type=text],
 input[type=email],
 select,
 textarea {
@@ -808,13 +934,13 @@ textarea {
     margin-top: 0px;
     margin-bottom: 0px;
     text-align: left;
-}
+} */
 
-textarea {
+/* textarea {
     height: 100px;
 }
 
-*:focus {outline:none}
+*:focus {outline:none} */
 
 
 /* ================================================================================================================================ */
@@ -898,7 +1024,7 @@ nav ul {
 }
 
 nav .nav-link {
-
+  color: #fff;
 }
 
 nav .green {

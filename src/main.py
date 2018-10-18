@@ -12,8 +12,7 @@ cspace = CSpace(wb)
 
 # setup flask project
 app = Flask(__name__)
-
-
+app.static_folder = 'templates/resources'
 @app.route('/')
 def index():
     return render_template('index.html')
@@ -25,6 +24,10 @@ def send_js(path):
 @app.route('/admin')
 def admin():
     return render_template('admin_nav.html')
+
+@app.route('/credits')
+def credits():
+    return render_template('credits.html')
 
 @app.route('/rates')
 def rates():
