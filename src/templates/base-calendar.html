@@ -21,16 +21,55 @@
         height: 100%;
     }
 
+    /* ------------------------------- */
+    /*             Ratings             */
+    /* ------------------------------- */
+
+    .month-tabs {
+      width: 100%;
+      display: flex;
+      align-items: right;
+      flex-direction: row;
+      justify-content: flex-end;
+    }
+
+    .month-tab-info {
+      width: 8vw;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: green;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      margin-left: 1px;
+      color: white;
+      border: 1px solid white;
+    }
+    .month-tab-info:hover {
+      cursor : pointer;
+      border: 1px solid red;
+    }
+
+    /* ------------------------------- */
+    /*          Calendar Grid          */
+    /* ------------------------------- */
+
     .booking-calendar {
         display: grid;
-        grid-template-columns: 4fr repeat({{ tempData.maxcols }} , 1fr);
-        grid-template-rows: 1.5em repeat({{ tempData.maxrows }}, 1.5em);
+        <!--grid-template-columns: 4fr repeat({{ tempData.maxdays }} , 1fr);-->
+        <!--grid-template-rows: 1.5em repeat({{ tempData.maxcols}}, 1.5em);-->
         grid-column-gap: 3px;
         grid-row-gap: 3px;
         background-color: #fff;
         padding-top: 2px;
         padding-right: 4px;
         padding-left: 2px;
+        visibility: hidden;
+    }
+
+    .booking-calendar:last-child {
+        visibility: visible;
     }
 
     .calendar-day {
@@ -114,37 +153,43 @@
 <body>
 <div class="container">
     <div id="tooltip"></div>
-    <div class="booking-calendar">
-
-
-
-
-        {% set week_word = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'] %}
-        {% for i in range(tempData.maxcols+1) %}
-            {% if i > 0 %}
-                <div class="calendar-day">
-                {{ i }} {{tempData.dayheader[i-1]}}
-                </div>
-            {% else %}
-                &nbsp;
-            {% endif %}
-        {% endfor %}
-        {% for room, bookings in tempData.bookings.items() %}
-            <div class="calendar-room">
-                {{ room }}
-            </div>
-            {% for book in bookings %}
-                {% if book %}
-                    <div class="calendar-booking-booked" style='background-color: {{ rates[facilities[room].type].Color }}'
-                         onmousemove="showTooltip('{{ clients[book].name }}');"
-                         onmouseleave="closeToolTip();">
-                {% else %}
-                    <div class="calendar-booking-empty">
-                {% endif %}
-                </div>
-            {% endfor %}
-        {% endfor %}
+    <div class="month-tabs">
+        {% for month in tempData %}
+            <div class="month-tab-info">{{ month }}</div>
+        {% endfor%}
     </div>
+
+    {% for month, info in tempData.items() %}
+        <div id="{{ month }}" class="booking-calendar"
+        style="grid-template-columns: 4fr repeat({{ info.maxcols }} , 1fr); grid-template-rows: 2em repeat({{ info.maxrows}}, 1.5em);">
+            {% for i in range(info.maxcols+1) %}
+                {% if i > 0 %}
+                    <div class="calendar-day">
+                    {{ i }} {{info.dayheader[i-1]}}
+                    </div>
+                {% else %}
+                    &nbsp;
+                {% endif %}
+            {% endfor %}
+
+            {% for room, booking_data in info.bookings.items() %}
+                <div class="calendar-room">
+                    {{ room }}
+                </div>
+                {% for booked in booking_data %}
+                    {% if booked %}
+                        <div class="calendar-booking-booked" style='background-color: {{ rates[facilities[room].type].Color }}'
+                             onmousemove="showTooltip('{{ clients[booked].name }}');"
+                             onmouseleave="closeToolTip();">
+                    {% else %}
+                        <div class="calendar-booking-empty">
+                    {% endif %}
+                    </div>
+                {% endfor %}
+            {% endfor %}
+        </div>
+    {% endfor%}
+
     <div class="rating-container">
         <div class="ratings">
             <div>Rates</div>

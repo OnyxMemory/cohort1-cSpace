@@ -50,26 +50,10 @@ def client_page(name=None):
 
 @app.route('/calendar')
 def get_bookings():
-    monthly_booking = cspace.extract_bookings(cspace.workbook['2018-09'])
-
-    mydate = '2018-09'.split('-')
-
-    mdate = datetime.date(int(mydate[0]), int(mydate[1]), 1)
-    maxDays = last_day_of_month(mdate).day
-    dayheader = [];
-    for myday in range(maxDays):
-        mdate = datetime.date(int(mydate[0]), int(mydate[1]), myday+1)
-        dayheader.append(mdate.strftime('%a'))
-    # print(maxDays, dayheader)
+    # Get Rates
     cspace.add_rooms_from_array(cspace.room_array, cspace.workbook['Rates'])
-    # monthly_booking = cspace.extract_bookings(date)
-    # print(monthly_booking)
 
-    tempData = {'date': '2018-10',
-                'dayheader': dayheader,
-                'bookings': monthly_booking,
-                'maxrows': len(monthly_booking),
-                'maxcols': maxDays }
+    # Color code for Rates
     colors = ['#C39BD3', '#7FB3D5', '#7DCEA0', '#F0B27A', '#808B96']
     i = 0
     dataRates = {}
@@ -77,9 +61,32 @@ def get_bookings():
         dataRates[type] = {'Credits': credit, 'Color': colors[i]}
         i = i + 1
 
+    # Get Month tabs from excel worksheet
+    sheets = cspace.workbook.sheetnames
+    sheets.remove('Clients')
+    sheets.remove('Facilities')
+    sheets.remove('Rates')
 
-    # cols = len(next(iter(monthly_booking.values() )))
-    # rows = len(monthly_booking)
+    tempData = {}
+    for month_sheet in sheets:
+        monthly_booking = cspace.extract_bookings(cspace.workbook[month_sheet])
+        print(month_sheet)
+        mydate = month_sheet.split('-')
+
+        mdate = datetime.date(int(mydate[0]), int(mydate[1]), 1)
+        maxDays = cspace.last_day_of_month(mdate)
+        dayheader = [];
+        for myday in range(maxDays):
+            mdate = datetime.date(int(mydate[0]), int(mydate[1]), myday+1)
+            dayheader.append(mdate.strftime('%a'))
+
+        tempData[month_sheet] = {
+                    'dayheader': dayheader,
+                    'bookings': monthly_booking,
+                    'maxrows': len(monthly_booking),
+                    'maxcols': maxDays }
+
+    # print(tempData)
     return render_template('base-calendar.html',
                            tempData=tempData,
                            rates=dataRates,

@@ -86,7 +86,7 @@ class CSpace:
         year, month = month_sheet.title.split('-')
         last_day = CSpace.last_day_of_month(datetime.date(int(year), int(month), 1))
 
-        for cols in month_sheet.iter_cols(min_row=1, max_row=last_day, min_col=3):
+        for cols in month_sheet.iter_cols(min_row=1, max_row=last_day+1, min_col=3):
             for x, cell in enumerate(cols):
                 if x is 0:
                     heading = cell.value
