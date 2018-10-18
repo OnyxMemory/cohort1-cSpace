@@ -16,6 +16,9 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 
+@app.route('/admin')
+def admin():
+    return render_template('admin_nav.html')
 
 @app.route('/<string:date>')
 def show_people_by_date(date):
@@ -24,7 +27,7 @@ def show_people_by_date(date):
 
 
 cspace.add_clients_from_array(cspace.clients_array)
-@app.route('/client/<name>')
+@app.route('/clients/<name>')
 def client_page(name=None):
     return render_template('client_info.html', clients=cspace.clients, name=name)
 
