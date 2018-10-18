@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="resources/css/clients.css">
+</head>
+<body>
+    <table class="client-table">
+        <tr>
+            <th>Name</th>
+            <th>Phone Number</th>
+        </tr>
+        {% for key, client in clients.items() %}
+        <tr>
+            <td><a class="client-button" href="/clients/{{key}}">{{client.name}}</a></td>
+            <td><a class="client-button" href="/clients/{{key}}">{{client.phone}}</a></td>
+            <td><a class="client-button" href="/clients/{{key}}">{{client.email}}</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html> 
