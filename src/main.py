@@ -3,6 +3,7 @@ import openpyxl
 from flask import Flask, render_template
 from CSpace import CSpace
 
+
 # load workbook into cspace object
 wb = openpyxl.load_workbook('./data/cSpace_booking.xlsx')
 cspace = CSpace(wb)
@@ -21,6 +22,29 @@ def show_people_by_date(date):
     clients_credits = cspace.run(date)
     return render_template('tables.html', clients=clients_credits, date=date)
 
+@app.route('/ws/<string:date>')
+def get_bookings_by_month(date):
+    monthly_booking = cspace.extract_bookings(cspace.workbook[date])
+    cspace.add_rooms_from_array(cspace.room_array, cspace.workbook['Rates'])
+    # monthly_booking = cspace.extract_bookings(date)
+    # print(monthly_booking)
+
+    colors = ['#C39BD3', '#7FB3D5', '#7DCEA0', '#F0B27A', '#808B96']
+    i = 0
+    dataRates = {}
+    for type, credit in cspace.rates.items():
+        dataRates[type] = {'Credits': credit, 'Color': colors[i]}
+        i = i + 1
+
+    cols = len(next(iter(monthly_booking.values() )))
+    rows = len(monthly_booking)
+    return render_template('base-calendar.html',
+                           monthly_booking=monthly_booking,
+                           rows=rows,
+                           cols=cols,
+                           rates=dataRates,
+                           facilities=cspace.rooms,
+                           date=date)
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True)
