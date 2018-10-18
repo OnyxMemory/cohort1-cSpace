@@ -25,9 +25,9 @@ def send_js(path):
 def admin():
     return render_template('admin_nav.html')
 
-@app.route('/rates')
-def rates():
-    return render_template('rates.html')
+@app.route('/credits')
+def credits():
+    return render_template('credits.html')
 
 @app.route('/<string:date>')
 def show_people_by_date(date):
