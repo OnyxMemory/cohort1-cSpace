@@ -1,5 +1,4 @@
     function showTooltip(client) {
-          console.log('Yes');
           var ev = window.event;
           var posX = ev.clientX;
           var posY = ev.clientY;
@@ -9,8 +8,9 @@
           elem.style.left=posX+10+'px';
           elem.style.visibility = "visible";
           // elem.style.hover='pointer';
-          elem.innerHTML="<span class='tooltip-client'>"+client+"<BR>Room: "+room+"</span>";
+          elem.innerHTML="<span class='tooltip-client'>"+client+"</span>";
     }
+
     function closeToolTip() {
           var elem = document.getElementById("tooltip");
           elem.style.visibility = "hidden";

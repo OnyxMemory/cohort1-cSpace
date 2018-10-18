@@ -1,6 +1,6 @@
 import openpyxl
 
-from flask import Flask, render_template
+from flask import Flask, render_template, send_from_directory
 from CSpace import CSpace
 from Client import Client
 
@@ -16,6 +16,10 @@ app = Flask(__name__)
 @app.route('/')
 def index():
     return render_template('index.html')
+
+@app.route('/js/<path:path>')
+def send_js(path):
+    return send_from_directory('templates/resources/js/', path)
 
 @app.route('/admin')
 def admin():
