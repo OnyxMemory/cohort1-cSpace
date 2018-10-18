@@ -27,6 +27,11 @@ def show_clientlist():
     cspace.add_clients_from_array(cspace.clients_array)
     return render_template('clients.html', clients=cspace.clients)
 
+@app.route('/clients')
+def show_clientlist():
+    cspace.add_clients_from_array(cspace.clients_array)
+    return render_template('clients.html', clients=cspace.clients)
+
 cspace.add_clients_from_array(cspace.clients_array)
 @app.route('/clients/<name>')
 def client_page(name=None):
