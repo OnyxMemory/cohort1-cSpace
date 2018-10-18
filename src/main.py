@@ -31,6 +31,5 @@ cspace.add_clients_from_array(cspace.clients_array)
 def client_page(name=None):
     return render_template('client_info.html', clients=cspace.clients, name=name)
 
-
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True)
