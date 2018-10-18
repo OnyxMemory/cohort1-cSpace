@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="resources/css/clients.css">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/clients.css') }}" />
 </head>
 <body>
     <table class="client-table">
         <tr>
             <th>Name</th>
             <th>Phone Number</th>
+            <th>Email</th>
         </tr>
         {% for key, client in clients.items() %}
         <tr>

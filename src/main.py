@@ -10,8 +10,7 @@ cspace = CSpace(wb)
 
 # setup flask project
 app = Flask(__name__)
-
-
+app.static_folder = 'templates/resources'
 @app.route('/')
 def index():
     return render_template('index.html')
@@ -20,7 +19,7 @@ def index():
 def admin():
     return render_template('admin_nav.html')
 
-@app.route('/<string:date>')
+@app.route('/date/<date>')
 def show_people_by_date(date):
     clients_credits = cspace.run(date)
     return render_template('tables.html', clients=clients_credits, date=date)
