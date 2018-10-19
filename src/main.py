@@ -44,13 +44,12 @@ def credits():
 def rates():
     return render_template('rates.html')
 
-<<<<<<< HEAD
+
 # @app.route('/<string:date>')
 # def show_people_by_date(date):
 #     clients_credits = cspace.run(date)
 #     return render_template('tables.html', clients=clients_credits, date=date)
-=======
->>>>>>> b138f97af22a5ddb6065d3615ddc3f3594cbb211
+
 
 @app.route('/clients')
 def show_clientlist():
