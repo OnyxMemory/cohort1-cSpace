@@ -4,147 +4,53 @@
     <meta charset="UTF-8">
     <title>Monthly Bookings</title>
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
-    <script src="/js/calendar.js"></script>
-    <style>
-    body {
-        width: 100vw;
-        height: 100vh;
-        overflow: hidden;
-        margin: 0;
-        font-family: "Lato", sans-serif;
-        font-weight: 300;
-        box-sizing: border-box;
-    }
-
-    .container {
-        width: 100%;
-        height: 100%;
-    }
-
-    .booking-calendar {
-        display: grid;
-        grid-template-columns: 4fr repeat({{ tempData.maxcols }} , 1fr);
-        grid-template-rows: 1.5em repeat({{ tempData.maxrows }}, 1.5em);
-        grid-column-gap: 3px;
-        grid-row-gap: 3px;
-        background-color: #fff;
-        padding-top: 2px;
-        padding-right: 4px;
-        padding-left: 2px;
-    }
-
-    .calendar-day {
-        padding-left: 2px;
-        border: 1px solid #cecece;
-        background-color: #cecece;
-        box-shadow: 1px 1px 1px;
-        text-align: center;
-        font-size: 80%;
-    }
-
-    .calendar-room {
-        padding-left: 2px;
-        color: #000;
-        font-size: 70%;
-        border-bottom: 1px solid lightgray;
-    }
-
-    .calendar-booking-empty {
-        border: 1px solid #fff;
-        background-color: #fff;
-        box-shadow: 1px 1px 1px;
-    }
-
-    .calendar-booking-booked {
-        border: 1px solid #cecece;
-        background-color: green;
-        box-shadow: 1px 1px 1px;
-    }
-
-/* ------------------------------- */
-/*             Ratings             */
-/* ------------------------------- */
-    .rating-container {
-        width: 100%,
-        position: absolute;
-    }
-
-    .ratings {
-        position: relative;
-        top: 10px;
-        left: 200px;
-        width: 350px;
-
-        display: grid;
-        grid-template-columns: 3em repeat(5 , 4fr);
-        grid-template-rows: 2.5em;
-        grid-column-gap: 3px;
-        background-color: #fff;
-        text-align: center;
-        box-shadow: 1px 1px 1px;
-    }
-
-    .ratings-rate {
-        font-size: 95%;
-    }
-
-    .ratings-type {
-        font-size: 70%;
-    }
-
-    /* ----------------------------------------- */
-    /*               Tooltip section             */
-    /* ----------------------------------------- */
-
-    #tooltip{
-      visibility: hidden;
-      position:absolute;
-      background-color: lightgray;
-      width: 12vw;
-      height: 10vh;
-      opacity:0.85;
-      border-radius: 6px;
-      font-size: 1em;
-      font-weight: bold;
-      padding: 2px;
-    }
-
-    </style>
+    <link rel="stylesheet" type="text/css" href="static/css/calendar.css">
+    <script src="static/js/calendar.js"></script>
 </head>
 <body>
 <div class="container">
     <div id="tooltip"></div>
-    <div class="booking-calendar">
-
-
-
-
-        {% set week_word = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'] %}
-        {% for i in range(tempData.maxcols+1) %}
-            {% if i > 0 %}
-                <div class="calendar-day">
-                {{ i }} {{tempData.dayheader[i-1]}}
-                </div>
-            {% else %}
-                &nbsp;
-            {% endif %}
-        {% endfor %}
-        {% for room, bookings in tempData.bookings.items() %}
-            <div class="calendar-room">
-                {{ room }}
-            </div>
-            {% for book in bookings %}
-                {% if book %}
-                    <div class="calendar-booking-booked" style='background-color: {{ rates[facilities[room].type].Color }}'
-                         onmousemove="showTooltip('{{ clients[book].name }}');"
-                         onmouseleave="closeToolTip();">
-                {% else %}
-                    <div class="calendar-booking-empty">
-                {% endif %}
-                </div>
-            {% endfor %}
-        {% endfor %}
+    <div class="month-tabs">
+        {% for month in tempData %}
+            <div id="month-tab-{{month}}" class="month-tab-info" onclick="showmonth('{{ month }}');">{{ month }}</div>
+        {% endfor%}
     </div>
+
+    {% for month, info in tempData.items() %}
+      <div id="{{month}}" class="booking-container">
+        <div class="booking-calendar"
+        style="grid-template-columns: 3.5fr repeat({{ info.maxcols }}, 1fr); grid-template-rows: 2em repeat({{ info.maxrows}}, 1.5em);">
+            {% for i in range(info.maxcols+1) %}
+                {% if i > 0 %}
+                    <div class="calendar-day">
+                        <div class="calendar-day-day">{{ i }}</div>
+                        <div class="calendar-day-weekday">{{info.dayheader[i-1]}}</div>
+                    </div>
+                {% else %}
+                    &nbsp;
+                {% endif %}
+            {% endfor %}
+
+            {% for room, booking_data in info.bookings.items() %}
+                <div class="calendar-room">
+                    {{ room }}
+                </div>
+                {% for booked in booking_data %}
+                    {% if booked %}
+                        <div class="calendar-booking-booked" style='background-color: {{ rates[facilities[room].type].Color }}'
+                             onmousemove="showTooltip('{{ clients[booked].name }}');"
+                             onmouseleave="closeToolTip();">
+                    {% else %}
+                        <div class="calendar-booking-empty"
+                             onclick="showBookingAlert();">
+                    {% endif %}
+                    </div>
+                {% endfor %}
+            {% endfor %}
+        </div>
+      </div>
+    {% endfor%}
+
     <div class="rating-container">
         <div class="ratings">
             <div>Rates</div>
