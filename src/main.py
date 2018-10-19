@@ -17,9 +17,9 @@ app.static_folder = 'templates/resources'
 def index():
     return render_template('index.html')
 
-@app.route('/js/<path:path>')
-def send_js(path):
-    return send_from_directory('templates/resources/js/', path)
+# @app.route('/js/<path:path>')
+# def send_js(path):
+#     return send_from_directory('templates/resources/js/', path)
 
 @app.route('/admin')
 def admin():
@@ -67,10 +67,11 @@ def get_bookings():
     sheets.remove('Facilities')
     sheets.remove('Rates')
 
+    # Form the data structure to be sent to template
+    #   it will include all the month tabs from the excel spreadsheet
     tempData = {}
     for month_sheet in sheets:
         monthly_booking = cspace.extract_bookings(cspace.workbook[month_sheet])
-        print(month_sheet)
         mydate = month_sheet.split('-')
 
         mdate = datetime.date(int(mydate[0]), int(mydate[1]), 1)
