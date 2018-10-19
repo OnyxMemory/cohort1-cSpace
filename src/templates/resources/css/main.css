@@ -727,8 +727,31 @@ input[type=submit]:hover {
 /* ============================================================================================== */
 /* Upcoming Events */
 /* ============================================================================================== */
-
 .section-events{
+  padding: 10rem;
+}
+
+.events {
+  color: blue;
+}
+
+.events__date {
+  color: blue;
+}
+
+.events__text--main {
+
+}
+
+.events__text--sub {
+
+}
+
+.events__img {
+  width: 40%;
+}
+
+/* .section-events{
   padding: 10rem;
   height: 100vh;
   background-color: rgba(114, 188, 255, 0.19);
@@ -766,7 +789,7 @@ input[type=submit]:hover {
 
 .event-img {
   width: 100%;
-}
+} */
 
 /* ============================================================================================== */
 /* Section Form */
