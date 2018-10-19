@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1{
+    color: #090f5d;
+    font-size: 40px;
+    font-family: Arial;
+    
+    
+}
+
+
+p {
+    font-size: 20px;
+    text-align: justify;
+    font-family: sans-serif;
+    
+}
+.main-text{
+    text-align: justify;
+    
+}
