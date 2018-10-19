@@ -31,7 +31,6 @@ def index():
 #     return send_from_directory('templates/resources/js/', path)
 
 
->>>>>>> b138f97af22a5ddb6065d3615ddc3f3594cbb211
 @app.route('/admin')
 def admin():
     return render_template('admin_nav.html')
