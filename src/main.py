@@ -83,8 +83,9 @@ def get_bookings():
     sheets.remove('Facilities')
     sheets.remove('Rates')
 
-    # Form the data structure to be sent to template
+    # Create the data structure to be sent to template
     #   it will include all the month tabs from the excel spreadsheet
+    #   plus the rates, facilities and clients ... !!
     tempData = {}
     for month_sheet in sheets:
         monthly_booking = cspace.extract_bookings(cspace.workbook[month_sheet])

@@ -1,5 +1,10 @@
 document.addEventListener('DOMContentLoaded', function() {
     selectStartingMonthTab();
+
+    var classname = document.getElementsByClassName("calendar-booking-empty");
+    for (var i = 0; i < classname.length; i++) {
+        classname[i].addEventListener('click', showBookingAlert, false);
+    }
 });
 
 
@@ -51,4 +56,22 @@ function showTooltip(client) {
 function closeToolTip() {
       var elem = document.getElementById("tooltip");
       elem.style.visibility = "hidden";
+}
+
+function showBookingAlert() {
+      var ev = window.event;
+      var posX = ev.clientX;
+      var posY = ev.clientY;
+      var element = document.elementFromPoint(posX, posY);
+      var elem = document.getElementById("tooltip");
+
+      elem.style.top=element.offsetTop+5+'px';
+      elem.style.left=posX+10+'px';
+      elem.style.height='100px';
+      elem.style.visibility = "visible";
+
+      // elem.style.hover='pointer';
+
+
+      elem.innerHTML="<div><p class='tooltip-bookit'>Book this room !</p><p class='tooltip-construction'>Under construction.</p></div>";
 }

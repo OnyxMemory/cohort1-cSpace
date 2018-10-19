@@ -152,3 +152,12 @@
       padding: 2px;
     }
 
+    .tooltip-bookit {
+       font-weight: 200;
+       text-align: center;
+    }
+
+    .tooltip-construction {
+       font-weight: 700;
+       text-align: center;
+    }
