@@ -6,26 +6,30 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 </head>
 <body>
-    <div class="container">
-        <table class="table table-striped">
-            <thead class="thead-dark">
-            <tr>
-                <th scope="col">Name</th>
-                <th scope="col">Phone Number</th>
-                <th scope="col">Email</th>
-            </tr>
-            </thead>
-            <tbody>
-            {% for key, client in clients.items() %}
-            <tr>
-                <td><a class="btn btn-outline-primary btn-block" href="/clients/{{key}}">{{client.name}}</a></td>
-                <td><a class="btn btn-outline-primary btn-block" href="/clients/{{key}}">{{client.phone}}</a></td>
-                <td><a class="btn btn-outline-primary btn-block" href="/clients/{{key}}">{{client.email}}</a></td>
-            </tr>
-            {% endfor %}
-            </tbody>
+    <div class="page">
+        <div class="container back">
             <a href="/admin"><h1>Back</h1></a>
-        </table>
+        </div>
+        <div class="container client-table" style="overflow: auto">
+            <table class="table table-striped">
+                <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Phone Number</th>
+                    <th scope="col">Email</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for key, client in clients.items() %}
+                <tr>
+                    <td><a class="btn btn-outline-primary btn-block" href="/clients/{{key}}">{{client.name}}</a></td>
+                    <td><a class="btn btn-outline-primary btn-block" href="/clients/{{key}}">{{client.phone}}</a></td>
+                    <td><a class="btn btn-outline-primary btn-block" href="/clients/{{key}}">{{client.email}}</a></td>
+                </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
