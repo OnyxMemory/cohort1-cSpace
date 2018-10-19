@@ -1,4 +1,6 @@
 import openpyxl
+import datetime
+import json
 
 from flask import Flask, render_template, send_from_directory
 from CSpace import CSpace
@@ -12,13 +14,22 @@ cspace = CSpace(wb)
 # setup flask project
 app = Flask(__name__)
 app.static_folder = 'templates/resources'
+
+
 @app.route('/')
 def index():
-    return render_template('index.html')
+    with open('data/testimonials.json') as json_data:
+        testimonials = json.load(json_data)
 
-@app.route('/js/<path:path>')
-def send_js(path):
-    return send_from_directory('templates/resources/js/', path)
+    print(testimonials)
+
+    return render_template('index.html', testimonials=testimonials)
+
+
+# @app.route('/js/<path:path>')
+# def send_js(path):
+#     return send_from_directory('templates/resources/js/', path)
+
 
 @app.route('/admin')
 def admin():
@@ -28,32 +39,37 @@ def admin():
 def credits():
     return render_template('credits.html')
 
+
 @app.route('/rates')
 def rates():
     return render_template('rates.html')
 
+<<<<<<< HEAD
 # @app.route('/<string:date>')
 # def show_people_by_date(date):
 #     clients_credits = cspace.run(date)
 #     return render_template('tables.html', clients=clients_credits, date=date)
+=======
+>>>>>>> b138f97af22a5ddb6065d3615ddc3f3594cbb211
 
 @app.route('/clients')
 def show_clientlist():
     cspace.add_clients_from_array(cspace.clients_array)
     return render_template('clients.html', clients=cspace.clients)
 
+
 cspace.add_clients_from_array(cspace.clients_array)
 @app.route('/clients/<name>')
 def client_page(name=None):
     return render_template('client_info.html', clients=cspace.clients, name=name)
 
-@app.route('/ws/<string:date>')
-def get_bookings_by_month(date):
-    monthly_booking = cspace.extract_bookings(cspace.workbook[date])
-    cspace.add_rooms_from_array(cspace.room_array, cspace.workbook['Rates'])
-    # monthly_booking = cspace.extract_bookings(date)
-    # print(monthly_booking)
 
+@app.route('/calendar')
+def get_bookings():
+    # Get Rates
+    cspace.add_rooms_from_array(cspace.room_array, cspace.workbook['Rates'])
+
+    # Color code for Rates
     colors = ['#C39BD3', '#7FB3D5', '#7DCEA0', '#F0B27A', '#808B96']
     i = 0
     dataRates = {}
@@ -61,16 +77,38 @@ def get_bookings_by_month(date):
         dataRates[type] = {'Credits': credit, 'Color': colors[i]}
         i = i + 1
 
-    cols = len(next(iter(monthly_booking.values() )))
-    rows = len(monthly_booking)
+    # Get Month tabs from excel worksheet
+    sheets = cspace.workbook.sheetnames
+    sheets.remove('Clients')
+    sheets.remove('Facilities')
+    sheets.remove('Rates')
+
+    # Form the data structure to be sent to template
+    #   it will include all the month tabs from the excel spreadsheet
+    tempData = {}
+    for month_sheet in sheets:
+        monthly_booking = cspace.extract_bookings(cspace.workbook[month_sheet])
+        mydate = month_sheet.split('-')
+
+        mdate = datetime.date(int(mydate[0]), int(mydate[1]), 1)
+        maxDays = cspace.last_day_of_month(mdate)
+        dayheader = [];
+        for myday in range(maxDays):
+            mdate = datetime.date(int(mydate[0]), int(mydate[1]), myday+1)
+            dayheader.append(mdate.strftime('%a'))
+
+        tempData[month_sheet] = {
+                    'dayheader': dayheader,
+                    'bookings': monthly_booking,
+                    'maxrows': len(monthly_booking),
+                    'maxcols': maxDays }
+
+    # print(tempData)
     return render_template('base-calendar.html',
-                           monthly_booking=monthly_booking,
-                           rows=rows,
-                           cols=cols,
+                           tempData=tempData,
                            rates=dataRates,
                            facilities=cspace.rooms,
-                           clients=cspace.clients,
-                           date=date)
+                           clients=cspace.clients)
 
 
 if __name__ == '__main__':

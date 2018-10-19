@@ -1046,32 +1046,7 @@ nav ul {
     font-size: 3em;
 }
 
-nav .nav-link {
-  color: #fff;
-}
-
-nav .green {
-    color: #fff;
-}
-nav .green:hover {
-    color: #fff;
-}
-nav .orange {
-    color: #fff;
-}
-nav .orange:hover {
-    color: #fff;
-}
-nav .blue {
-    color: #fff;
-}
-nav .blue:hover {
-    color: #fff;
-}
-nav .purple {
-    color: #fff;
-}
-nav .purple:hover {
+.nav-link {
     color: #fff;
 }
 
@@ -1079,12 +1054,10 @@ nav .purple:hover {
   background-color: white;
   opacity: 0.9;
   border-bottom: 1px solid #019db3;
-  color: #333;
 }
 
 .hidden {
   display: none;
-  color: #333;
 }
 
 .show {
