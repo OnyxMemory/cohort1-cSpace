@@ -1,0 +1,23 @@
+[
+      {
+          "first_name": "John",
+          "last_name": "Black",
+          "company": "Microsoft",
+          "testimonial": "I have worked many years with this company and they provide the greatest stuff ever.",
+          "picture": "john.jpg"
+      },
+      {
+          "first_name": "Mary",
+          "last_name": "Lamb",
+          "company": "Google",
+          "testimonial": "I have worked many years with this company and they provide the greatest stuff ever.",
+          "picture": "mary.jpg"
+      },
+      {
+          "first_name": "Simon",
+          "last_name": "Says",
+          "company": "Amazon",
+          "testimonial": "I have worked many years with this company and they provide the greatest stuff ever.",
+          "picture": "simon.jpg"
+      }
+]

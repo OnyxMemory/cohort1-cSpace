@@ -1,5 +1,6 @@
 import openpyxl
 import datetime
+import json
 
 from flask import Flask, render_template, send_from_directory
 from CSpace import CSpace
@@ -13,13 +14,22 @@ cspace = CSpace(wb)
 # setup flask project
 app = Flask(__name__)
 app.static_folder = 'templates/resources'
+
+
 @app.route('/')
 def index():
-    return render_template('index.html')
+    with open('data/testimonials.json') as json_data:
+        testimonials = json.load(json_data)
+
+    print(testimonials)
+
+    return render_template('index.html', testimonials=testimonials)
+
 
 @app.route('/js/<path:path>')
 def send_js(path):
     return send_from_directory('templates/resources/js/', path)
+
 
 @app.route('/admin')
 def admin():
@@ -29,24 +39,23 @@ def admin():
 def credits():
     return render_template('credits.html')
 
+
 @app.route('/rates')
 def rates():
     return render_template('rates.html')
 
-@app.route('/<string:date>')
-def show_people_by_date(date):
-    clients_credits = cspace.run(date)
-    return render_template('tables.html', clients=clients_credits, date=date)
 
 @app.route('/clients')
 def show_clientlist():
     cspace.add_clients_from_array(cspace.clients_array)
     return render_template('clients.html', clients=cspace.clients)
 
+
 cspace.add_clients_from_array(cspace.clients_array)
 @app.route('/clients/<name>')
 def client_page(name=None):
     return render_template('client_info.html', clients=cspace.clients, name=name)
+
 
 @app.route('/calendar')
 def get_bookings():
