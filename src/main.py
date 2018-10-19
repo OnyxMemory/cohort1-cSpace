@@ -26,8 +26,6 @@ def index():
     return render_template('index.html', testimonials=testimonials)
 
 
-<<<<<<< HEAD
-=======
 # @app.route('/js/<path:path>')
 # def send_js(path):
 #     return send_from_directory('templates/resources/js/', path)
