@@ -1,0 +1,14 @@
+
+body {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url(../img/background.jpeg);
+}
+body h1 {
+    color:#fff;
+}
+.images img {
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin: auto;
+}

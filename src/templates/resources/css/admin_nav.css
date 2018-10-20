@@ -1,8 +1,27 @@
-#v-pills-home-tab {
-    color: black
+
+body {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url(../img/background.jpeg);
 }
 
-.col-3 {
+.col-2 {
     margin-top: 20px;
     margin-left: 15px;
+}
+
+#v-pills-home h1 {
+    margin-top: 20px;
+}
+
+.col-8 h1 {
+    text-align: center;
+    background-image: linear-gradient(to right, #005BB6, rgb(181, 219, 255));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    background-color: transparent;
+}
+
+.col-8 p,
+.col-8 a {
+    color: #005BB6;
 }
