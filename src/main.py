@@ -37,7 +37,7 @@ def index():
 
 @app.route('/admin')
 def admin():
-    return render_template('admin_working.html')
+    return render_template('admin_nav.html')
 
 @app.route('/credits')
 def credits():
