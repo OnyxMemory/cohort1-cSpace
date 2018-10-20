@@ -29,14 +29,6 @@ body {
 /*  REUSABLE COMPONENTS */
 /* ------------------------------------- */
 
-.row {
-    max-width: 114rem;
-    margin: 0 auto; 
-}
-
-.box {
-    padding: 1%;
-}
 
 /* ============================================================================================== */  
 /* Typography/ Headings */
@@ -239,7 +231,7 @@ input[type=submit] {
   text-decoration: none;
   padding: 1rem 4rem;
   border: 1px solid #005BB6;
-  border-radius: 2rem;
+  border-radius: 1rem;
   font-size: 2rem;
   display: inline-block;
   transition: .3s; 
@@ -265,8 +257,7 @@ input[type=submit]:hover {
 }
 
 .btn--white {
-  color: #fff;
-  border: 1px solid #fff;
+  border: 1px solid #fff !important;
   border-radius: 2px;
 }
 
@@ -317,114 +308,15 @@ input[type=submit]:hover {
 }
 
 
-
-/*  SECTIONS  ============================================================================= */
-
-
-
- /* GROUPING  =============================================================================
-
-.row {
-  zoom: 1; /* For IE 6/7 (trigger hasLayout) */
-/* }
-
-.row:before,
-.row:after {
-  content:"";
-  display:table;
-}
-.row:after {
-  clear:both;
-} */
-
-/*  GRID COLUMN SETUP   ==================================================================== */
-
-/* .col {
-	display: block;
-	float:left;
-	margin: 1% 0 1% 1.6%;
-}
-
-.col:first-child { margin-left: 0; } all browsers except IE6 and lower */
-
-/*  GRID OF TWO   ============================================================================= */
-
-
-/* .span-2-of-2 {
-	width: 100%;
-}
-
-.span-1-of-2 {
-	width: 49.2%;
-}
-
-/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
-/* 
-@media only screen and (max-width: 480px) {
-	.span-2-of-2 {
-		width: 100%; 
-	}
-	.span-1-of-2 {
-		width: 100%; 
-	}
-} */
-
-
-/*  GRID OF THREE   ============================================================================= */
-
-	
-/* .span-3-of-3 {
-	width: 100%; 
-}
-
-.span-2-of-3 {
-	width: 66.13%; 
-}
-
-.span-1-of-3 {
-	width: 32.26%; 
-} */
-
-
-/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
-
-/* @media only screen and (max-width: 480px) {
-	.span-3-of-3 {
-		width: 100%; 
-	}
-	.span-2-of-3 {
-		width: 100%; 
-	}
-	.span-1-of-3 {
-		width: 100%;
-	}
-} */
-
-/*  GRID OF FOUR   ============================================================================= */
-
-
-/* .span-4-of-4 {
-	width: 100%; 
-}
-
-.span-3-of-4 {
-	width: 74.6%; 
-}
-
-.span-2-of-4 {
-	width: 49.2%; 
-}
-
-.span-1-of-4 {
-	width: 23.8%; 
-}  */
-
 /* ============================================================================================== */
 /* header */
 
 .header {
   height: 90vh;
-  background-image: linear-gradient(to right bottom, rgba(22, 22, 22, 0.8), rgba(28, 56, 83, 0.2)), url(../img/header-background.jpg);
+  background-image: linear-gradient(
+    to right bottom, 
+  rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.4)), 
+    url(../img/header-background.jpg);
   background-size: cover;
   background-attachment: fixed;
   background-position: center; 
@@ -455,7 +347,7 @@ input[type=submit]:hover {
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
   display: flex;
   justify-content: space-around;
-  align-items: center; 
+  align-items: center;
 }  
   
   .bottom-nav__link {
@@ -649,7 +541,6 @@ input[type=submit]:hover {
   background-size: cover;
 }
 
-
 .testimonials__box {
   background: rgb(58, 58, 58);
   color: #fff;
@@ -729,75 +620,43 @@ input[type=submit]:hover {
 /* ============================================================================================== */
 .section-events{
   padding: 10rem;
+  background: #f4f4f4;
+  background-image: linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),url(../img/events-section-bg.jpeg);
+  background-size: cover;
+  background-position: center;
 }
 
 .events {
-  color: blue;
+  color: #fff;
+  display: flex;
+  margin: 2rem;
+  margin-left: 0;
 }
 
 .events__date {
-  color: blue;
+  font-size: 2.5rem;
 }
 
 .events__text--main {
-
+  font-size: 2.2rem;
+  margin-top: -.5rem;
 }
 
 .events__text--sub {
-
+  font-size: 1.8rem;
 }
 
 .events__img {
-  width: 40%;
+  height: 25rem;
 }
-
-/* .section-events{
-  padding: 10rem;
-  height: 100vh;
-  background-color: rgba(114, 188, 255, 0.19);
-}
-
-.section-events .main-date {
-    line-height: 145%;
-    width: 100%;
-    margin-left: 15%;
-    margin-bottom: 3px;
-    margin-top:10px;
-    color: #333;
-    font-size: 200%;
-    text-align: right;
-    font-weight: 300;
-}
-
-.section-events .paragpragh-main {
-    text-align: left;
-    margin-bottom: 3px;
-    margin-top:3px;
-}
-
-.section-events .paragpraph-sub {
-    text-align:left;
-    margin-bottom: 3px;
-    margin-top:3px;
-    margin-left: 15%;
-}
-
-.section-events .main-date span {
-    font-size: 75%;
-    font-weight: 300;
-}
-
-.event-img {
-  width: 100%;
-} */
-
 /* ============================================================================================== */
 /* Section Form */
 
 .section-contact {
   background: #20253c;
   border-top: 1px solid #343b60;
-  border-bottom: 1px solid #343b60; 
+  border-bottom: 1px solid #343b60;
+  padding: 5rem;
 }
 
 .form {
@@ -905,9 +764,9 @@ input[type=submit]:hover {
 }
 
 .form__btn {
-  background: transparent;
   align-self: flex-start;
   width: 20rem;
+  background: transparent;
 }
 
 .contact {
@@ -936,38 +795,83 @@ input[type=submit]:hover {
 .contact__address {
   border-bottom: none;
 }
-/* .section-form{
-    padding: 0;
-    height: 100vh;
-    background-color: #fff;
-}
-.contact-form {
-    width: 60%;
-    margin: 20px auto;
-} */
-
-/* input[type=text],
-input[type=email],
-select,
-textarea {
-    width: 85%;
-    padding: 5px;
-    border-radius: 3px;
-    border: 1px solid #e6e6e6;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    text-align: left;
-} */
-
-/* textarea {
-    height: 100px;
-}
-
-*:focus {outline:none} */
-
 
 /* ================================================================================================================================ */
-/*
+/* Footer
+*/
+
+.footer {
+  background: #323232;
+  padding: 5rem;
+}
+
+.footer__img {
+  height: 5rem;
+}
+
+.footer__ul {
+  list-style: none;
+  display: flex;
+  justify-items: center;
+  margin-top: 2rem;
+}
+
+.footer__item {
+  
+}
+
+.footer__item:not(:last-child) {
+  margin-right: 2rem;
+}
+
+.footer__link:link,
+.footer__link:visited {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1.9rem;
+  letter-spacing: 1px;
+  text-decoration: none;
+  padding-bottom: 3px;
+  border: 1px solid transparent;
+  transition: all .3s;
+}
+
+.footer__link:link:hover,
+.footer__link:visited:hover {
+  border-bottom: 1px solid #72BCFF;
+  color: #72BCFF;
+}
+
+.footer__text {
+  color:#fff;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  margin-top: -3rem;
+}
+
+.footer__social-ul {
+  list-style: none;
+  display: flex;
+  justify-items: center;
+  justify-content: space-evenly;
+}
+
+.footer__social-item {
+  
+}
+
+.footer__social-link {
+  text-decoration: none;
+  font-size: 4rem;
+  color: #fff;
+  transition: all .3s;
+}
+
+.footer__social-link:hover {
+  color: #72BCFF;
+}
+/* ================================================================================================================================ */
+/* Grid
 */
 
 
@@ -1024,7 +928,7 @@ textarea {
 /* Navbar specific css*/
 
 nav {
-   background-color:rgba(0, 0, 0, 0.5); 
+   background-color:rgba(0, 0, 0, 0.3); 
     padding-right: 30px!important;
 }
 
@@ -1053,7 +957,8 @@ nav ul {
 .brighten {
   background-color: white;
   opacity: 0.9;
-  border-bottom: 1px solid #019db3;
+  /* border-bottom: 1px solid #019db3; */
+  box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, 0.1); 
 }
 
 .hidden {
