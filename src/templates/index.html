@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
     <link rel="stylesheet" href="static/css/main.css" />
     <title>cSpace</title>
 </head>
@@ -13,8 +14,8 @@
     <header class="header">
      <nav class="navbar fixed-top navbar-expand-sm">
         <a class="navbar-brand" href="#">
-          <img class="light-img" src="static/img/cspace-logo.png" width="300"/>
-          <img class="dark-img hidden" src="static/img/cspace-logo-dark.png" width="300"/>
+          <img class="light-img" src="static/img/cspace-logo.png" width="250"/>
+          <img class="dark-img hidden" src="static/img/cspace-logo-dark.png" width="250"/>
         </a>
           <ul class="navbar-nav justify-content-end">
             <li class="nav-item">
@@ -30,16 +31,16 @@
         </div>
       </nav> 
     </header>
-        <div class="heading-text-box">
-            <h1 class="heading-primary">
-                <span class="heading-primary--main">Never stop creating.</span>
-                <span class="heading-primary--sub">Creativity. Community. Collaboration. Change.</span>
-            </h1>
-            
-            <div class="book-now u-margin-top-small">
-                <a href="#" class="btn btn__animated">Book Now</a>
-            </div>
+        
+    <div class="heading-text-box">
+        <h1 class="heading-primary">
+            <span class="heading-primary--main">Never stop creating.</span>
+            <span class="heading-primary--sub">Creativity. Community. Collaboration. Change.</span>
+        </h1>        
+        <div class="book-now u-margin-top-small">
+            <a href="#" class="btn btn__animated">Book Now</a>
         </div>
+    </div>
 
     
     <div class="bottom-nav">
@@ -48,7 +49,7 @@
         </div>
 
         <div class="bottom-nav__link-box">
-            <a href="#" class="bottom-nav__link">Community</a>
+            <a href="#" class="bottom-nav__link">Testimonials</a>
         </div>
 
         <div class="bottom-nav__link-box">
@@ -64,7 +65,7 @@
         <div class="section-spaces__heading">
             <div class="u-center-text">
                 <h2 class="heading-secondary u-margin-bottom-small">
-                    hello Our Spaces &mdash; Inspire Your Team Today
+                    Our Spaces &mdash; Inspire Your Team Today
                 </h2>
                 <p>
                     Located in a vibrant, arts-friendly neighbourhood near downtown, cSPACE King Edward merges century-old historic fabric, leading edge technology and a vital community of creatives to offer Calgary’s most distinctive event, meeting and exhibition spaces.
@@ -163,147 +164,92 @@
                     </div>
                 </div>
             </div>
-        </section>
+    </section>
 
-        <section class="section-testimonials">
-            <div class="row">
-                <h2 class="heading-secondary heading-secondary--black u-center-text">
-                    OUR CLIENTS
-                </h2>
-                <p class="heading-secondary--sub">HERE'S WHAT THEY HAVE TO SAY!</p>
-            </div>
-            <div class="row">
-<<<<<<< HEAD
+    <section class="section-testimonials">
+        <div class="u-center-text u-margin-bottom-big">
+            <h2 class="heading-secondary heading-secondary--black">
+                OUR CLIENTS
+            </h2>
+            <p class="heading-secondary--sub">HERE'S WHAT THEY HAVE TO SAY!</p>
+        </div>
+        <div class="row">
+            {% for testimonial in testimonials %}
                 <div class="col-1-of-3">
                     <div class="testimonials__box">
-                        <img src="static/img/customer-1.jpg" alt="testimonial-1" class="testimonials__img">
+                        <img src="static/img/testimonials/{{ testimonial.picture }}" alt="testimonial-1" class="testimonials__img">
                         <p class="testimonials__text">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat error deleniti, nemo ratione consequatur veritatis nisi mollitia, dolore animi eos quibusdam cum numquam tempore tempora iusto adipisci excepturi earum.
+                            {{ testimonial.testimonial }}
                         </p>
                     </div>
-                    <!-- <div class="down-arrow"></div> -->
                     <div class="testimonials__client">
-                        <p class="testimonials__client-name">John Smith</p>
-                        <p class="testimonials__client-company">ABC Company</p>
+                        <p class="testimonials__client-name">{{ testimonial.first_name }} {{ testimonial.last_name }}</p>
+                        <p class="testimonials__client-company">{{ testimonial.company }}</p>
                     </div>
                 </div>
-                <div class="col-1-of-3">
-                    <div class="testimonials__box testimonials__box--middle">
-                        <img src="static/img/customer-1.jpg" alt="testimonial-1" class="testimonials__img">
-                        <p class="testimonials__text">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat error deleniti, nemo ratione consequatur veritatis nisi mollitia, dolore animi eos quibusdam cum numquam tempore tempora iusto adipisci excepturi earum.
-                        </p>
-                    </div>
-                    <!-- <div class="down-arrow"></div> -->
-                    <div class="testimonials__client testimonials__client--middle">
-                        <p class="testimonials__client-name">John Smith</p>
-                        <p class="testimonials__client-company">ABC Company</p>
-                    </div>
-                </div>
-                <div class="col-1-of-3">
-                    <div class="testimonials__box">
-                        <img src="static/img/customer-1.jpg" alt="testimonial-1" class="testimonials__img">
-                        <p class="testimonials__text">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat error deleniti, nemo ratione consequatur veritatis nisi mollitia, dolore animi eos quibusdam cum numquam tempore tempora iusto adipisci excepturi earum.
-                        </p>
-                        </div>
-                        <!-- <div class="down-arrow"></div> -->
-                        <div class="testimonials__client">
-                            <p class="testimonials__client-name">John Smith</p>
-                            <p class="testimonials__client-company">ABC Company</p>
-                    </div>
-                </div>
-=======
-                {% for testimonial in testimonials %}
-                    <div class="col-1-of-3">
-                        <div class="testimonials__box">
-                            <img src="static/img/testimonials/{{ testimonial.picture }}" alt="testimonial-1" class="testimonials__img">
-                            <p class="testimonials__text">
-                                {{ testimonial.testimonial }}
-                            </p>
-                        </div>
-                        <!-- <div class="down-arrow"></div> -->
-                        <div class="testimonials__client">
-                            <p class="testimonials__client-name">{{ testimonial.first_name }} {{ testimonial.last_name }}</p>
-                            <p class="testimonials__client-company">{{ testimonial.company }}</p>
-                        </div>
-                    </div>
-                {% endfor %}
->>>>>>> b138f97af22a5ddb6065d3615ddc3f3594cbb211
-            </div>
-        </section>
+            {% endfor %}
+        </div>
+    </section>
         
-        <section class="section-events">
-            <div class="row">
-                <h2 class="heading-secondary u-center-text">Upcoming Public Events</h2>
-            </div>
-            <div class="row">
-                <div class="col-1-of-2">
-                    <div class="events">
-                        <div class="events__date">Oct 26</div>
-                        <p class="events__text--main">Exhibition: History of the Great Bambino</p> 
-                        <p class="events__text--sub">Come see images and artwork all about Babe Ruth
-                                        and learn why many consider him the great 
-                                        baseball player of all-time</p>                  
-                    </div>
-<<<<<<< HEAD
-                </div>
-                <div class="col-1-of-2">
-                    <img src="static/img/Meeting.jpeg" class="event__img">
-=======
->>>>>>> b138f97af22a5ddb6065d3615ddc3f3594cbb211
-                </div>
-            </div>
+    <section class="section-events">
+        <div class="u-center-text u-margin-bottom-big">
+            <h2 class="heading-secondary">Upcoming Public Events</h2>
+        </div>
 
-            <div class="row">
-                <div class="col-1-of-2">
-                    <div class="events">
-                        <div class="events__date">Oct 27</div>
-                        <p class="events__text--main">Farmers and Farmers Market at cSpace</p> 
-                        <p class="events__text--sub">Join us every Saturday 10 – 3, starting June 2 at the Farmers & Makers Market at cSPACE and enjoy an incredible selection of fresh produce, locally made, baked and grown goods, food trucks, live music, children’s activities, and more.</p>                  
-                    </div>
-<<<<<<< HEAD
-                </div>
-                <div class="col-1-of-2">
-                    <img src="static/img/Meeting.jpeg" class="event__img">
-                </div>
-            </div>
-            
-            <div class="row">
-                <div class="col-1-of-2">
-                    <div class="events">
-                        <div class="events__date">Oct 31</div>
-                        <p class="events__text--main">cSpace Halloween Spooktacular!</p> 
-                        <p class="events__text--sub">Come join us in celebrating the spookiest holiday
-                                of the yeat. Prizes for best costumes.</p>                  
-=======
->>>>>>> b138f97af22a5ddb6065d3615ddc3f3594cbb211
+        <div class="row">
+            <div class="col-1-of-3">
+                <div class="events">
+                    <div class="events__text-box">
+                        <div class="events__date">Oct 27, 2018</div>
+                        <p class="events__text--main">Farmers Market at cSpace</p> 
+                        <p class="events__text--sub">
+                            Join us every Saturday 10 – 3, starting June 2 at the Farmers & Makers Market at cSPACE and enjoy an incredible selection of fresh produce, locally made, baked and grown goods, food trucks, live music, children’s activities, and more.
+                        </p>                  
                     </div>
                 </div>
-                <div class="col-1-of-2">
-                    <img src="static/img/Meeting.jpeg" class="event__img">
+            </div>
+            <div class="col-1-of-3">
+                <div class="events">
+                    <div class="events__text-box">
+                        <div class="events__date">Oct 27, 2018</div>
+                        <p class="events__text--main">Farmers Market at cSpace</p> 
+                         <p class="events__text--sub">
+                            Join us every Saturday 10 – 3, starting June 2 at the Farmers & Makers Market at cSPACE and enjoy an incredible selection of fresh produce, locally made, baked and grown goods, food trucks, live music, children’s activities, and more.
+                        </p>                  
+                    </div>
                 </div>
             </div>
-        </section>
+            <div class="col-1-of-3">
+                <div class="events">
+                    <div class="events__text-box">
+                        <div class="events__date">Oct 27, 2018</div>
+                        <p class="events__text--main">Farmers Market at cSpace</p> 
+                        <p class="events__text--sub">
+                            Join us every Saturday 10 – 3, starting June 2 at the Farmers & Makers Market at cSPACE and enjoy an incredible selection of fresh produce, locally made, baked and grown goods, food trucks, live music, children’s activities, and more.
+                        </p>                  
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="u-center-text">
+            <a href="#" class="events__btn btn btn--white">See all events</a>
+        </div>
+    </section>
 
-        <section class="section-contact">
-            <div class="row">
-                <div class="col-1-of-2">
-                    <div class="contact__box">
-                        <form action="#" class="form">
-                            <div class="form__group-box">
-                                <div class="form__group">
-                                    <input type="text" class="form__input" id="name" required>
-                                    <label for="name" class="form__label">NAME</label>
-                                </div>
-                                <div class="form__group">
-                                    <input type="text" class="form__input" id="email" required>
-                                    <label for="email" class="form__label">EMAIL</label>
-                                </div>
+    <section class="section-contact">
+        <div class="row">
+            <div class="col-1-of-2">
+                <div class="contact__box">
+                    <form action="#" class="form">
+                        <div class="form__group-box">
+                            <div class="form__group">
+                                <input type="text" class="form__input" id="name" required>
+                                <label for="name" class="form__label">NAME</label>
                             </div>
-                            <div class="form__group--textarea">
-                                <textarea name="message" id="message" cols="30" rows="8" class="form__textarea"></textarea>
-                                <label for="message" class="form__label--textarea">MESSAGE</label>
+                            <div class="form__group">
+                                <input type="text" class="form__input" id="email" required>
+                                <label for="email" class="form__label">EMAIL</label>
                             </div>
                             <input href="#" class="form__btn btn btn--white u-margin-right-xsmall" value="Send">
                         </form>
@@ -315,23 +261,64 @@
                             <h2 class="heading-tertiary">Email</h2>
                             <p class="contact__text">informatioono@untitled.com</p>
                         </div>
-                        <div class="contact__phone">
-                            <h2 class="heading-tertiary">Phone</h2>
-                            <p class="contact__text">(000) 000-0000 x12387</p>
+                        <div class="form__group--textarea">
+                            <textarea name="message" id="message" cols="30" rows="8" class="form__textarea"></textarea>
+                            <label for="message" class="form__label--textarea">MESSAGE</label>
                         </div>
-                        <div class="contact__address">
-                            <h2 class="heading-tertiary">Address</h2>
-                            <address class="contact__text">
-                                1234 Somewhere Road #5432
-                                <br>Nashville, TN 00000
-                                <br>United States of America
-                            </address>
-                        </div>
+                        <input type="submit" class="btn form__btn btn--white u-margin-right-xsmall" value="Send">
+                    </form>
+                </div>
+            </div>
+            <div class="col-1-of-2">
+                <div class="contact">
+                    <div class="contact__email">
+                        <h2 class="heading-tertiary">Email</h2>
+                        <p class="contact__text">info@cspaceprojects.com</p>
+                    </div>
+                    <div class="contact__phone">
+                        <h2 class="heading-tertiary">Phone</h2>
+                        <p class="contact__text">(403) 476-2025</p>
+                    </div>
+                    <div class="contact__address">
+                        <h2 class="heading-tertiary">Address</h2>
+                        <address class="contact__text">
+                            1721 29th Avenue SW, Suite 130
+                            <br>Calgary, AB T2T 6T7
+                        </address>
                     </div>
                 </div>
             </div>
-        </section>
-        
+        </div>
+    </section>
+    
+    <footer class="footer">
+        <div class="u-center-text u-margin-bottom-medium u-margin-top-small">
+            <img class="footer__img" src="static/img/cspace-logo.png"/>
+        </div>
+        <div class="row">
+            <div class="col-1-of-2">
+                <ul class="footer__ul">
+                    <div class="footer__item"><a href="#" class="footer__link">Home</a></div>
+                    <div class="footer__item"><a href="#" class="footer__link">About</a></div>
+                    <div class="footer__item"><a href="#" class="footer__link">Spaces</a></div>
+                    <div class="footer__item"><a href="#" class="footer__link">Events  </a></div>
+                </ul>
+            </div>
+            <div class="col-1-of-2">
+                    <ul class="footer__social">
+                        <ul class="footer__social-ul">
+                            <li class="footer__social-item"><a href="#" class="footer__social-link"><i class="fab fa-facebook-f"></i></a></li>
+                            <li class="footer__social-item"><a href="#" class="footer__social-link"><i class="fab fa-twitter"></i></a></li>
+                            <li class="footer__social-item"><a href="#" class="footer__social-link"><i class="fab fa-youtube-square"></i></a></li>
+                            <li class="footer__social-item"><a href="#" class="footer__social-link"><i class="fab fa-instagram"></i></a></li>
+                        </ul>
+                    </ul>
+                </div>
+        </div>
+        <div class="footer__text u-center-text">
+                cSPACE © 2018 Made with ❤ by EvolveU's Cohort 1
+        </div>
+    </footer>
         <!-- <section class = "section-form">
                 <div class = "row">
                     <h2 class="heading-secondary">We're happy to hear from you</h2>

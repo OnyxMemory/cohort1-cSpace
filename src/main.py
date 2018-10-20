@@ -21,8 +21,6 @@ def index():
     with open('data/testimonials.json') as json_data:
         testimonials = json.load(json_data)
 
-    print(testimonials)
-
     return render_template('index.html', testimonials=testimonials)
 
 
@@ -48,13 +46,7 @@ def credits():
 def rates():
     return render_template('rates.html')
 
-
-@app.route('/<string:date>')
-def show_people_by_date(date):
-    clients_credits = cspace.run(date)
-    return render_template('tables.html', clients=clients_credits, date=date)
-
-
+  
 @app.route('/clients')
 def show_clientlist():
     cspace.add_clients_from_array(cspace.clients_array)
