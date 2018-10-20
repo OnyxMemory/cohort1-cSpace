@@ -1,0 +1,30 @@
+
+body {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url(../img/background.jpeg);
+}
+
+.col-2 {
+    margin-top: 20px;
+    margin-left: 15px;
+}
+
+#v-pills-home h1,
+#v-pills-clients h1,
+#v-pills-credits h1,
+#v-pills-calendar h1 {
+    margin-top: 20px;
+}
+
+.col-8 h1 {
+    text-align: center;
+    background-image: linear-gradient(to right, rgb(181, 219, 255),#005BB6);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    background-color: transparent;
+}
+
+.col-8 p,
+.col-8 a {
+    color: #005BB6;
+}
