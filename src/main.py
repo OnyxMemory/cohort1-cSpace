@@ -31,13 +31,13 @@ def index():
 #     return send_from_directory('templates/resources/js/', path)
 
 
-# @app.route('/admin')
-# def admin():
-#     return render_template('admin_nav.html')
-
 @app.route('/admin')
 def admin():
     return render_template('admin_nav.html')
+
+# @app.route('/admin')
+# def admin():
+#     return render_template('admin_working.html')
 
 @app.route('/credits')
 def credits():
