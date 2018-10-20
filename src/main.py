@@ -33,6 +33,10 @@ def index():
 def admin():
     return render_template('admin_nav.html')
 
+# @app.route('/admin')
+# def admin():
+#     return render_template('admin_working.html')
+
 @app.route('/credits')
 def credits():
     return render_template('credits.html')
@@ -42,8 +46,7 @@ def credits():
 def rates():
     return render_template('rates.html')
 
-
-
+  
 @app.route('/clients')
 def show_clientlist():
     cspace.add_clients_from_array(cspace.clients_array)
@@ -85,7 +88,7 @@ def get_bookings():
 
         mdate = datetime.date(int(mydate[0]), int(mydate[1]), 1)
         maxDays = cspace.last_day_of_month(mdate)
-        dayheader = [];
+        dayheader = []
         for myday in range(maxDays):
             mdate = datetime.date(int(mydate[0]), int(mydate[1]), myday+1)
             dayheader.append(mdate.strftime('%a'))
