@@ -8,6 +8,7 @@ html {
 
 .credits-container {
     position: relative;
+    overflow: visible;
     padding-bottom: 100%;
 }
 
