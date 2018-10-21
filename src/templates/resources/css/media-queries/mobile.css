@@ -16,13 +16,7 @@
 
     .heading-secondary {
         font-size: 4rem;
-        text-transform: uppercase;
-        font-weight: 400;
-        letter-spacing: 2px;
-        color: transparent;
-        background-image: linear-gradient(to right, #005BB6, #72BCFF);
-        -webkit-background-clip: text;
-        background-clip: text;
+
       }
 
       .heading__secondary--dash-blue,
@@ -175,7 +169,7 @@
   }
   
   .testimonials__heading {
-    margin-bottom: 8rem;
+    margin-bottom: 4.5rem;
   }
   
   .testimonials__box {
@@ -224,14 +218,14 @@
         padding: 6rem 1.5rem;
     }
     
-
-    .events__heading {
-        margin-bottom: 4rem;
+    .section-events__heading {
+        margin-bottom: 5rem;
     }
-
+   
     .events {
         margin: 1rem 0;
     }
+
     
     .events__text--sub {
         margin-top: -1rem;

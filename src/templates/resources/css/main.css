@@ -529,7 +529,7 @@ input[type=submit]:hover {
 
 .section-testimonials {
   background: rgb(50, 102, 180);
-  padding: 9rem;
+  padding: 12rem;
   position: relative;
 }
 
@@ -546,7 +546,7 @@ input[type=submit]:hover {
 }
 
 .testimonials__heading {
-  margin-bottom: 8rem;
+  margin-bottom: 10rem;
 }
 
 .testimonials__box {
@@ -627,14 +627,14 @@ input[type=submit]:hover {
 /* Upcoming Events */
 /* ============================================================================================== */
 .section-events{
-  padding: 10rem;
+  padding: 12rem;
   background: #f4f4f4;
   background-image: linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),url(../img/events-section-bg.jpeg);
   background-size: cover;
   background-position: center;
 }
 
-.events__heading {
+.section-events__heading {
   margin-bottom: 8rem;
 }
 
