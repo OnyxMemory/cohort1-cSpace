@@ -32,6 +32,11 @@ def admin():
 def credits():
     return render_template('credits.html')
 
+@app.route('/<string:date>')
+def show_people_by_date(date):
+    clients_credits = cspace.run(date)
+    return render_template('tables.html', clients=clients_credits, date=date)
+
 
 @app.route('/rates')
 def rates():
