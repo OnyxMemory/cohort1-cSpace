@@ -1,55 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
-    <link rel="stylesheet" href="static/css/main.css" />
-    <title>cSpace</title>
-</head>
-<body>
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+      <link rel="stylesheet" href="static/css/main.css" />
+      <title>cSpace</title>
+  </head>
+  <body>
     <header class="header">
-     <nav class="navbar fixed-top navbar-expand-sm">
-        <a class="navbar-brand" href="#">
-          <img class="light-img" src="static/img/cspace-logo.png" width="250"/>
-          <img class="dark-img hidden" src="static/img/cspace-logo-dark.png" width="250"/>
-        </a>
-          <ul class="navbar-nav justify-content-end">
-            <li class="nav-item">
-              <a class="nav-link" href="#about">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#contact">Contact</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="admin">Login</a>
-            </li>
-          </ul>
-        </div>
-      </nav> 
+        <nav class="navbar fixed-top navbar-expand-sm">
+            <a class="navbar-brand" href="#">
+                <img class="light-img" src="static/img/cspace-logo.png" width="300" />
+                <img class="dark-img hidden" src="static/img/cspace-logo-dark.png" width="300" />
+            </a>
+            <ul class="navbar-nav justify-content-end">
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="admin">Login</a>
+                </li>
+            </ul>
+            </div>
+        </nav>
     </header>
-        
     <div class="heading-text-box">
         <h1 class="heading-primary">
             <span class="heading-primary--main">Never stop creating.</span>
             <span class="heading-primary--sub">Creativity. Community. Collaboration. Change.</span>
-        </h1>        
+        </h1>
         <div class="book-now u-margin-top-small">
             <a href="#" class="btn btn__animated">Book Now</a>
         </div>
     </div>
-
-    
     <div class="bottom-nav">
         <div class="bottom-nav__link-box">
-            <a href="#" class="bottom-nav__link">Spaces</a>
+            <a href="#spaces" class="bottom-nav__link">Spaces</a>
         </div>
 
         <div class="bottom-nav__link-box">
-            <a href="#" class="bottom-nav__link">Testimonials</a>
+            <a href="#testimonials" class="bottom-nav__link">Community</a>
         </div>
 
         <div class="bottom-nav__link-box">
@@ -57,116 +54,148 @@
         </div>
 
         <div class="bottom-nav__link-box">
-            <a href="#" class="bottom-nav__link">Events</a>
+            <a href="#events" class="bottom-nav__link">Events</a>
         </div>
     </div>
-
-    <section class="section-spaces" id="about">
+    <section id="spaces" class="section-spaces">
         <div class="section-spaces__heading">
             <div class="u-center-text">
                 <h2 class="heading-secondary u-margin-bottom-small">
                     Our Spaces &mdash; Inspire Your Team Today
                 </h2>
                 <p>
-                    Located in a vibrant, arts-friendly neighbourhood near downtown, cSPACE King Edward merges century-old historic fabric, leading edge technology and a vital community of creatives to offer Calgary’s most distinctive event, meeting and exhibition spaces.
+                    Located in a vibrant, arts-friendly neighbourhood near downtown, cSPACE King Edward merges
+                    century-old historic fabric, leading edge technology and a vital community of creatives to offer
+                    Calgary’s most distinctive event, meeting and exhibition spaces.
                 </p>
             </div>
         </div>
-            <div class="spaces__meeting"> 
-                <div class="row">
-                    <div class="col-1-of-2">
-                        <img src="static/img/meeting.jpeg" alt="spaces-meeting" class="spaces__image spaces__image--left">
-                    </div>
-                    <div class="col-1-of-2">
-                        <div class="spaces__heading spaces__heading--right">
-                            <h3 class="heading-tertiary">
-                                Meeting
-                            </h3>
-                            <p>Our meeting spaces are great. The Treehouse fits over 50 people</p>
+        <div id="spaces-carousel" class="carousel slide" data-ride="carousel" data-interval="4000">
+            <div class="carousel-inner">
+                <ol class="carousel-indicators">
+                    <li data-target="#spaces-carousel" data-slide-to="0" class="active">
+                        <div class="text">Meeting</div>
+                    </li>
+                    <li data-target="#spaces-carousel" data-slide-to="1">
+                        <div class="text">Theatre</div>
+                    </li>
+                    <li data-target="#spaces-carousel" data-slide-to="2">
+                        <div class="text">Desk</div>
+                    </li>
+                    <li data-target="#spaces-carousel" data-slide-to="3">
+                        <div class="text">Gallery</div>
+                    </li>
+                </ol>
+                <div class="carousel-item active">
+                    <div class="spaces space-left">
+                        <div class="row space-row">
+                            <div class="col col-sm-12 col-md-6">
+                                <img src="static/img/spaces/meeting.jpg" class="carousel-image" alt="Meeting Spaces">
+                            </div>
+                            <div class="col col-sm-12 col-md-6">
+                                <div class="spaces__heading spaces__heading--right">
+                                    <h3 class="heading-tertiary">
+                                        Meeting
+                                    </h3>
+                                    <p>We have a coworking space called the sandbox which is great</p>
+                                </div>
+                                <div class="spaces__text-box spaces__text-box--right">
+                                    <ul class="spaces__list">
+                                        <li class="spaces__item"><span class="spaces__item--left">&nbsp;</span>Lorem
+                                            ipsum dolor sit amet</li>
+                                        <li class="spaces__item"><span class="spaces__item--left">&nbsp;</span>Consectetur
+                                            adipiscing elit</li>
+                                        <li class="spaces__item"><span class="spaces__item--left">&nbsp;</span>Blanditiis
+                                            praesentium voluptatum</li>
+                                    </ul>
+                                    <a class="btn btn--light-blue u-margin-top-xsmall">Learn more</a>
+                                </div>
+                            </div>
                         </div>
-                        <div class="spaces__text-box spaces__text-box--right">
-                            <ul class="spaces__list">
-                                <li class="spaces__item"><span class="spaces__item--left">&nbsp;</span>RGO Treehouse</li>
-                                <li class="spaces__item"><span class="spaces__item--left">&nbsp;</span>RGO Treehouse (North)</li>
-                                <li class="spaces__item"><span class="spaces__item--left">&nbsp;</span>RGO Treehouse (South)</li>
-                            </ul>
-                            <a class="btn btn--light-blue u-margin-top-xsmall">Learn more</a>
-                        </div>    
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="spaces space-right">
+                        <div class="row space-row">
+                            <div class="col col-sm-12 col-md-6">
+                                <div class="spaces__heading spaces__heading--left">
+                                    <h3 class="heading-tertiary">
+                                        Theatre
+                                    </h3>
+                                    <p>We have a world class theatre that fits over 300 people</p>
+                                </div>
+                                <div class="spaces__text-box spaces__text-box--left">
+                                    <ul class="spaces__list spaces__list--right">
+                                        <li class="spaces__item">Studio Theatre<span class="spaces__item--right">&nbsp;</span></li>
+                                        <li class="spaces__item">Studio Theatre (North)<span class="spaces__item--right">&nbsp;</span></li>
+                                        <li class="spaces__item">Studio Theatre (South)<span class="spaces__item--right">&nbsp;</span></li>
+                                        <a class="btn btn--light-blue u-margin-top-xsmall">Learn more</a>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col col-sm-12 col-md-6">
+                                <img src="static/img/spaces/theatre.jpg" class="carousel-image" alt="Theatre Space">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="spaces space-left">
+                        <div class="row space-row">
+                            <div class="col col-sm-12 col-md-6">
+                                <img src="static/img/spaces/desk.jpg" class="carousel-image" alt="Desk Space">
+                            </div>
+                            <div class="col col-sm-12 col-md-6">
+                                <div class="spaces__heading spaces__heading--right">
+                                    <h3 class="heading-tertiary">
+                                        Desk
+                                    </h3>
+                                    <p>We have a coworking space called the sandbox which is great</p>
+                                </div>
+                                <div class="spaces__text-box spaces__text-box--right">
+                                    <ul class="spaces__list">
+                                        <li class="spaces__item"><span class="spaces__item--left">&nbsp;</span>Lorem
+                                            ipsum dolor sit amet</li>
+                                        <li class="spaces__item"><span class="spaces__item--left">&nbsp;</span>Consectetur
+                                            adipiscing elit</li>
+                                        <li class="spaces__item"><span class="spaces__item--left">&nbsp;</span>Blanditiis
+                                            praesentium voluptatum</li>
+                                    </ul>
+                                    <a class="btn btn--light-blue u-margin-top-xsmall">Learn more</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="spaces space-right">
+                        <div class="row space-row">
+                            <div class="col col-sm-12 col-md-6">
+                                <div class="spaces__heading spaces__heading--left">
+                                    <h3 class="heading-tertiary">
+                                        Gallery
+                                    </h3>
+                                    <p>We have a world class gallery that fits over 300 people</p>
+                                </div>
+                                <div class="spaces__text-box spaces__text-box--left">
+                                    <ul class="spaces__list spaces__list--right">
+                                        <li class="spaces__item">Lorem ipsum dolor sit amet<span class="spaces__item--right">&nbsp;</span></li>
+                                        <li class="spaces__item">Consectetur adipiscing elit<span class="spaces__item--right">&nbsp;</span></li>
+                                        <li class="spaces__item">Blanditiis praesentium voluptatum<span class="spaces__item--right">&nbsp;</span></li>
+                                        <a class="btn btn--light-blue u-margin-top-xsmall">Learn more</a>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col col-sm-12 col-md-6">
+                                <img src="static/img/spaces/gallery.jpg" class="carousel-image" alt="Gallery Space">
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="spaces__theatre"> 
-                <div class="row">
-                    <div class="col-1-of-2">
-                        <div class="spaces__heading spaces__heading--left">
-                            <h3 class="heading-tertiary">
-                                Theatre
-                            </h3>
-                            <p>We have a world class theatre that fits over 300 people</p>
-                        </div>
-                        <div class="spaces__text-box spaces__text-box--left">
-                            <ul class="spaces__list spaces__list--right">
-                                <li class="spaces__item">Studio Theatre<span class="spaces__item--right">&nbsp;</span></li>
-                                <li class="spaces__item">Studio Theatre (North)<span class="spaces__item--right">&nbsp;</span></li>
-                                <li class="spaces__item">Studio Theatre (South)<span class="spaces__item--right">&nbsp;</span></li>
-                                <a class="btn btn--light-blue u-margin-top-xsmall">Learn more</a>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-1-of-2">
-                        <img src="static/img/theatre.jpg" alt="spaces-theatre" class="spaces__image spaces__image-theatre spaces__image--right">
-                    </div>
-                </div>
-            </div>
-            <div class="spaces__desk"> 
-                <div class="row">
-                    <div class="col-1-of-2">
-                        <img src="static/img/desk.jpg" alt="spaces-desk" class="spaces__image spaces__image--left">
-                    </div>
-                    <div class="col-1-of-2">
-                        <div class="spaces__heading spaces__heading--right">
-                            <h3 class="heading-tertiary">
-                                Desk
-                            </h3>
-                            <p>We have a coworking space called the sandbox which is great</p>
-                        </div>
-                        <div class="spaces__text-box spaces__text-box--right">
-                            <ul class="spaces__list">
-                                <li class="spaces__item"><span class="spaces__item--left">&nbsp;</span>Lorem ipsum dolor sit amet</li>
-                                <li class="spaces__item"><span class="spaces__item--left">&nbsp;</span>Consectetur adipiscing elit</li>
-                                <li class="spaces__item"><span class="spaces__item--left">&nbsp;</span>Blanditiis praesentium voluptatum</li>
-                            </ul>
-                            <a class="btn btn--light-blue u-margin-top-xsmall">Learn more</a>
-                        </div>            
-                    </div>
-                </div>
-            </div>
-            <div class="spaces__gallery"> 
-                <div class="row">
-                    <div class="col-1-of-2">
-                        <div class="spaces__heading spaces__heading--left">
-                            <h3 class="heading-tertiary">
-                                Gallery
-                            </h3>
-                            <p>We have a world class gallery that fits over 300 people</p>
-                        </div>
-                        <div class="spaces__text-box spaces__text-box--left">
-                            <ul class="spaces__list spaces__list--right">
-                                <li class="spaces__item">Lorem ipsum dolor sit amet<span class="spaces__item--right">&nbsp;</span></li>
-                                <li class="spaces__item">Consectetur adipiscing elit<span class="spaces__item--right">&nbsp;</span></li>
-                                <li class="spaces__item">Blanditiis praesentium voluptatum<span class="spaces__item--right">&nbsp;</span></li>
-                                <a class="btn btn--light-blue u-margin-top-xsmall">Learn more</a>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-1-of-2">
-                        <img src="static/img/gallery.jpg" alt="spaces-gallery" class="spaces__image spaces__image-gallery spaces__image--right">
-                    </div>
-                </div>
-            </div>
+        </div>
     </section>
-
-    <section class="section-testimonials">
+    <section id="testimonials" class="section-testimonials">
         <div class="u-center-text u-margin-bottom-big">
             <h2 class="heading-secondary heading-secondary--black">
                 OUR CLIENTS
@@ -190,8 +219,7 @@
             {% endfor %}
         </div>
     </section>
-        
-    <section class="section-events">
+    <section id="events" class="section-events">
         <div class="u-center-text u-margin-bottom-big">
             <h2 class="heading-secondary">Upcoming Public Events</h2>
         </div>
@@ -231,13 +259,11 @@
                 </div>
             </div>
         </div>
-        
         <div class="u-center-text">
             <a href="#" class="events__btn btn btn--white">See all events</a>
         </div>
     </section>
-
-    <section class="section-contact">
+    <section id="contact" class="section-contact">
         <div class="row">
             <div class="col-1-of-2">
                 <div class="contact__box">
@@ -289,8 +315,7 @@
                 </div>
             </div>
         </div>
-    </section>
-    
+    </section> 
     <footer class="footer">
         <div class="u-center-text u-margin-bottom-medium u-margin-top-small">
             <img class="footer__img" src="static/img/cspace-logo.png"/>
@@ -318,134 +343,13 @@
         <div class="footer__text u-center-text">
                 cSPACE © 2018 Made with ❤ by EvolveU's Cohort 1
         </div>
-    </footer>
-        <!-- <section class = "section-form">
-                <div class = "row">
-                    <h2 class="heading-secondary">We're happy to hear from you</h2>
-                </div>
-                <div class="row">
-                    <form method="post" action="#" class="contact-form">
-                        <div class="row">
-                            <div class="col-1-of-3">
-                                <label for="name" class="main">Name</label>
-                            </div>
-                            <div class="col-2-of-3">
-                                <input class="sub" type="text" name="name" id="name" placeholder="Your Name" required>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-1-of-3">
-                                <label for="email" class="main">Email</label>
-                            </div>
-                            <div class="col-2-of-3">
-                                <input class="sub" type="email" name="email" id="email" placeholder="Your Email" required>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-1-of-3">
-                                <label for="find-us" class="main">How did you find us</label>
-                            </div>
-                            <div class="col-2-of-3">
-                                <select class="sub" name="find-us" id="find-us">
-                                    <option value="Friends" selected>Friends</option>
-                                    <option value="Search">Search Engine</option>
-                                    <option value="Ad">Advertisement</option>
-                                    <option value="Other">Other</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-1-of-3">
-                                <label class="main">Drop us a line</label>
-                            </div>
-                            <div class="col-2-of-3">
-                                <textarea class="sub" name="message" placeholder="Your Message"></textarea>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-1-of-3">
-                                <label>&nbsp;</label>
-                            </div>
-                            <div class="col-2-of-3">
-                                <input class="main" type="submit" value="Send It!">
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </section> -->
-
-        <!-- #=================================================== -->
-
-            <!-- <section class="grid-test">
-                <div class="row">
-                    <div class="col-1-of-2">
-                        Col 1 of 2
-                    </div>
-                    <div class="col-1-of-2">
-                        Col 1 of 2
-                    </div>
-                </div>
-    
-                <div class="row">
-                    <div class="col-1-of-3">
-                        Col 1 of 3
-                    </div>
-                    <div class="col-1-of-3">
-                        Col 1 of 3
-                    </div>
-                    <div class="col-1-of-3">
-                        Col 1 of 3
-                    </div>
-                </div>
-    
-                <div class="row">
-                    <div class="col-1-of-3">
-                        Col 1 of 3
-                    </div>
-                    <div class="col-2-of-3">
-                        Col 2 of 3
-                    </div>
-                </div>
-    
-                <div class="row">
-                    <div class="col-1-of-4">
-                        Col 1 of 4
-                    </div>
-                    <div class="col-1-of-4">
-                        Col 1 of 4
-                    </div>
-                    <div class="col-1-of-4">
-                        Col 1 of 4
-                    </div>
-                    <div class="col-1-of-4">
-                        Col 1 of 4
-                    </div>
-                </div>
-    
-                <div class="row">
-                    <div class="col-1-of-4">
-                        Col 1 of 4
-                    </div>
-                    <div class="col-1-of-4">
-                        Col 1 of 4
-                    </div>
-                    <div class="col-2-of-4">
-                        Col 2 of 4
-                    </div>
-                </div>
-    
-                <div class="row">
-                    <div class="col-1-of-4">
-                        Col 1 of 4
-                    </div>
-                    <div class="col-3-of-4">
-                        Col 3 of 4
-                    </div>
-                </div> -->
-            </section>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    </footer>   
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
     <script src="static/js/index.js"></script>
-</body>
+  </body>
 </html>
