@@ -1,0 +1,70 @@
+*{
+    top: 400px;
+    margin: 25px;
+    padding: 20;
+    box-sizing: border-box;
+   
+    
+}
+
+h1{
+    color: #090f5d;
+    font-size: 40px;
+    font-family: sans-serif;
+    margin-bottom: 20px;
+    
+    
+    
+}
+
+
+p {
+    font-size: 20px;
+    text-align: justify;
+    font-family: sans-serif;
+    
+}
+.main-text{
+    text-align: justify;
+    margin-bottom: 20px;
+    
+}
+.aboutcontainer {
+    width: 1140px;
+    top: 0;
+    left: 0;
+ 
+    
+}
+
+.aboutmain {
+  
+    width: 60%;
+}
+
+.abouttitle {
+    
+    width:25%
+    
+}
+
+
+
+.parentimage {
+    position: relative;
+    top: 0;
+    left: 700px;
+}
+
+.aboutimg2 {
+    position: absolute;
+    right:800px;
+    top:250px;
+    
+}
+
+.aboutimg1 {
+    position: relative;
+    top: 0;
+    left: 0;
+}
