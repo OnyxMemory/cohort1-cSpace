@@ -31,7 +31,7 @@ body {
 }
 
 .clients-container,
-.calendar-container
+.calendar-container,
 .credits-container {
     position: relative;
     padding-bottom: 100%;
