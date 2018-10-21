@@ -15,7 +15,7 @@ body {
     margin-top: 20px;
 }
 
-.col-8 h1 {
+.col-9 h1 {
     text-align: center;
     background-image: linear-gradient(to right, rgb(181, 219, 255),#005BB6);
     -webkit-background-clip: text;
@@ -24,19 +24,21 @@ body {
     background-color: transparent;
 }
 
-.col-8 p,
-.col-8 a {
+.col-9 p,
+.col-9 a {
     color: #005BB6;
 }
 
 .clients-container,
-.calendar-container {
+.calendar-container
+.credits-container {
     position: relative;
     padding-bottom: 100%;
 }
 
 .clients-iframe,
-.calendar-iframe {
+.calendar-iframe,
+.credits-iframe {
     position: absolute;
     top: 0;
     left: 0;
