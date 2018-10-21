@@ -24,22 +24,18 @@ def index():
     return render_template('index.html', testimonials=testimonials)
 
 
-# @app.route('/js/<path:path>')
-# def send_js(path):
-#     return send_from_directory('templates/resources/js/', path)
-
-
 @app.route('/admin')
 def admin():
     return render_template('admin_nav.html')
 
-# @app.route('/admin')
-# def admin():
-#     return render_template('admin_working.html')
-
 @app.route('/credits')
 def credits():
     return render_template('credits.html')
+
+@app.route('/<string:date>')
+def show_people_by_date(date):
+    clients_credits = cspace.run(date)
+    return render_template('tables.html', clients=clients_credits, date=date)
 
 
 @app.route('/rates')

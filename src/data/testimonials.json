@@ -3,21 +3,21 @@
           "first_name": "John",
           "last_name": "Black",
           "company": "Microsoft",
-          "testimonial": "I have worked many years with this company and they provide the greatest stuff ever.",
+          "testimonial": "cSpace has let me develop my artistic and entreprenurial skill to heights I couldn't have dreamed.",
           "picture": "john.jpg"
       },
       {
           "first_name": "Mary",
           "last_name": "Lamb",
           "company": "Google",
-          "testimonial": "I have worked many years with this company and they provide the greatest stuff ever.",
+          "testimonial": "A great place to hold workplace meetings! Beautiful building and wonderful people make this place extra special.",
           "picture": "mary.jpg"
       },
       {
           "first_name": "Simon",
           "last_name": "Says",
           "company": "Amazon",
-          "testimonial": "I have worked many years with this company and they provide the greatest stuff ever.",
+          "testimonial": "I have taken art classes at cSpace. There are many activities to do and wonderful works of art to see all the time.",
           "picture": "simon.jpg"
       }
 ]
