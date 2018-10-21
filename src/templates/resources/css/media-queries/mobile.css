@@ -1,0 +1,322 @@
+/* Tablet portrait 600px - 900px */
+
+@media screen and (max-width: 600px) {
+    html {
+        font-size: 37.5%; 
+    }
+
+
+    /* Header */
+    .header {
+        height: 100vh;
+    }
+    .heading-text-box {
+        left: 2rem;
+    }
+
+    .heading-secondary {
+        font-size: 4rem;
+        text-transform: uppercase;
+        font-weight: 400;
+        letter-spacing: 2px;
+        color: transparent;
+        background-image: linear-gradient(to right, #005BB6, #72BCFF);
+        -webkit-background-clip: text;
+        background-clip: text;
+      }
+
+      .heading__secondary--dash-blue,
+      .heading__secondary--dash-black {
+        margin-top: -1rem;
+        margin-bottom: -1.2rem;
+      }
+
+
+    .heading__secondary--main-black {
+        display: block;
+        font-size: 4rem;
+        text-transform: uppercase;
+        font-weight: 400;
+        letter-spacing: 2px;
+        color: transparent;
+        background-image: linear-gradient(to right, rgb(0, 0, 0), rgb(33, 33, 33));
+        -webkit-background-clip: text;
+        background-clip: text;
+      }
+      
+      .heading__secondary--sub-black {
+        font-size: 2rem;
+        text-transform: uppercase;
+        font-weight: 400;
+        letter-spacing: 2px;
+        color: transparent;
+        background-image: linear-gradient(to right, rgb(0, 0, 0), rgb(33, 33, 33));
+        -webkit-background-clip: text;
+        background-clip: text;
+      }
+
+      .heading__secondary--dash-black {
+        display: block;
+        color: transparent;
+        background-image: linear-gradient(to right, rgb(0, 0, 0), rgb(33, 33, 33));
+        -webkit-background-clip: text;
+        background-clip: text;
+      }
+    /* ---------------------------------------------------------------- */
+    /* grid */
+
+    .row:not(:last-child) {
+        margin-bottom: 2rem; 
+    }
+      
+    .row [class^="col-"] {
+        width: 100% !important;
+    }
+
+    .row [class^="col-"]:not(:last-child) {
+        margin-right: 0; 
+    }
+
+
+    /* ============================================================================================== */
+    /* bottom navigation */
+    /* ============================================================================================== */
+    .bottom-nav {
+        visibility: hidden;
+        height: 0;
+    } 
+
+    /* ============================================================================================== */
+    /* SECTIONS */
+    /* ============================================================================================== */
+
+
+    /*------------- Spaces Section -----------------*/
+
+    /*----- spaces section heading  -----*/
+    .section-spaces__heading {
+        padding: 6rem 0;
+    }
+    
+    .section-spaces__heading p {
+        width: 90%;
+    }
+    
+    /*-----------------------*/
+    
+    .spaces__meeting,
+    .spaces__theatre,
+    .spaces__desk,
+    .spaces__gallery {
+        padding: 6rem 0;
+    }
+    
+    
+    /*------ spaces heading -----*/ 
+    .spaces__heading {
+       width: 50%;
+       margin: 0 auto;
+       position: static;
+    }
+
+    .spaces__heading--right {
+        position: relative;
+        top: -22rem;
+        padding: 2rem;
+        text-align: center;
+    }
+    
+    .spaces__heading--left {
+        left: 0;
+        padding: 2rem;
+        text-align: center;
+    }
+    
+    /*------ spaces text -----*/
+    .spaces__text-box {
+        visibility: hidden;
+    }
+    
+    
+    /*------ spaces image -----*/
+    .spaces__image {
+        position: relative;
+        width: 50%;
+        margin: 0 auto;
+    }
+    
+    .spaces__img-box {
+        position: relative;
+        z-index: 5;
+    }
+    
+    .spaces__image-theatre, 
+    .spaces__image-gallery {
+        height: 20rem; 
+    }
+    
+    .spaces__image--left {
+        top: 10rem; 
+    }
+    
+    .spaces__image--right {
+        right: 0;
+        top: 0;
+    }
+    
+ /* ============================================================================================== */
+/* Testimonials section */
+/* ============================================================================================== */
+
+.section-testimonials {
+    background: rgb(50, 102, 180);
+    padding: 6rem;
+    position: relative;
+  }
+  
+  .testimonials__heading {
+    margin-bottom: 8rem;
+  }
+  
+  .testimonials__box {
+    font-size: 2rem;
+    margin-top: 5rem;
+  }
+  
+  .testimonials__box--middle {
+    top: 3rem;
+  }
+  
+  .testimonials__img {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .testimonials__text {
+      font-size: 2.rem;
+  }
+  
+  
+  .testimonials__text:before {
+    font-size: 2.8rem;
+  }
+  
+  .testimonials__client--middle {
+    top: 3rem;
+  }
+  
+  .testimonials__client-name {
+    font-size: 1.8rem;
+  }
+  
+  .testimonials__client-company {
+    margin-top: -1rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+  }
+  
+
+    
+    /* ============================================================================================== */
+    /* Upcoming Events */
+    /* ============================================================================================== */
+    .section-events{
+        padding: 6rem 1.5rem;
+    }
+    
+
+    .events__heading {
+        margin-bottom: 4rem;
+    }
+
+    .events {
+        margin: 1rem 0;
+    }
+    
+    .events__text--sub {
+        margin-top: -1rem;
+    }
+
+    /* ============================================================================================== */
+    /* Section Form */
+    /* ============================================================================================== */
+    .section-contact {
+        padding: 6rem 1.5rem;
+    }
+    
+    .form__group {
+        margin-top: 2rem;
+    }
+
+    .form__group-box {
+        flex-direction: column;
+    }
+
+    .form__group {
+        width: 100%;
+        margin-top: 0;
+    }
+
+    .form__group--textarea {
+        margin-top: 1rem;
+    }
+        
+    .form__btn {
+        width: 17rem;
+    }
+
+    /*--- contact details --*/
+    
+    .contact {
+        margin-top: 6rem;
+        border-left: none;
+        border-top: 1px solid #343b60;
+        border-bottom: 1px solid #343b60;
+        flex-direction: row;
+        align-items: flex-start;
+        align-content: center;
+    }
+    
+    .heading-secondary--white{
+        margin-top: 0;
+      }
+      
+    
+    .contact__email, 
+    .contact__phone, 
+    .contact__address {
+        border-bottom: none;
+        padding: 3rem 0;
+    }
+    
+    .contact__address {
+        border-bottom: none;
+    }
+    
+    /* ================================================================================================================================ */
+    /* Footer
+    */
+    
+    .footer {
+        padding: 4rem;
+    }
+    
+    .footer__img {
+        height: 4rem;
+    }
+    
+    .footer__img-box {
+        margin-top: 0;
+    }
+    
+    .footer__ul {
+        justify-items: center;
+        justify-content: center;
+        margin-top: -2rem;
+        margin-bottom: 2rem;
+    }   
+    
+    .footer__text {
+        margin-top: -.5rem;
+    }
+}

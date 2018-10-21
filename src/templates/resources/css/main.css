@@ -63,7 +63,8 @@ body {
     font-size: 2.5rem;
     font-weight: 300;
     color: #f2f2f2;
-    letter-spacing: .1rem; }
+    letter-spacing: .1rem; 
+  }
 
 .heading-secondary {
   font-size: 5rem;
@@ -76,6 +77,13 @@ body {
   background-clip: text;
 }
 
+.heading-secondary--white{
+  color: #fff !important;
+  font-weight: 300;
+  text-align: center;
+  margin-top: 4rem;
+}
+
 .heading-secondary--sub {
   font-size: 1.8rem;
   text-align: center;
@@ -85,12 +93,6 @@ body {
   background-clip: text;
 }
 
-
-.heading-secondary--white {
-  color: #fff;
-  font-weight: 300;
-  opacity: .9;
-}
 
 .heading-secondary--black {
   font-weight: 400;
@@ -449,17 +451,17 @@ input[type=submit]:hover {
 /*------ spaces text -----*/
 .spaces__text-box {
   position: relative;
-  font-size: 2rem; 
+  font-size: 2rem;
 }
 
 .spaces__text-box--right {
   top: 5rem;
-  left: 12rem; 
+  padding-left: 8rem;
 }
 
 .spaces__text-box--left {
   top: 5rem;
-  left: -7rem; 
+  padding-right: 7rem; 
 }
 
 .spaces__list {
@@ -496,11 +498,15 @@ input[type=submit]:hover {
 /*------ spaces image -----*/
 .spaces__image {
   width: 120%;
-  position: relative;
+  position: absolute;
   border-radius: 2px;
   z-index: 20;
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
   filter: brightness(90%); 
+}
+
+.spaces__img-box {
+  position: relative;
 }
 
 .spaces__image-theatre, 
@@ -509,13 +515,12 @@ input[type=submit]:hover {
 }
 
 .spaces__image--left {
-  left: -2rem;
   top: 5rem; 
 }
 
 .spaces__image--right {
-  right: 5rem;
-  top: 5rem; 
+  top: 5rem;
+  right: 0;
 }
 
 /* ============================================================================================== */  
@@ -525,7 +530,6 @@ input[type=submit]:hover {
 .section-testimonials {
   background: rgb(50, 102, 180);
   padding: 9rem;
-  z-index: 100;
   position: relative;
 }
 
@@ -539,6 +543,10 @@ input[type=submit]:hover {
   top: 0;
   left: 0;
   background-size: cover;
+}
+
+.testimonials__heading {
+  margin-bottom: 8rem;
 }
 
 .testimonials__box {
@@ -626,6 +634,10 @@ input[type=submit]:hover {
   background-position: center;
 }
 
+.events__heading {
+  margin-bottom: 8rem;
+}
+
 .events {
   color: #fff;
   display: flex;
@@ -634,7 +646,7 @@ input[type=submit]:hover {
 }
 
 .events__date {
-  font-size: 2.5rem;
+  font-size: 2.5rem; 
 }
 
 .events__text--main {
@@ -646,9 +658,6 @@ input[type=submit]:hover {
   font-size: 1.8rem;
 }
 
-.events__img {
-  height: 25rem;
-}
 /* ============================================================================================== */
 /* Section Form */
 
@@ -769,6 +778,8 @@ input[type=submit]:hover {
   background: transparent;
 }
 
+/*--- contact details --*/
+
 .contact {
   border-left: 1px solid #343b60;
   display: flex;
@@ -780,6 +791,14 @@ input[type=submit]:hover {
 .contact p, 
 .contact address {
   color: #fff;
+  font-size: 1.6rem; 
+}
+
+.contact__text--link:link,
+.contact__text--link:visited {
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
   font-size: 1.6rem; 
 }
 
@@ -807,6 +826,10 @@ input[type=submit]:hover {
 
 .footer__img {
   height: 5rem;
+}
+
+.footer__img-box {
+  margin-top: 4rem;
 }
 
 .footer__ul {
@@ -897,7 +920,6 @@ input[type=submit]:hover {
 
   .row .col-1-of-2 {
     width: calc((100% - 6rem) / 2);
-    /* background: orangered; */
   }
 
   .row .col-1-of-3 {
@@ -933,8 +955,8 @@ nav {
 }
 
 nav img {
-    margin-top: 15px;
-    margin-bottom: 15px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 nav ul li {
@@ -944,6 +966,11 @@ nav ul li {
 
 nav ul {
     width: 100%;
+}
+
+.light-img,
+.dark-img {
+  height: 5.5rem;
 }
 
 .navbar-nav li {

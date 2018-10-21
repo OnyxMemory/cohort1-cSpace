@@ -1,0 +1,26 @@
+/* Tablet landscape 900px-1200px */
+
+@media screen and (max-width: 1200px) {
+    html {
+        font-size: 56.25%; 
+    }
+
+    /*--------------- spaces image --------------------*/
+
+    .spaces__img-box--left {
+        margin-left: 2rem;
+    }
+
+    .spaces__img-box--right {
+        margin-right: 2rem;
+    }
+
+    /*--------------- section spaces -----------------*/
+    /* heading */
+    .section-spaces__heading p {
+        width: 70%; 
+      }
+
+
+
+}
