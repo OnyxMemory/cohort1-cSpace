@@ -1,0 +1,203 @@
+/* Tablet portrait 600px - 900px */
+
+@media screen and (max-width: 900px) {
+    html {
+        font-size: 50%; 
+    }
+
+    /* Header  */
+    .heading-text-box {
+        left: 5rem;
+    }
+    
+    /*Header logo */
+    .light-img,
+    .dark-img {
+        height: 5rem;
+    }
+
+    /*--- typography ---*/
+
+    .heading__secondary--main {
+        display: block;
+        font-size: 5rem;
+        text-transform: uppercase;
+        font-weight: 400;
+        letter-spacing: 2px;
+        color: transparent;
+        background-image: linear-gradient(to right, #005BB6, #72BCFF);
+        -webkit-background-clip: text;
+        background-clip: text;
+      }
+      
+      .heading__secondary--sub {
+        font-size: 2rem;
+        text-transform: uppercase;
+        font-weight: 400;
+        letter-spacing: 2px;
+        color: transparent;
+        background-image: linear-gradient(to right, #005BB6, #72BCFF);
+        -webkit-background-clip: text;
+        background-clip: text;
+      }
+
+      .heading__secondary--dash-blue {
+        display: block;
+        color: transparent;
+        background-image: linear-gradient(to right, #005BB6, #72BCFF);
+        -webkit-background-clip: text;
+        background-clip: text;
+        margin-top: -1.5rem;
+        margin-bottom: -2.7rem;
+      }
+ /* ---------------------------------- */
+ .heading__secondary--main-black {
+  display: block;
+  font-size: 5rem;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 2px;
+  color: transparent;
+  background-image: linear-gradient(to right, rgb(0, 0, 0), rgb(33, 33, 33));
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.heading__secondary--sub-black {
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 2px;
+  color: transparent;
+  background-image: linear-gradient(to right, rgb(0, 0, 0), rgb(33, 33, 33));
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.heading__secondary--dash-black {
+  display: block;
+  color: transparent;
+  background-image: linear-gradient(to right, rgb(0, 0, 0), rgb(33, 33, 33));
+  -webkit-background-clip: text;
+  background-clip: text;
+  margin-top: -1.5rem;
+  margin-bottom: -2.7rem;
+
+      /* ---------------------------------- */
+
+    /*--- section spaces ---*/
+
+    .section-spaces__heading {
+        padding: 5rem 0;
+    }
+
+    .spaces__heading--right {
+        left: -8rem;
+        padding-left: 14rem; 
+    }
+
+    .spaces__meeting,
+    .spaces__theatre,
+    .spaces__desk,
+    .spaces__gallery {
+        padding: 10rem 0 19rem 0;
+        box-shadow: 0 1rem 2rem rgba(0,0,0,.7);
+    }
+
+    .spaces__image {
+        width: 120%;
+        position: absolute;
+        border-radius: 2px;
+        z-index: 20;
+        box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
+        filter: brightness(90%); 
+      }
+      
+      .spaces__img-box {
+        position: relative;
+      }
+      
+      .spaces__image-theatre, 
+      .spaces__image-gallery {
+        height: 40rem; 
+      }
+      
+      .spaces__image--left {
+        top: 5rem; 
+      }
+      
+      .spaces__image--right {
+        top: 5rem;
+        right: 0;
+      }
+
+      /* ---------------------------------- */
+       /* testimonials */
+       .section-testimonials {
+        padding: 6rem;
+      }
+
+    /* ---------------------------------- */
+       /* events */
+      .section-events{
+        padding: 6rem;
+      }
+
+      /* ---------------------------------- */
+       /* footer */
+      .footer {
+        padding: 4rem;
+      }
+
+
+       /* ---------------------------------- */
+       /* grid */
+       .row {
+        max-width: 114rem;
+        margin: 0 auto;  
+      }
+        .row:not(:last-child) {
+          margin-bottom: 4rem; 
+        }
+        .row:after {
+          content: "";
+          display: table;
+          clear: both; 
+        }
+      
+        .row [class^="col-"] {
+          float: left;
+        }
+          .row [class^="col-"]:not(:last-child) {
+            margin-right: 2.5rem; 
+          }
+      
+        .row .col-1-of-2 {
+          width: calc((100% - 2.5rem) / 2);
+        }
+      
+        .row .col-1-of-3 {
+          width: calc((100% - 2.5rem * 2) / 3);
+          /* background: orangered; */
+        }
+      
+        .row .col-2-of-3 {
+          width: calc(2 * ((100% - 2.5rem * 2) / 3) + 2.5rem);
+          /* background: orangered; */
+         }
+      
+        .row .col-1-of-4 {
+          width: calc((100% - 2.5rem * 3) / 4); 
+          /* background: orangered; */
+        }
+      
+        .row .col-2-of-4 {
+          width: calc(2 * ((100% - 2.5rem * 3) / 4) + 2.5rem); 
+          /* background: orangered; */
+        }
+      
+        .row .col-3-of-4 {
+          width: calc(3 * ((100% - 2.5rem * 3) / 4) + 2 * 2.5rem);
+          /* background: orangered; */
+         }
+}
