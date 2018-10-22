@@ -32,6 +32,7 @@ body {
     border-top: transparent;
     padding: .25rem;
 }
-/* .container.client-table {
-    background-color: transparent;
-} */
+
+th {
+    text-align: center;
+}
