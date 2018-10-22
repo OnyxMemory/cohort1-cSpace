@@ -95,3 +95,18 @@ class CSpace:
                     bookings[heading].append(cell.value)
 
         return bookings
+    def populate_client_bookings(self):
+            sheets = self.workbook.sheetnames
+            sheets.remove('Clients')
+            sheets.remove('Facilities')
+            sheets.remove('Rates')
+            for month in sheets:
+                booking_dictionary = self.extract_bookings(self.workbook[month])
+                for room, name_array in booking_dictionary.items():
+                    for day in range(0,len(name_array)):
+                        if name_array[day]:
+                            if month in self.clients[name_array[day]].bookings:
+                                self.clients[name_array[day]].bookings[month].append((day+1,room))
+                            else:
+                                self.clients[name_array[day]].bookings[month]=[(day+1,room)]
+                            

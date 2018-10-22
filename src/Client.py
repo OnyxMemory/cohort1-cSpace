@@ -3,6 +3,7 @@ class Client:
         self.name, self.email, self.phone, self.payment_method, self.payment_status, self.issues, self.notes = client_info
         self.first_name, self.last_name = self.name.split()
         self.credits = 0
+        self.bookings = {}
 
     def __str__(self):
         return {
