@@ -52,6 +52,7 @@ def show_clientlist():
 cspace.add_clients_from_array(cspace.clients_array)
 @app.route('/clients/<name>')
 def client_page(name=None):
+    cspace.populate_client_bookings()
     return render_template('client_info.html', clients=cspace.clients, name=name)
 
 
