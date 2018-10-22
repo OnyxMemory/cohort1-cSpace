@@ -14,14 +14,8 @@
   }
 */
 
-.page {
-    height:100vh;
-}
-
-.back {
-    height:10%;
-}
 
 .client-table {
-    height:90%;
+    /* height: 60vh; */
+    
 }
