@@ -172,3 +172,9 @@ class TestOopMajorCSpace(unittest.TestCase):
         ]
 
         self.assertEqual(output, self.cspace.run('2018-08'))
+
+    def test_populate_client_bookings(self):
+        test_client = Client(self.client_data)
+        self.cspace.add_client(test_client)
+
+        self.assertEqual({},self.cspace.clients["Carrie"].bookings)
