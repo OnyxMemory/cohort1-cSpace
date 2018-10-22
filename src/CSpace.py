@@ -95,6 +95,7 @@ class CSpace:
                     bookings[heading].append(cell.value)
 
         return bookings
+        
     def populate_client_bookings(self):
             sheets = self.workbook.sheetnames
             sheets.remove('Clients')
