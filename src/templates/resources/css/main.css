@@ -75,6 +75,8 @@ body {
   background-image: linear-gradient(to right, #005BB6, #72BCFF);
   -webkit-background-clip: text;
   background-clip: text;
+  text-align: center;
+  margin-top: 20px;
 }
 
 .heading-secondary--white{
@@ -377,11 +379,60 @@ input[type=submit]:hover {
 /* SECTIONS */
 /* ============================================================================================== */
 
+/*------------- About Section -----------------*/
+.section-about{
+  background: #fff;
+}
+
+.about-maintext{
+    text-align: justify;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 20px;
+    margin-top: 30px;
+    width: 70%;
+    margin-left: 15%;
+    
+}
+
+.aboutheading-secondary {
+  font-size: 5rem;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 2px;
+  color: transparent;
+  background-image: linear-gradient(to right, #005BB6, #72BCFF);
+  -webkit-background-clip: text;
+  background-clip: text;
+  text-align: center;
+  margin-top: 40px;
+  width: 100%;
+}
+
+.aboutcontainer {
+  text-align: center;
+}
+
+
+.aboutimg2 {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.aboutimg1 {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
 
 /*------------- Spaces Section -----------------*/
 
 /*----- spaces section heading  -----*/
-.section-spaces__heading {
+.section-spaces__headingf {
   background: #fff;
   padding: 9rem 0;
   background: #ffffff;
