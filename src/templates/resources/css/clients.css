@@ -19,3 +19,19 @@
     /* height: 60vh; */
     
 }
+
+body {
+    background-color: transparent;
+}
+
+.btn-outline-primary {
+    color: #fff;
+}
+
+.table td, .table th {
+    border-top: transparent;
+    padding: .25rem;
+}
+/* .container.client-table {
+    background-color: transparent;
+} */
