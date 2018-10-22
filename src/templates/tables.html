@@ -1,36 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Current Credits Booked by Client</title>
-    <link rel="shortcut icon" href="#" />
-    <style>
-        ul {
-            list-style-type: none;
-        }
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="static/css/table.css">
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,300italic" rel="stylesheet" type="text/css">
+        <title> Clients Credits</title>
 
-        li {
-            margin: 0 auto;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            width: 30%;
-        }
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div class="row">
+                    <div class="img-box">
+                        <img src="/static/img/cspace.png" alt="Cspace logo" class="logo">
+                    </div>
+                    
+                </div>
+            </nav>
+        </header>
+        <section class="section-steps">
+            <div class="row">
+                <h1>Clients Credits</h1>
+            </div>
+            <div class="row">
+                <div class="col span-1-of-2 steps-box">
+                    <div class="works-step">
+                        <div>Name</div>
+                        {% for client in clients %}
+                            <P>{{client[0]}} {{client[1]}}</P>
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="col span-1-of-2 steps-box">
+                    <div class="works-step">
+                        <div>Credits</div>
+                        {% for client in clients %}
+                            <P>{{client[2]}}</P>
+                        {% endfor %}
+                        
+                    </div>
+                </div>
+            </div>
+        
+        </section>
+    
+    </body>
 
-        .container {
-            width: 100%;
-            text-align: center;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h1>{{ date }}</h1>
-        <ul>
-            {% for client in clients %}
-            <li><b>{{ client[0] }} {{ client[1] }}</b><span>{{ client[2] }}</span></li>
-            {% endfor %}
-        </ul>
-    </div>
-</body>
+
+
 </html>
