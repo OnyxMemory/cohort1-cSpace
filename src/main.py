@@ -35,7 +35,6 @@ def credits():
 @app.route('/<string:date>')
 def show_people_by_date(date):
     clients_credits = cspace.run(date)
-    print(clients_credits)
     return render_template('tables.html', clients=clients_credits, date=date)
 
 
