@@ -1,5 +1,9 @@
 html {
-    background-color:blue;
+    background-color:transparent;
+}
+
+body {
+    background-color: transparent;
 }
 .col-2 {
     margin-top: 20px;
