@@ -16,7 +16,7 @@ body {
     margin-top: 20px;
 }
 
-.col-8 h1 {
+.col-9 h1 {
     text-align: center;
     background-image: linear-gradient(to right, rgb(181, 219, 255),#005BB6);
     -webkit-background-clip: text;
@@ -25,8 +25,8 @@ body {
     background-color: transparent;
 }
 
-.col-8 p,
-.col-8 a {
+.col-9 p,
+.col-9 a {
     color: #005BB6;
 }
 
