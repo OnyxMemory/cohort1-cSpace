@@ -34,7 +34,7 @@ body {
 .calendar-container,
 .credits-container {
     position: relative;
-    padding-bottom: 100%;
+    padding-bottom: 60%;
 }
 
 .clients-iframe,
