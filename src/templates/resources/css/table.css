@@ -12,9 +12,9 @@ html{
     text-rendering: optimizeLegibility;
 }
 .row{
-    max-width: 1140px;
-    margin: 0 auto;
+    width: 100%;
 }
+
 h1 {
     margin-top:0;
     margin-bottom: 20px;
@@ -25,62 +25,29 @@ h1 {
     text-align: center;
     padding-top: 50px;
     border-bottom: 2px solid #020202;
-    
 }
 
 .img-box {
-    text-align: center;
+    margin: 0 auto;
 }
 
 .logo {
     height: 50px;
     margin: 20px auto;
-    display: inline-block;static
+    display: inline-block;
     text-align: center;
     }
 
-.main-nav {
-    float: right;
-    list-style: none;
-    margin-top: 30px;
-}
-.main-nav li {
-    display: inline-block;
-    margin-left: 40px;
-    padding-top: 0px;
-}
-.main-nav li a:link,
-.main-nav li a:visited{
-    padding: 8px 0;
-    color: #020202;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 100%;
-    border-bottom: 2px solid transparent;
-    transition: border-bottom 0,2s;
-}
-.main-nav li a:hover,
-.main-nav li a:active {
-    border-bottom: 2px solid #020202;
-}
 .steps-box {
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
     margin-top: 10px;
 }
 .name-title {
     text-align: center;
 }
-.steps-box:first-child {
-    text-align: center;
-    padding-left: 15%;
-    float: left;
-}
-.steps-box:last-child {
-    padding-left: 10%;
-    float: left;
-    text-align: center;
-    
-}
-.works-step div {
+.works-step {
     color: #020202;
     display: inline-block;
     padding: 5px;
