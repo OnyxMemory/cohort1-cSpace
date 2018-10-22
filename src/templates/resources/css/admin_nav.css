@@ -31,10 +31,14 @@ body {
 }
 
 .clients-container,
-.calendar-container,
 .credits-container {
     position: relative;
     padding-bottom: 60%;
+}
+
+.calendar-container {
+    position: relative;
+    padding-bottom: 70%
 }
 
 .clients-iframe,
