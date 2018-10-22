@@ -83,7 +83,44 @@
     /* ============================================================================================== */
     /* SECTIONS */
     /* ============================================================================================== */
-
+    .section-about{
+        padding: 6rem 0 8rem 0;
+        
+      }
+      
+      .about-maintext{
+          text-align: center;
+          margin: 0 auto;
+          text-align: center;
+          font-size: 2rem;
+          width: 90%;
+          margin-bottom: 2rem;          
+      }
+      
+      .aboutheading-secondary {
+            margin: 0 0 3rem 0;
+      }
+      
+      .aboutcontainer {
+        text-align: center;
+      }
+      
+      
+      .aboutimg2 {
+          position: relative;
+          top: 0;
+          left: 0;
+          width: 100%;
+      }
+      
+      .aboutimg1 {
+          position: relative;
+          top: 0;
+          left: 0;
+          width: 100%;
+      }
+      
+      
 
     /*------------- Spaces Section -----------------*/
 
