@@ -5,14 +5,11 @@ $(document).scroll(function() {
         $('.light-img').addClass('hidden')
         $('.dark-img').removeClass('hidden')
         $('.nav-link').css('color', '#000')
+        $('#menu-icon').css('color', '#000')
     } else {
         $('.light-img').removeClass('hidden')
         $('.dark-img').addClass('hidden')
         $('.nav-link').css('color', '#fff')
+        $('#menu-icon').css('color', '#fff')
     }
 });
-
-
-
-
-

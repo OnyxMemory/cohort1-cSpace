@@ -16,33 +16,32 @@
 </head>
 <body>
     <header class="header">
-     <nav class="navbar fixed-top">
-        <a class="navbar-brand" href="#">
-          <img class="light-img" src="static/img/cspace-logo.png"/>
-          <img class="dark-img hidden" src="static/img/cspace-logo-dark.png"/>
-        </a>
-          <ul class="navbar-nav justify-content-end d-none d-md-block">
-            <li class="nav-item">
-              <a class="nav-link" href="#about">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#contact">Contact</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="admin">Login</a>
-            </li>
-          </ul>
-          <button class="navbar-toggler d-sm-none" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-        </div>
-      </nav>
-      <div class="collapse d-none d-md-none" id="navbarToggleExternalContent">
-        <div class="bg-dark p-4">
-          <h4 class="text-white">Collapsed content</h4>
-          <span class="text-muted">Toggleable via the navbar brand.</span>
-        </div>
-      </div>
+            <nav class="navbar navbar-expand-md fixed-top">
+                    <a class="navbar-brand" href="#">
+                            <img class="light-img" src="static/img/cspace-logo.png"/>
+                            <img class="dark-img hidden" src="static/img/cspace-logo-dark.png"/>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+                      <span id="menu-icon" class="navbar-toggler-icon"><i class="fas fa-2x fa-bars"></i></span>
+                    </button>
+              
+                    <div class="collapse navbar-collapse" id="navbar">
+                      <ul class="navbar-nav mr-auto">
+                      </ul>
+                      <ul class="navbar-nav justify-content-end">
+                            <li class="nav-item active">
+                              <a class="nav-link" href="#about">About</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="#contact">Contact</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="admin">Login</a>
+                            </li>
+                          </ul>
+                  
+                    </div>
+                  </nav>
     </header>
     <div class="heading-text-box">
         <h1 class="heading-primary">
@@ -309,7 +308,7 @@
         </div>
     </section>
 
-    <section class="section-contact">
+    <section id="contact" class="section-contact">
         <h2 class="heading-secondary heading-secondary--white u-margin-bottom-small">
             Contact us
         </h2>

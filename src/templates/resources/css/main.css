@@ -1005,6 +1005,14 @@ nav {
     padding-right: 30px!important;
 }
 
+#menu-icon {
+  color: #fff;
+}
+
+.navbar .navbar-collapse {
+  text-align: center;
+}
+
 nav img {
     margin-top: 1rem;
     margin-bottom: 1rem;
@@ -1195,3 +1203,4 @@ ol.carousel-indicators li.active {
 .space-right {
   background-image: linear-gradient(-90deg, #ffffff 0%, #ffffff 35%, rgba(0, 91, 182, 0.8) 100%);
 }
+
