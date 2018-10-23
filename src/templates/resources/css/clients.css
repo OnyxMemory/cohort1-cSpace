@@ -1,8 +1,8 @@
 /* .client-table th, .client-table td {
     text-align: left;}
 .client-table {
-    border-collapse: collapse; 
-    border: 1px solid #ddd; 
+    border-collapse: collapse;
+    border: 1px solid #ddd;
 }
 
 .client-table tr {
@@ -17,7 +17,7 @@
 
 .client-table {
     /* height: 60vh; */
-    
+
 }
 
 body {

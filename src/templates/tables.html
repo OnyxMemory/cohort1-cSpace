@@ -13,39 +13,35 @@
 
 <body>
     <header>
-        <nav>
-            <div class="row">
-                <div class="img-box">
-                    <img src="/static/img/cspace.png" alt="Cspace logo" class="logo">
-                </div>
-            </div>
-        </nav>
     </header>
     <section class="section-steps">
         <div class="container">
             <div class="row">
+              <!-- <div class = "step-box-container"> -->
                 <div class="col-6 steps-box">
-                    <div class="works-step">
-                        <div>Name</div>
-                        {% for client in clients %}
-                        <P>{{client[0]}} {{client[1]}}</P>
-                        {% endfor %}
-                    </div>
-                </div>
-                <div class="col-6 steps-box">
-                    <div class="works-step">
-                        <div>Credits</div>
-                        {% for client in clients %}
-                        <P>{{client[2]}}</P>
-                        {% endfor %}
-                    </div>
-                </div>
+                      <div class="works-step">
+                          <div class = "sticky">Name</div>
+                            {% for client in clients %}
+                            <P>{{client[0]}} {{client[1]}}</P>
+                            {% endfor %}
+                      </div>
+                  </div>
+                  <div class="col-6 steps-box">
+                      <div class="works-step">
+                          <div class = "sticky">Credits</div>
+                          {% for client in clients %}
+                          <P>{{client[2]}}</P>
+                          {% endfor %}
+                      </div>
+                  </div>
+              <!-- </div> -->
+
             </div>
         </div>
-        <div class="row">
+        <!-- <div class="row">
             <span>Clients</span>
             <span>Credits</span>
-        </div>
+        </div> -->
 
     </section>
 </body>

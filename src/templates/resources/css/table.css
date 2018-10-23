@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 html{
-    background-color: #f4f4f4;
+    background-color: transparent;
     color: #555;
     font-family: 'lato', 'Arial', sans-serif;
     font-weight: 300;
@@ -14,30 +14,26 @@ html{
 .row{
     width: 100%;
 }
-
+body {
+  background-color: transparent;
+}
+::-webkit-scrollbar {
+  display: none;
+}
 h1 {
     margin-top:0;
     margin-bottom: 20px;
     color:#020202;
-    font-size: 170%;
+    font-size: 100%;
     word-spacing: 4px;
-    letter-spacing: 1px; 
+    letter-spacing: 1px;
     text-align: center;
     padding-top: 50px;
     border-bottom: 2px solid #020202;
 }
-
 .img-box {
     margin: 0 auto;
 }
-
-.logo {
-    height: 50px;
-    margin: 20px auto;
-    display: inline-block;
-    text-align: center;
-    }
-
 .steps-box {
     display: flex;
     justify-content: space-around;
@@ -48,8 +44,20 @@ h1 {
     text-align: center;
 }
 .works-step {
-    color: #020202;
+    color: #fff;
     display: inline-block;
-    padding: 5px;
-    font-size:150%; 
+    padding: 15px;
+    font-size:85%;
+}
+.works-step p{
+  padding-top: 20px;
+}
+.sticky{
+  position: fixed;
+  text-align: center;
+  margin-top: -30px;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-bottom: 10px;
+  background-color: black;
 }
