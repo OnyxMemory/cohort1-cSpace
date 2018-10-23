@@ -2,55 +2,63 @@
 <html>
 
 <head>
-    <link rel="stylesheet" href="/static/css/client_info_style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/client_info_style.css">
     <title>Client page</title>
 </head>
 
 <body>
+    <div class="container clients-tab">
+        <div class="row">
+            <div class="col">
+                <div class="client-text">
+                    <h1> {{ clients[name].first_name }} {{ clients[name].last_name }} </h1>
+                    <img src="/static/img/clientPhotos/owl.png" alt="Client Photo" class="client-photo">
 
-    <div class="client-text">
-        <h1> {{ clients[name].first_name }} {{ clients[name].last_name }} </h1>
-        <img src="/static/img/clientPhotos/owl.png" alt="Client Photo" class="client-photo">
+                    <ul class="client-contact-info">
+                        <li>Phone: {{clients[name].phone}}</li>
+                        <li>Email: {{clients[name].email}}</li>
+                    </ul>
 
-        <ul class="client-contact-info">
-            <li>Phone: {{clients[name].phone}}</li>
-            <li>Email: {{clients[name].email}}</li>
-        </ul>
+                    <ul class="client-info">
+                        <li>Payment Method: {{clients[name].payment_method}}</li>
+                        <li>Payment Status: {{clients[name].payment_status}}</li>
+                        <li>Issues: {{clients[name].issues}}</li>
+                        <li>Notes: {{clients[name].notes}}</li>
+                    </ul>
+                </div>
+                <div class="client-left-col">
+                        <ul class="client-nav">
+                            <li><a href="#">Update</a></li>
+                            <li><a href="#">Delete</a></li>
+                            <li><a href="/clients">Back to client list</a></li>
+                        </ul>
+            
+                </div>
+            </div>
+            
+            <div class="col">
+                <h2>Confirmed Bookings:</h2>
+            
+                <ul class="client-events">
+                    {% for month, eventsArray in clients[name].bookings.items() %}
+                        <h3>{{month}}</h3>
+                        {% for event in eventsArray %}
+                            {% set day,room = event %}   
+                            <li> - {{day}}, {{room}}</li>
+                        {% endfor%}
+                    {% endfor %}
+                </ul>
+                
+            </div>
 
-        <ul class="client-info">
-            <li>Payment Method: {{clients[name].payment_method}}</li>
-            <li>Payment Status: {{clients[name].payment_status}}</li>
-            <li>Issues: {{clients[name].issues}}</li>
-            <li>Notes: {{clients[name].notes}}</li>
-        </ul>
+        </div>
     </div>
 
-    <div class="client-events">
-        <h2>Confirmed Bookings:</h2>
-    
-        <ul class="client-info">
-            {% for month, eventsArray in clients[name].bookings.items() %}
-                <h3>{{month}}</h3>
-                {% for event in eventsArray %}
-                    {% set day,room = event %}   
-                    <li> - {{day}}, {{room}}</li>
-                {% endfor%}
-            {% endfor %}
-        </ul>
-        
-    </div>
-    
-
-    <div class="client-left-col">
-        <ul class="client-nav">
-            <li><a href="#">Update</a></li>
-            <li><a href="#">Delete</a></li>
-            <li><a href="/clients">Back to client list</a></li>
-        </ul>
-
-    </div>
-
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 </body>
 
 </html>
