@@ -32,11 +32,10 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      background-color: green;
       border-top-left-radius: 10px;
       border-top-right-radius: 10px;
       margin-left: 1px;
-      color: white;
+      color: black;
       border: 1px solid white;
     }
     .month-tab-info:hover {
@@ -89,7 +88,13 @@
         padding-left: 2px;
         color: #000;
         font-size: 70%;
-        border-bottom: 1px solid #72BCFF;
+        <!-- border-bottom: 1px solid #72BCFF; -->
+
+        border: 1px solid #cecece;
+        background-color: #cecece;
+        box-shadow: 1px 1px 1px;
+
+
     <!--background-image: linear-gradient(to right, #005BB6, #72BCFF);-->
     }
 
