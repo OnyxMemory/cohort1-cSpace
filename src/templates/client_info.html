@@ -26,7 +26,21 @@
         </ul>
     </div>
 
-    <h2>Upcoming Events:</h2>
+    <div class="client-events">
+        <h2>Confirmed Bookings:</h2>
+    
+        <ul class="client-info">
+            {% for month, eventsArray in clients[name].bookings.items() %}
+                <h3>{{month}}</h3>
+                {% for event in eventsArray %}
+                    {% set day,room = event %}   
+                    <li> - {{day}}, {{room}}</li>
+                {% endfor%}
+            {% endfor %}
+        </ul>
+        
+    </div>
+    
 
     <div class="client-left-col">
         <ul class="client-nav">
