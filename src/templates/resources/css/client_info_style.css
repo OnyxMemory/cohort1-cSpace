@@ -18,14 +18,16 @@ html {
 /* HEADERS */
 /* ----------------------------- */
  
-.client-text h1,h2 {
+h1,h2 {
     color: #005BB6;
     font-family: sans-serif;
     margin-bottom: 20px;   
 }
 
 h1 {font-size: 40px;}
-h2 {font-size: 30px;}
+h2 {
+    font-size: 30px;
+    margin-top: 20px;}
 
 body {
     font-family: "Lato", sans-serif;
@@ -52,3 +54,5 @@ li a:active {
 .client-photo {
     width: 20%;
 }
+
+.client-left-col{margin-top: 20px;}
