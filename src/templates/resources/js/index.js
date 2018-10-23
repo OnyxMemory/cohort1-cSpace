@@ -1,6 +1,7 @@
 $(document).scroll(function() {
     $('nav').toggleClass('brighten', $(this).scrollTop() > 675)
-    // $('#bottom-nav').toggleClass('brighten', $(this).scrollTop() > 675)
+    $('#bottom-nav').toggleClass('hidden', $(this).scrollTop() > 4350)
+    console.log($(this).scrollTop())
     
     if($(this).scrollTop() > 675) {
         $('.light-img').addClass('hidden')

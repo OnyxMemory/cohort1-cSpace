@@ -320,7 +320,7 @@ input[type=submit]:hover {
 /* header */
 
 .header {
-  height: 90vh;
+  height: 92vh;
   background-image: linear-gradient(
     to right bottom, 
   rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.4)), 
@@ -351,7 +351,7 @@ input[type=submit]:hover {
 /* bottom */
 
 .bottom-nav {
-  height: 10vh;
+  height: 8vh;
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
   display: flex;
   position: fixed;
@@ -362,8 +362,8 @@ input[type=submit]:hover {
 }  
 
 .bottom-nav--light {
-  background-image: linear-gradient(to right, rgb(255, 255, 255), rgb(255, 255, 255));
-  
+  background-image: linear-gradient(to right, rgb(255, 255, 255,.9), rgb(255, 255, 255,.9));
+  box-shadow: 0 -1rem 1.5rem rgba(0, 0, 0, 0.1); 
 }  
 
   .bottom-nav__link {
