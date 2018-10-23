@@ -1,47 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="shortcut icon" href="static/img/favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
+        crossorigin="anonymous">
     <link rel="stylesheet" href="static/css/main.css" />
     <link rel="stylesheet" href="static/css/media-queries/tablet-landscape.css" />
     <link rel="stylesheet" href="static/css/media-queries/tablet-portrait.css" />
     <link rel="stylesheet" href="static/css/media-queries/mobile.css" />
     <title>cSpace</title>
 </head>
+
 <body>
     <header class="header">
-            <nav class="navbar navbar-expand-md fixed-top">
-                    <a class="navbar-brand" href="#">
-                            <img class="light-img" src="static/img/cspace-logo.png"/>
-                            <img class="dark-img hidden" src="static/img/cspace-logo-dark.png"/>
-                    </a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
-                      <span id="menu-icon" class="navbar-toggler-icon"><i class="fas fa-2x fa-bars"></i></span>
-                    </button>
-              
-                    <div class="collapse navbar-collapse" id="navbar">
-                      <ul class="navbar-nav mr-auto">
-                      </ul>
-                      <ul class="navbar-nav justify-content-end">
-                            <li class="nav-item active">
-                              <a class="nav-link" href="#about">About</a>
-                            </li>
-                            <li class="nav-item">
-                              <a class="nav-link" href="#contact">Contact</a>
-                            </li>
-                            <li class="nav-item">
-                              <a class="nav-link" href="admin">Login</a>
-                            </li>
-                          </ul>
-                  
-                    </div>
-                  </nav>
+        <nav class="navbar navbar-expand-md fixed-top">
+            <a class="navbar-brand" href="#">
+                <img class="light-img" src="static/img/cspace-logo.png" />
+                <img class="dark-img hidden" src="static/img/cspace-logo-dark.png" />
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span id="menu-icon" class="navbar-toggler-icon"><i class="fas fa-2x fa-bars"></i></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbar">
+                <ul class="navbar-nav mr-auto">
+                </ul>
+                <ul class="navbar-nav justify-content-end">
+                    <!-- <li class="nav-item active">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li> -->
+                    <!-- Test -->
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="admin">Spaces</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="admin">Testimonials</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="admin">Events</a>
+                    </li> -->
+                    <!-- Test -->
+                    <li class="nav-item">
+                        <a class="nav-link nav-link-login" href="admin">Login</a>
+                    </li>
+                </ul>
+
+            </div>
+        </nav>
     </header>
     <div class="heading-text-box">
         <h1 class="heading-primary">
@@ -52,17 +68,21 @@
             <a href="#" class="btn btn__animated">Book Now</a>
         </div>
     </div>
-    <div class="bottom-nav">
+    <div id="bottom-nav" class="bottom-nav">
         <div class="bottom-nav__link-box">
             <a href="#spaces" class="bottom-nav__link">Spaces</a>
         </div>
 
         <div class="bottom-nav__link-box">
-            <a href="#testimonials" class="bottom-nav__link">Community</a>
+            <a href="#testimonials" class="bottom-nav__link">Testimonials</a>
         </div>
 
         <div class="bottom-nav__link-box">
-            <a href="#" class="bottom-nav__link">Coworking</a>
+            <a href="#about" class="bottom-nav__link">About</a>
+        </div>
+
+        <div class="bottom-nav__link-box">
+            <a href="#contact" class="bottom-nav__link">Contact</a>
         </div>
 
         <div class="bottom-nav__link-box">
@@ -72,19 +92,23 @@
 
     <section id="about" class="section-about">
         <div class="aboutcontainer">
-            <div class="row">       
+            <div class="row">
                 <h2 class="aboutheading-secondary"> About CSpace </h2>
-                    <p class="about-maintext">
-                        At <strong>cSPACE King Edward</strong>, our mission is to provide the conditions that diverse communities of creatives need to remain vital, sustainable and innovative while generating dividends for Calgarians across the city.
-`
-                        Shared Space – Affordable, flexible and inspiring spaces that are responsive to the evolving needs of new artistic practices, missions and enterprises while delivering unique gathering places for all Calgarians.
-                    </p>
+                <p class="about-maintext">
+                    At <strong>cSPACE King Edward</strong>, our mission is to provide the conditions that diverse
+                    communities of creatives need to remain vital, sustainable and innovative while generating
+                    dividends for Calgarians across the city.
+                    `
+                    Shared Space – Affordable, flexible and inspiring spaces that are responsive to the evolving needs
+                    of new artistic practices, missions and enterprises while delivering unique gathering places for
+                    all Calgarians.
+                </p>
             </div>
             <div class="row">
                 <div class="col-1-of-2">
                     <img src="static/img/aboutcSpace.jpg" class="aboutimg1" alt="cSpace hallway">
                 </div>
-                <div class = "col-1-of-2">
+                <div class="col-1-of-2">
                     <img src="static/img/aboutCspace1.jpg" class="aboutimg2" alt="cSpace outside">
                 </div>
             </div>
@@ -95,7 +119,8 @@
             <div class="u-center-text">
                 <h2 class="heading-secondary u-margin-bottom-small">
                     <span class="heading__secondary--main">Our Spaces</span>
-                    <span class="heading__secondary--dash-blue">&mdash;</span> <span class="heading__secondary--sub">Inspire Your Team Today</span>
+                    <span class="heading__secondary--dash-blue">&mdash;</span> <span class="heading__secondary--sub">Inspire
+                        Your Team Today</span>
                 </h2>
                 <p>
                     Located in a vibrant, arts-friendly neighbourhood near downtown, cSPACE King Edward merges
@@ -104,163 +129,162 @@
                 </p>
             </div>
         </div>
-        <div id="spaces-carousel" class="carousel slide" data-ride="carousel" data-interval="4000">
-            <div class="carousel-inner">
-                <ol class="carousel-indicators">
-                    <li data-target="#spaces-carousel" data-slide-to="0" class="active">
-                        <div class="text">Meeting</div>
-                    </li>
-                    <li data-target="#spaces-carousel" data-slide-to="1">
-                        <div class="text">Theatre</div>
-                    </li>
-                    <li data-target="#spaces-carousel" data-slide-to="2">
-                        <div class="text">Desk</div>
-                    </li>
-                    <li data-target="#spaces-carousel" data-slide-to="3">
-                        <div class="text">Gallery</div>
-                    </li>
-                </ol>
-                <div class="carousel-item active">
-                    <div class="spaces space-left">
-                        <div class="row space-row">
-                            <div class="col col-sm-12 col-md-6">
-                                <img src="static/img/spaces/meeting.jpg" class="carousel-image" alt="Meeting Spaces">
-                            </div>
-                            <div class="col col-sm-12 col-md-6">
-                                <div class="spaces__heading spaces__heading--right">
-                                    <h3 class="heading-tertiary">
-                                        Meeting
-                                    </h3>
-                                    <p>We have a coworking space called the sandbox which is great</p>
+        <div class="d-md-none">
+            <h1>asdasdf</h1>
+        </div>
+        <div id="spaces-carousel" class="carousel slide d-none d-md-block" data-ride="carousel" data-interval="4000">
+                <div class="carousel-inner">
+                    <ol class="carousel-indicators">
+                        <li data-target="#spaces-carousel" data-slide-to="0" class="active">
+                            <div class="text">Meeting</div>
+                        </li>
+                        <li data-target="#spaces-carousel" data-slide-to="1">
+                            <div class="text">Theatre</div>
+                        </li>
+                        <li data-target="#spaces-carousel" data-slide-to="2">
+                            <div class="text">Desk</div>
+                        </li>
+                        <li data-target="#spaces-carousel" data-slide-to="3">
+                            <div class="text">Gallery</div>
+                        </li>
+                    </ol>
+                    <div class="carousel-item active">
+                        <div class="spaces space-left">
+                            <div class="row space-row">
+                                <div class="col col-sm-12 col-md-6">
+                                    <img src="static/img/spaces/meeting.jpg" class="carousel-image" alt="Meeting Spaces">
                                 </div>
-                                <div class="col col-sm-12 col-md-6 spaces__text-box spaces__text-box--right">
-                                    <ul class="spaces__list">
-                                        <li class="spaces__item"><span class="spaces__item--left">&nbsp;</span>Lorem
-                                            ipsum dolor sit amet</li>
-                                        <li class="spaces__item"><span class="spaces__item--left">&nbsp;</span>Consectetur
-                                            adipiscing elit</li>
-                                        <li class="spaces__item"><span class="spaces__item--left">&nbsp;</span>Blanditiis
-                                            praesentium voluptatum</li>
-                                    </ul>
-                                    <a class="btn btn--light-blue u-margin-top-xsmall">Learn more</a>
-                                </div>
-                            
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="spaces space-right">
-                        <div class="row space-row">
-                            <div class="col col-sm-12 col-md-6">
-                                <div class="spaces__heading spaces__heading--left">
-                                    <h3 class="heading-tertiary">
-                                        Theatre
-                                    </h3>
-                                    <p>We have a world class theatre that fits over 300 people</p>
-                                </div>
-                                <div class="spaces__text-box spaces__text-box--left">
-                                    <ul class="spaces__list spaces__list--right">
-                                        <li class="spaces__item">Studio Theatre<span class="spaces__item--right">&nbsp;</span></li>
-                                        <li class="spaces__item">Studio Theatre (North)<span class="spaces__item--right">&nbsp;</span></li>
-                                        <li class="spaces__item">Studio Theatre (South)<span class="spaces__item--right">&nbsp;</span></li>
+                                <div class="col col-sm-12 col-md-6">
+                                    <div class="spaces__heading spaces__heading--right">
+                                        <h3 class="heading-tertiary">
+                                            Meeting
+                                        </h3>
+                                        <p>We have a coworking space called the sandbox which is great</p>
+                                    </div>
+                                    <div class="spaces__text-box spaces__text-box--right">
+                                        <ul class="spaces__list">
+                                            <li class="spaces__item"><span class="spaces__item--left">&nbsp;</span>Lorem
+                                                ipsum dolor sit amet</li>
+                                            <li class="spaces__item"><span class="spaces__item--left">&nbsp;</span>Consectetur
+                                                adipiscing elit</li>
+                                            <li class="spaces__item"><span class="spaces__item--left">&nbsp;</span>Blanditiis
+                                                praesentium voluptatum</li>
+                                        </ul>
                                         <a class="btn btn--light-blue u-margin-top-xsmall">Learn more</a>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col col-sm-12 col-md-6">
-                                <img src="static/img/spaces/theatre.jpg" class="carousel-image" alt="Theatre Space">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="spaces space-left">
-                        <div class="row space-row">
-                            <div class="col col-sm-12 col-md-6">
-                                <img src="static/img/spaces/desk.jpg" class="carousel-image" alt="Desk Space">
-                            </div>
-                            <div class="col col-sm-12 col-md-6">
-                                <div class="spaces__heading spaces__heading--right">
-                                    <h3 class="heading-tertiary">
-                                        Desk
-                                    </h3>
-                                    <p>We have a coworking space called the sandbox which is great</p>
-                                </div>
-                                <div class="spaces__text-box spaces__text-box--right">
-                                    <ul class="spaces__list">
-                                        <li class="spaces__item"><span class="spaces__item--left">&nbsp;</span>Lorem
-                                            ipsum dolor sit amet</li>
-                                        <li class="spaces__item"><span class="spaces__item--left">&nbsp;</span>Consectetur
-                                            adipiscing elit</li>
-                                        <li class="spaces__item"><span class="spaces__item--left">&nbsp;</span>Blanditiis
-                                            praesentium voluptatum</li>
-                                    </ul>
-                                    <a class="btn btn--light-blue u-margin-top-xsmall">Learn more</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="spaces space-right">
-                        <div class="row space-row">
-                            <div class="col col-sm-12 col-md-6">
-                                <div class="spaces__heading spaces__heading--left">
-                                    <h3 class="heading-tertiary">
-                                        Gallery
-                                    </h3>
-                                    <p>We have a world class gallery that fits over 300 people</p>
+                    <div class="carousel-item">
+                        <div class="spaces space-right">
+                            <div class="row space-row">
+                                <div class="col col-sm-12 col-md-6">
+                                    <div class="spaces__heading spaces__heading--left">
+                                        <h3 class="heading-tertiary">
+                                            Theatre
+                                        </h3>
+                                        <p>We have a world class theatre that fits over 300 people</p>
+                                    </div>
+                                    <div class="spaces__text-box spaces__text-box--left">
+                                        <ul class="spaces__list spaces__list--right">
+                                            <li class="spaces__item">Studio Theatre<span class="spaces__item--right">&nbsp;</span></li>
+                                            <li class="spaces__item">Studio Theatre (North)<span class="spaces__item--right">&nbsp;</span></li>
+                                            <li class="spaces__item">Studio Theatre (South)<span class="spaces__item--right">&nbsp;</span></li>
+                                            <a class="btn btn--light-blue u-margin-top-xsmall">Learn more</a>
+                                        </ul>
+                                    </div>
                                 </div>
-                                <div class="spaces__text-box spaces__text-box--left">
-                                    <ul class="spaces__list spaces__list--right">
-                                        <li class="spaces__item">Lorem ipsum dolor sit amet<span class="spaces__item--right">&nbsp;</span></li>
-                                        <li class="spaces__item">Consectetur adipiscing elit<span class="spaces__item--right">&nbsp;</span></li>
-                                        <li class="spaces__item">Blanditiis praesentium voluptatum<span class="spaces__item--right">&nbsp;</span></li>
+                                <div class="col col-sm-12 col-md-6">
+                                    <img src="static/img/spaces/theatre.jpg" class="carousel-image" alt="Theatre Space">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="spaces space-left">
+                            <div class="row space-row">
+                                <div class="col col-sm-12 col-md-6">
+                                    <img src="static/img/spaces/desk.jpg" class="carousel-image" alt="Desk Space">
+                                </div>
+                                <div class="col col-sm-12 col-md-6">
+                                    <div class="spaces__heading spaces__heading--right">
+                                        <h3 class="heading-tertiary">
+                                            Desk
+                                        </h3>
+                                        <p>We have a coworking space called the sandbox which is great</p>
+                                    </div>
+                                    <div class="spaces__text-box spaces__text-box--right">
+                                        <ul class="spaces__list">
+                                            <li class="spaces__item"><span class="spaces__item--left">&nbsp;</span>Lorem
+                                                ipsum dolor sit amet</li>
+                                            <li class="spaces__item"><span class="spaces__item--left">&nbsp;</span>Consectetur
+                                                adipiscing elit</li>
+                                            <li class="spaces__item"><span class="spaces__item--left">&nbsp;</span>Blanditiis
+                                                praesentium voluptatum</li>
+                                        </ul>
                                         <a class="btn btn--light-blue u-margin-top-xsmall">Learn more</a>
-                                    </ul>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col col-sm-12 col-md-6">
-                                <img src="static/img/spaces/gallery.jpg" class="carousel-image" alt="Gallery Space">
                             </div>
                         </div>
                     </div>
-                    <div class="col-1-of-2">
-                        <div class="spaces__img-box spaces__img-box--right">
-                            <img src="static/img/gallery.jpg" alt="spaces-gallery" class="spaces__image spaces__image-gallery spaces__image--right">
+                    <div class="carousel-item">
+                        <div class="spaces space-right">
+                            <div class="row space-row">
+                                <div class="col col-sm-12 col-md-6">
+                                    <div class="spaces__heading spaces__heading--left">
+                                        <h3 class="heading-tertiary">
+                                            Gallery
+                                        </h3>
+                                        <p>We have a world class gallery that fits over 300 people</p>
+                                    </div>
+                                    <div class="spaces__text-box spaces__text-box--left">
+                                        <ul class="spaces__list spaces__list--right">
+                                            <li class="spaces__item">Lorem ipsum dolor sit amet<span class="spaces__item--right">&nbsp;</span></li>
+                                            <li class="spaces__item">Consectetur adipiscing elit<span class="spaces__item--right">&nbsp;</span></li>
+                                            <li class="spaces__item">Blanditiis praesentium voluptatum<span class="spaces__item--right">&nbsp;</span></li>
+                                            <a class="btn btn--light-blue u-margin-top-xsmall">Learn more</a>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col col-sm-12 col-md-6">
+                                    <img src="static/img/spaces/gallery.jpg" class="carousel-image" alt="Gallery Space">
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
     </section>
     <section id="testimonials" class="section-testimonials">
         <div class="testimonials__heading">
             <div class="u-center-text">
                 <h2 class="heading-secondary heading-secondary--black u-margin-bottom-small">
                     <span class="heading__secondary--main-black">Our Clients</span>
-                    <span class="heading__secondary--dash-black">&mdash;</span> <span class="heading__secondary--sub-black">Here's what they have to say</span>
+                    <span class="heading__secondary--dash-black">&mdash;</span> <span class="heading__secondary--sub-black">Here's
+                        what they have to say</span>
                 </h2>
-            </div>    
+            </div>
         </div>
         <div class="row">
             {% for testimonial in testimonials %}
-                <div class="col-1-of-3">
-                    <div class="testimonials__box">
-                        <img src="static/img/testimonials/{{ testimonial.picture }}" alt="testimonial-1" class="testimonials__img">
-                        <p class="testimonials__text">
-                            {{ testimonial.testimonial }}
-                        </p>
-                    </div>
-                    <div class="testimonials__client">
-                        <p class="testimonials__client-name">{{ testimonial.first_name }} {{ testimonial.last_name }}</p>
-                        <p class="testimonials__client-company">{{ testimonial.company }}</p>
-                    </div>
+            <div class="col-1-of-3">
+                <div class="testimonials__box">
+                    <img src="static/img/testimonials/{{ testimonial.picture }}" alt="testimonial-1" class="testimonials__img">
+                    <p class="testimonials__text">
+                        {{ testimonial.testimonial }}
+                    </p>
                 </div>
+                <div class="testimonials__client">
+                    <p class="testimonials__client-name">{{ testimonial.first_name }} {{ testimonial.last_name }}</p>
+                    <p class="testimonials__client-company">{{ testimonial.company }}</p>
+                </div>
+            </div>
             {% endfor %}
         </div>
     </section>
-    
+
     <section id="events" class="section-events">
         <div class="section-events__heading">
             <div class="u-center-text">
@@ -273,10 +297,12 @@
                 <div class="events">
                     <div class="events__text-box">
                         <div class="events__date">Oct 27, 2018</div>
-                        <p class="events__text--main">Farmers Market at cSpace</p> 
+                        <p class="events__text--main">Farmers Market at cSpace</p>
                         <p class="events__text--sub">
-                            Join us every Saturday 10 – 3, starting June 2 at the Farmers & Makers Market at cSPACE and enjoy an incredible selection of fresh produce, locally made, baked and grown goods, food trucks, live music, children’s activities, and more.
-                        </p>                  
+                            Join us every Saturday 10 – 3, starting June 2 at the Farmers & Makers Market at cSPACE and
+                            enjoy an incredible selection of fresh produce, locally made, baked and grown goods, food
+                            trucks, live music, children’s activities, and more.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -284,10 +310,12 @@
                 <div class="events">
                     <div class="events__text-box">
                         <div class="events__date">Oct 27, 2018</div>
-                        <p class="events__text--main">Farmers Market at cSpace</p> 
-                         <p class="events__text--sub">
-                            Join us every Saturday 10 – 3, starting June 2 at the Farmers & Makers Market at cSPACE and enjoy an incredible selection of fresh produce, locally made, baked and grown goods, food trucks, live music, children’s activities, and more.
-                        </p>                  
+                        <p class="events__text--main">Farmers Market at cSpace</p>
+                        <p class="events__text--sub">
+                            Join us every Saturday 10 – 3, starting June 2 at the Farmers & Makers Market at cSPACE and
+                            enjoy an incredible selection of fresh produce, locally made, baked and grown goods, food
+                            trucks, live music, children’s activities, and more.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -295,10 +323,12 @@
                 <div class="events">
                     <div class="events__text-box">
                         <div class="events__date">Oct 27, 2018</div>
-                        <p class="events__text--main">Farmers Market at cSpace</p> 
+                        <p class="events__text--main">Farmers Market at cSpace</p>
                         <p class="events__text--sub">
-                            Join us every Saturday 10 – 3, starting June 2 at the Farmers & Makers Market at cSPACE and enjoy an incredible selection of fresh produce, locally made, baked and grown goods, food trucks, live music, children’s activities, and more.
-                        </p>                  
+                            Join us every Saturday 10 – 3, starting June 2 at the Farmers & Makers Market at cSPACE and
+                            enjoy an incredible selection of fresh produce, locally made, baked and grown goods, food
+                            trucks, live music, children’s activities, and more.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -354,10 +384,10 @@
                 </div>
             </div>
         </div>
-    </section> 
+    </section>
     <footer class="footer">
         <div class="u-center-text u-margin-bottom-medium footer__img-box">
-            <img class="footer__img" src="static/img/cspace-logo.png"/>
+            <img class="footer__img" src="static/img/cspace-logo.png" />
         </div>
         <div class="row">
             <div class="col-1-of-2">
@@ -365,24 +395,24 @@
                     <div class="footer__item"><a href="#" class="footer__link">Home</a></div>
                     <div class="footer__item"><a href="#" class="footer__link">About</a></div>
                     <div class="footer__item"><a href="#" class="footer__link">Spaces</a></div>
-                    <div class="footer__item"><a href="#" class="footer__link">Events  </a></div>
+                    <div class="footer__item"><a href="#" class="footer__link">Events </a></div>
                 </ul>
             </div>
             <div class="col-1-of-2">
-                    <ul class="footer__social">
-                        <ul class="footer__social-ul">
-                            <li class="footer__social-item"><a href="#" class="footer__social-link"><i class="fab fa-facebook-f"></i></a></li>
-                            <li class="footer__social-item"><a href="#" class="footer__social-link"><i class="fab fa-twitter"></i></a></li>
-                            <li class="footer__social-item"><a href="#" class="footer__social-link"><i class="fab fa-youtube-square"></i></a></li>
-                            <li class="footer__social-item"><a href="#" class="footer__social-link"><i class="fab fa-instagram"></i></a></li>
-                        </ul>
+                <ul class="footer__social">
+                    <ul class="footer__social-ul">
+                        <li class="footer__social-item"><a href="#" class="footer__social-link"><i class="fab fa-facebook-f"></i></a></li>
+                        <li class="footer__social-item"><a href="#" class="footer__social-link"><i class="fab fa-twitter"></i></a></li>
+                        <li class="footer__social-item"><a href="#" class="footer__social-link"><i class="fab fa-youtube-square"></i></a></li>
+                        <li class="footer__social-item"><a href="#" class="footer__social-link"><i class="fab fa-instagram"></i></a></li>
                     </ul>
-                </div>
+                </ul>
+            </div>
         </div>
         <div class="footer__text u-center-text">
-                cSPACE © 2018 Made with ❤ by EvolveU's Cohort 1
+            cSPACE © 2018 Made with ❤ by EvolveU's Cohort 1
         </div>
-    </footer>   
+    </footer>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
@@ -390,5 +420,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
     <script src="static/js/index.js"></script>
-  </body>
+</body>
+
 </html>

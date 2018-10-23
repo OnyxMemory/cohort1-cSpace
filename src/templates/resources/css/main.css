@@ -311,6 +311,10 @@ input[type=submit]:hover {
   border-bottom: 1px solid #72BCFF; 
 }
 
+.nav-link-login {
+  
+}
+
 
 /* ============================================================================================== */
 /* header */
@@ -350,10 +354,18 @@ input[type=submit]:hover {
   height: 10vh;
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
   display: flex;
+  position: fixed;
+  width: 100vw;
+  z-index: 4000;
   justify-content: space-around;
   align-items: center;
 }  
+
+.bottom-nav--light {
+  background-image: linear-gradient(to right, rgb(255, 255, 255), rgb(255, 255, 255));
   
+}  
+
   .bottom-nav__link {
     display: inline-block;
     font-size: 3rem;
@@ -426,152 +438,6 @@ input[type=submit]:hover {
     top: 0;
     left: 0;
     width: 100%;
-}
-
-
-/*------------- Spaces Section -----------------*/
-
-/*----- spaces section heading  -----*/
-.section-spaces__headingf {
-  background: #fff;
-  padding: 9rem 0;
-  background: #ffffff;
-}
-
-.section-spaces__heading p {
-  margin: 0 auto;
-  font-size: 2rem;
-  width: 50%; 
-}
-
-/*-----------------------*/
-
-.spaces__meeting,
-.spaces__theatre,
-.spaces__desk,
-.spaces__gallery {
-  padding: 15rem 0 19rem 0;
-  box-shadow: 0 1rem 2rem rgba(0,0,0,.7);
-}
-
-
-/*----- spaces background  -----*/
-.spaces__meeting {
-  background-image: linear-gradient(-90deg, #ffffff 0%, #ffffff 35%, rgba(0, 91, 182, 0.8) 100%);
-  /* border-bottom: 1px solid #72BCFF;  */
-}
-
-.spaces__theatre {
-  background-image: linear-gradient(-90deg, rgba(0, 91, 182, 0.8) 0%, #ffffff 65%, #ffffff 100%);
-  /* border-bottom: 1px solid #72BCFF;  */
-}
-
-.spaces__desk {
-  background-image: linear-gradient(-90deg, #ffffff 0%, #ffffff 35%, rgba(0, 91, 182, 0.8) 100%);
-  /* border-bottom: 1px solid #72BCFF;  */
-}
-
-.spaces__gallery {
-  background-image: linear-gradient(-90deg, rgba(0, 91, 182, 0.8) 0%, #ffffff 65%, #ffffff 100%);
-  /* border-bottom: 1px solid #72BCFF;  */
-}
-
-
-/*------ spaces heading -----*/
-.spaces__heading {
-  position: relative;
-  background: #0b0b2d;
-  padding: 4rem;
-  color: #fff;
-  font-size: 1.6rem;
-  border-radius: 3px;
-  z-index: 10;
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); 
-}
-
-.spaces__heading--right {
-  left: -5rem;
-  padding-left: 14rem; 
-}
-
-.spaces__heading--left {
-  left: 5rem;
-  padding-left: -14rem; 
-}
-
-/*------ spaces text -----*/
-.spaces__text-box {
-  position: relative;
-  font-size: 2rem;
-}
-
-.spaces__text-box--right {
-  top: 5rem;
-  padding-left: 8rem;
-}
-
-.spaces__text-box--left {
-  top: 5rem;
-  padding-right: 7rem; 
-}
-
-.spaces__list {
-  list-style: none; 
-}
-
-.spaces__list--right {
-  text-align: right !important; 
-}
-
-.spaces__item {
-  margin: 1rem 1rem 1rem 0;
-  position: relative; 
-}
-
-.spaces__item--left, 
-.spaces__item--right {
-  display: inline-block;
-  width: 2.5px;
-  height: 3rem;
-  background: #72BCFF; 
-}
-
-.spaces__item--left {
-  margin-right: .5rem; 
-}
-
-.spaces__item--right {
-  margin-left: .5rem;
-  text-align: right; 
-}
-
-
-/*------ spaces image -----*/
-.spaces__image {
-  width: 120%;
-  position: absolute;
-  border-radius: 2px;
-  z-index: 20;
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
-  filter: brightness(90%); 
-}
-
-.spaces__img-box {
-  position: relative;
-}
-
-.spaces__image-theatre, 
-.spaces__image-gallery {
-  height: 40rem; 
-}
-
-.spaces__image--left {
-  top: 5rem; 
-}
-
-.spaces__image--right {
-  top: 5rem;
-  right: 0;
 }
 
 /* ============================================================================================== */  
@@ -921,6 +787,7 @@ input[type=submit]:hover {
   font-size: 1.5rem;
   letter-spacing: 1px;
   margin-top: -3rem;
+  padding-bottom: 7vh;
 }
 
 .footer__social-ul {
@@ -1038,6 +905,14 @@ nav ul {
 
 .nav-link {
     color: #fff;
+    transition: .3s;
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    /* border-bottom: 1px solid transparent; */
+}
+
+.nav-link:hover {
+  color: #72BCFF;
 }
 
 .brighten {
@@ -1147,7 +1022,7 @@ nav ul {
 
 ol.carousel-indicators {
   position: absolute;
-  bottom: 0;
+  top: 0;
   margin: 0;
   left: 0;
   right: 0;
@@ -1182,12 +1057,13 @@ ol.carousel-indicators li.active {
 
 .spaces {
   height: 90vh;
+  padding-top: 10rem;
 }
 
 .spaces .row {
   height: 100%;
   padding-top: 100px;
-  padding-bottom: 180px;
+  padding-bottom: 80px;
 }
 
 .row.space-row {
@@ -1203,4 +1079,3 @@ ol.carousel-indicators li.active {
 .space-right {
   background-image: linear-gradient(-90deg, #ffffff 0%, #ffffff 35%, rgba(0, 91, 182, 0.8) 100%);
 }
-

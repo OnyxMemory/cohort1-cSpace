@@ -19,7 +19,7 @@
     {% for month, info in tempData.items() %}
       <div id="{{month}}" class="booking-container">
         <div class="booking-calendar"
-        style="grid-template-columns: 3.5fr repeat({{ info.maxcols }}, 1fr); grid-template-rows: 2em repeat({{ info.maxrows}}, 1.5em);">
+        style="grid-template-columns: 5fr repeat({{ info.maxcols }}, 1fr); grid-template-rows: 2em repeat({{ info.maxrows}}, 1.5em);">
             {% for i in range(info.maxcols+1) %}
                 {% if i > 0 %}
                     <div class="calendar-day">
