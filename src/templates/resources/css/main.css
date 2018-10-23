@@ -311,6 +311,10 @@ input[type=submit]:hover {
   border-bottom: 1px solid #72BCFF; 
 }
 
+.nav-link-login {
+  
+}
+
 
 /* ============================================================================================== */
 /* header */
@@ -350,10 +354,18 @@ input[type=submit]:hover {
   height: 10vh;
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
   display: flex;
+  position: fixed;
+  width: 100vw;
+  z-index: 4000;
   justify-content: space-around;
   align-items: center;
 }  
+
+.bottom-nav--light {
+  background-image: linear-gradient(to right, rgb(255, 255, 255), rgb(255, 255, 255));
   
+}  
+
   .bottom-nav__link {
     display: inline-block;
     font-size: 3rem;
@@ -775,6 +787,7 @@ input[type=submit]:hover {
   font-size: 1.5rem;
   letter-spacing: 1px;
   margin-top: -3rem;
+  padding-bottom: 7vh;
 }
 
 .footer__social-ul {
@@ -892,6 +905,14 @@ nav ul {
 
 .nav-link {
     color: #fff;
+    transition: .3s;
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    /* border-bottom: 1px solid transparent; */
+}
+
+.nav-link:hover {
+  color: #72BCFF;
 }
 
 .brighten {
@@ -1001,7 +1022,7 @@ nav ul {
 
 ol.carousel-indicators {
   position: absolute;
-  bottom: 0;
+  top: 0;
   margin: 0;
   left: 0;
   right: 0;
@@ -1036,12 +1057,13 @@ ol.carousel-indicators li.active {
 
 .spaces {
   height: 90vh;
+  padding-top: 10rem;
 }
 
 .spaces .row {
   height: 100%;
   padding-top: 100px;
-  padding-bottom: 180px;
+  padding-bottom: 80px;
 }
 
 .row.space-row {

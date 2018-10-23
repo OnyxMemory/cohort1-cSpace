@@ -1,4 +1,4 @@
-/* Tablet portrait 600px - 900px */
+/* Tablet portrait starting 600px and below */
 
 @media screen and (max-width: 600px) {
     html {
