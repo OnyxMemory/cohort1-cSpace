@@ -200,7 +200,7 @@
 /* ============================================================================================== */
 
 .section-testimonials {
-    background: rgb(50, 102, 180);
+    background: rgb(186, 214, 255);
     padding: 6rem;
     position: relative;
   }
@@ -299,7 +299,7 @@
     /*--- contact details --*/
     
     .contact {
-        margin-top: 6rem;
+        margin-top: 0;
         border-left: none;
         border-top: 1px solid #343b60;
         border-bottom: 1px solid #343b60;
