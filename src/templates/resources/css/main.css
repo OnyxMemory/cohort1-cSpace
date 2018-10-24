@@ -1038,11 +1038,13 @@ nav ul {
 .section-spaces__heading {
   background: #fff;
   padding-top: 9rem 0;
+  
   background: #ffffff;
 }
 
 .section-spaces__heading p {
   margin: 0 auto;
+  padding-bottom: 10rem;
   font-size: 2rem;
   width: 50%; 
 }
