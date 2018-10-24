@@ -311,11 +311,6 @@ input[type=submit]:hover {
   border-bottom: 1px solid #72BCFF; 
 }
 
-.nav-link-login {
-  
-}
-
-
 /* ============================================================================================== */
 /* header */
 
@@ -387,6 +382,7 @@ input[type=submit]:hover {
   }
 
 
+
 /* ============================================================================================== */
 /* SECTIONS */
 /* ============================================================================================== */
@@ -445,7 +441,7 @@ input[type=submit]:hover {
 /*------- Testimonials Section ----- */
 
 .section-testimonials {
-  background: rgb(50, 102, 180);
+  background: rgb(186, 214, 255);
   padding: 12rem;
   position: relative;
 }
@@ -520,7 +516,7 @@ input[type=submit]:hover {
 .testimonials__client {
   text-align: center;
   margin-top: 2rem;
-  color: #fff;
+  color: #333;
   position: relative;
 }
 
@@ -529,7 +525,12 @@ input[type=submit]:hover {
 }
 
 .testimonials__client-name {
-  font-size: 1.6rem;
+  font-size: 1.7rem;
+}
+
+.testimonials__client-company {
+  font-size: 1.5rem;
+  margin-top: -.5rem;
 }
 
 .down-arrow {
@@ -579,7 +580,7 @@ input[type=submit]:hover {
 /* Section Form */
 
 .section-contact {
-  background: #20253c;
+  background: #fff;
   border-top: 1px solid #343b60;
   border-bottom: 1px solid #343b60;
   padding: 5rem;
@@ -597,7 +598,7 @@ input[type=submit]:hover {
 }
 
 .form__label {
-  color: #fff;
+  color: #343b60;
 }
 
 .form__group--textarea {
@@ -618,22 +619,22 @@ input[type=submit]:hover {
 .form__input {
   padding: 3rem 0 1rem 1rem;
   font-size: 1.7rem;
-  background: #2a3150;
+  background: #f5f5f5;
   border: none;
   outline: none;
   width: 100%;
-  color: white;
+  color: #343b60;
   border-bottom: 2px solid transparent;
   transition: all .3s; 
 }
 
 .form__input::-webkit-input-placeholder {
-  color: #fff;
+  color: #343b60;
   letter-spacing: 3px; 
 }
 
 .form__label {
-  color: #fff !important;
+  color: #343b60 !important;
   letter-spacing: 3px;
   font-size: 1.8rem;
   position: absolute;
@@ -644,7 +645,7 @@ input[type=submit]:hover {
 
 .form__input:focus, 
 .form__input:valid {
-  border-bottom: 2px solid #fff; 
+  border-bottom: 2px solid #343b60;
 }
 
 .form__input:focus + .form__label,
@@ -653,7 +654,7 @@ input[type=submit]:hover {
   top: 0;
   font-size: 1.2rem;
   letter-spacing: 1px;
-  color: #fff; 
+  color: #343b60; 
 }
 
 .form__group--textarea {
@@ -662,17 +663,17 @@ input[type=submit]:hover {
 }
 
 .form__textarea {
-  background: #2a3150;
+  background: #f5f5f5;
   outline: none;
   border: none;
   width: 100%;
   padding: 3rem 1rem 1rem 1rem;
-  color: #fff;
+  color: #343b60;
   font-size: 1.5rem; 
 }
 
 .form__label--textarea {
-  color: #fff;
+  color: #343b60;
   letter-spacing: 3px;
   font-size: 1.8rem;
   position: absolute;
@@ -686,7 +687,7 @@ input[type=submit]:hover {
   top: 0;
   font-size: 1.2rem;
   letter-spacing: 1px;
-  color: #fff; 
+  color: #343b60; 
 }
 
 .form__btn {
@@ -705,16 +706,25 @@ input[type=submit]:hover {
   align-content: space-between;
 }
 
+.heading-secondary--contact {
+  color: #343b60;
+  font-weight: 300;
+}
+
+.heading-tertiary--contact {
+  color: #343b60;
+}
+
 .contact p, 
 .contact address {
-  color: #fff;
+  color: #343b60;
   font-size: 1.6rem; 
 }
 
 .contact__text--link:link,
 .contact__text--link:visited {
   text-decoration: none;
-  color: #fff;
+  color: #343b60;
   cursor: pointer;
   font-size: 1.6rem; 
 }
@@ -738,7 +748,7 @@ input[type=submit]:hover {
 
 .footer {
   background: #323232;
-  padding: 5rem;
+  padding: 4rem;
 }
 
 .footer__img {
@@ -787,7 +797,6 @@ input[type=submit]:hover {
   font-size: 1.5rem;
   letter-spacing: 1px;
   margin-top: -3rem;
-  padding-bottom: 7vh;
 }
 
 .footer__social-ul {
@@ -904,15 +913,31 @@ nav ul {
 }
 
 .nav-link {
-    color: #fff;
-    transition: .3s;
-    font-size: 2.2rem;
-    text-transform: uppercase;
-    /* border-bottom: 1px solid transparent; */
+  color: #fff;
+  transition: .3s;
+  font-size: 2.2rem;
+  text-transform: uppercase;
+  border: 1px solid #fff;
+  border-radius: 1rem;
+  padding: .5rem 2.5rem !important;
+  display: inline-block;
+}
+
+.nav-link--black {
+  color: #333;
+  transition: .3s;
+  font-size: 2.2rem;
+  text-transform: uppercase;
+  border: 1px solid #333;
+  border-radius: 1.5rem;
+  padding: .5rem 2.5rem !important;
+  display: inline-block;
 }
 
 .nav-link:hover {
-  color: #72BCFF;
+  color: #72BCFF !important;
+  border: 1px solid #72BCFF;
+
 }
 
 .brighten {
@@ -929,6 +954,7 @@ nav ul {
 .show {
   display: block;
 }
+
 
 /* ---------------------------- SPACES CSS ---------------------------- */
 
