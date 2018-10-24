@@ -17,32 +17,31 @@
     <section class="section-steps">
         <div class="container">
             <div class="row">
-              <!-- <div class = "step-box-container"> -->
-                <div class="col-6 steps-box">
-                      <div class="works-step">
-                          <div class = "sticky">Name</div>
-                            {% for client in clients %}
-                            <P>{{client[0]}} {{client[1]}}</P>
-                            {% endfor %}
-                      </div>
-                  </div>
-                  <div class="col-6 steps-box">
-                      <div class="works-step">
-                          <div class = "sticky">Credits</div>
-                          {% for client in clients %}
-                          <P>{{client[2]}}</P>
-                          {% endfor %}
-                      </div>
-                  </div>
-              <!-- </div> -->
-
+                <div class="col-6 steps-heading">
+                    Name
+                </div>
+                <div class="col-6 steps-heading">
+                    Credits
+                </div>
             </div>
-        </div>
-        <!-- <div class="row">
-            <span>Clients</span>
-            <span>Credits</span>
-        </div> -->
+            <div class="row">
+                <div class="col-6 steps-box">
+                    <div class="works-step">
+                        {% for client in clients %}
+                        <P>{{client[0]}} {{client[1]}}</P>
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="col-6 steps-box">
+                    <div class="works-step">
 
+                        {% for client in clients %}
+                        <P>{{client[2]}}</P>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>          
+        </div>
     </section>
 </body>
 

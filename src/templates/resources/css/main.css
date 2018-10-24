@@ -946,9 +946,72 @@ nav ul {
 }
 
 /*----- spaces section heading  -----*/
+.img {
+  position: relative;
+}
+
+.img-heading {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #0b0b2d;
+  padding: 2rem;
+  color: #fff;
+  font-size: 5rem;
+  border-radius: 3px;
+  z-index: 10;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+#mobile-spaces {
+  margin-bottom: 10rem;
+}
+
+.spaces-ul {
+  width: 100%;
+  height: auto;
+  list-style-type: none;
+  font-size: 3em;
+  margin: 0 auto;
+}
+
+.spaces-li {
+  display: block;
+  float: left;
+  clear: left;
+  width: 100% !important;
+  height: auto;
+  text-align: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.space-button {
+  color: #72BCFF;
+  text-decoration: none;
+  background-color: white;
+  padding: 1rem 4rem;
+  border: 1px solid #72BCFF;
+  border-radius: 1rem;
+  margin-top: 2rem;
+  font-size: 4rem;
+  display: inline-block;
+  transition: .3s; 
+}
+
+.spaces-divider {
+  width: 30%;
+  margin: 0 auto;
+  border-bottom: 2px solid rgb(2, 108, 214);
+  margin-top: 8rem;
+  margin-bottom: 8rem;
+}
+
 .section-spaces__heading {
   background: #fff;
-  padding: 9rem 0;
+  padding-top: 9rem 0;
   background: #ffffff;
 }
 

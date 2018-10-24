@@ -105,7 +105,6 @@
         text-align: center;
       }
       
-      
       .aboutimg2 {
           position: relative;
           top: 0;
@@ -126,22 +125,13 @@
 
     /*----- spaces section heading  -----*/
     .section-spaces__heading {
-        padding: 6rem 0;
+        padding-top: 6rem;
+        padding-bottom: 0;
     }
     
     .section-spaces__heading p {
         width: 90%;
     }
-    
-    /*-----------------------*/
-    
-    .spaces__meeting,
-    .spaces__theatre,
-    .spaces__desk,
-    .spaces__gallery {
-        padding: 6rem 0;
-    }
-    
     
     /*------ spaces heading -----*/ 
     .spaces__heading {
@@ -150,51 +140,6 @@
        position: static;
     }
 
-    .spaces__heading--right {
-        position: relative;
-        top: -22rem;
-        padding: 2rem;
-        text-align: center;
-    }
-    
-    .spaces__heading--left {
-        left: 0;
-        padding: 2rem;
-        text-align: center;
-    }
-    
-    /*------ spaces text -----*/
-    .spaces__text-box {
-        visibility: hidden;
-    }
-    
-    
-    /*------ spaces image -----*/
-    .spaces__image {
-        position: relative;
-        width: 50%;
-        margin: 0 auto;
-    }
-    
-    .spaces__img-box {
-        position: relative;
-        z-index: 5;
-    }
-    
-    .spaces__image-theatre, 
-    .spaces__image-gallery {
-        height: 20rem; 
-    }
-    
-    .spaces__image--left {
-        top: 10rem; 
-    }
-    
-    .spaces__image--right {
-        right: 0;
-        top: 0;
-    }
-    
  /* ============================================================================================== */
 /* Testimonials section */
 /* ============================================================================================== */
