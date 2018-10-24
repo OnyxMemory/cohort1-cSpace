@@ -131,8 +131,29 @@
     
     .section-spaces__heading p {
         width: 90%;
+        padding-bottom: 0;
     }
+
+    .spaces-li {
+        padding: .5rem 0;
+        font-size: 2.2rem;
+      }
     
+      .space-button {
+        padding: 1rem 3rem;
+        border-radius: 1rem;
+        margin-top: 2rem;
+        font-size: 2rem;
+      }
+      
+      .spaces-divider {
+        width: 30%;
+        margin: 0 auto;
+        border-bottom: 2px solid rgb(2, 108, 214);
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+      }
+
     /*------ spaces heading -----*/ 
     .spaces__heading {
        width: 50%;
