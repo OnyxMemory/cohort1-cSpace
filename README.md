@@ -3,3 +3,5 @@
 After cloning the repository, you can install/update all the dependencies by running `pipenv sync` inside `pipenv shell`
 ## How to run tests
 To run tests please use `PYTHONPATH=src pytest` in the root directory **(cohort1-cSpace)**
+## How to run code coverage
+`PYTHONPATH=src pytest --cov-report html --cov .`
